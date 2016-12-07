@@ -1,0 +1,816 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  6 DEC 2016 19:33
+entering extended mode
+**./SwitchingPaper.tex
+(SwitchingPaper.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 70 language(s) loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\elsevier\elsart.cls"
+Document Class: elsart 2007/08/16, 2.20: Elsevier
+\@frontmatterwidth=\dimen102
+\@bls=\dimen103
+\eqntopsep=\skip41
+\eqnarraycolsep=\dimen104
+\labelwidthi=\dimen105
+\labelwidthii=\dimen106
+\labelwidthiii=\dimen107
+\labelwidthiv=\dimen108
+\@maxlistdepth=\count79
+\eqnbaselineskip=\skip42
+\eqnlineskip=\skip43
+\mathindent=\dimen109
+\rulepreskip=\dimen110
+\rulepostskip=\dimen111
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+\c@thm=\count85
+\c@alg=\count86
+\c@algorithm=\count87
+\c@note=\count88
+\c@summ=\count89
+\c@case=\count90
+\@tempcntc=\count91
+\c@figure=\count92
+\c@table=\count93
+\t@glob@notes=\toks14
+\t@loc@notes=\toks15
+\note@cnt=\count94
+\corauth@text=\toks16
+\email@text=\toks17
+\url@text=\toks18
+\c@corauth=\count95
+\c@author=\count96
+\n@author=\count97
+\c@collab=\count98
+\n@collab=\count99
+\c@address=\count100
+\sv@mathsurround=\dimen112
+\sv@hyphenpenalty=\count101
+\prev@elem=\count102
+\cur@elem=\count103
+\fm@box=\box26
+\fm@size=\dimen113
+\t@abstract=\box27
+\t@keyword=\box28
+\t@xtheight=\dimen114
+\@logoheight=\dimen115
+\@pubyear=\count104
+\c@firstpage=\count105
+\c@lastpage=\count106
+\slashbox=\box29
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1415.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1415.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1415.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 1415.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+\Slashbox=\box30
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 1416.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1416.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks19
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count107
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+\abovecaptionskip=\skip44
+\belowcaptionskip=\skip45
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = macro:->\@makefigurecaption .
+\c@ContinuedFloat=\count108
+)
+\c@KVtest=\count109
+\sf@farskip=\skip46
+\sf@captopadj=\dimen125
+\sf@capskip=\skip47
+\sf@nearskip=\skip48
+\c@subfigure=\count110
+\c@subfigure@save=\count111
+\c@lofdepth=\count112
+\c@subtable=\count113
+\c@subtable@save=\count114
+\c@lotdepth=\count115
+\sf@top=\skip49
+\sf@bottom=\skip50
+)
+
+LaTeX Warning: Unused global option(s):
+    [a4paper].
+
+(SwitchingPaper.aux
+
+LaTeX Warning: Label `eq:vectores' multiply defined.
+
+
+LaTeX Warning: Label `eq:permuta' multiply defined.
+
+
+LaTeX Warning: Label `eq:frequ' multiply defined.
+
+)
+\openout1 = `SwitchingPaper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count116
+\scratchdimen=\dimen126
+\scratchbox=\box31
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen127
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks22
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(Frontmatter.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 16.
+Missing character: There is no Â in font cmr10!
+Missing character: There is no « in font cmr10!
+\c@sv@footnote=\count122
+) (Introduction.tex [1{C:/Users/Maxi/AppData/Local/MiKTeX/2.9/pdftex/config/pdf
+tex.map}]
+Overfull \hbox (16.11423pt too wide) in paragraph at lines 13--18
+\OT1/cmr/m/n/12 entropy-complexity rep-re-sen-ta-tion ($\OML/cmm/m/it/12 H \OMS
+/cmsy/m/n/12   \OML/cmm/m/it/12 C$ \OT1/cmr/m/n/12 plane) de-serves spe-cial co
+nsideration[3--
+ []
+
+
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [2]
+
+LaTeX Warning: Reference `sec:quanti' on page 3 undefined on input line 33.
+
+) (ITQs.tex
+
+LaTeX Warning: Citation `aka varios' on page 3 undefined on input line 2.
+
+[3] [4] [5] [6]
+
+LaTeX Warning: Reference `fig:planezone' on page 7 undefined on input line 179.
+
+
+) (Results.tex [7]
+Missing character: There is no Â in font cmr12!
+Missing character: There is no « in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no « in font cmr12!
+ [8]
+
+LaTeX Warning: Reference `fig:LOGbin' on page 9 undefined on input line 49.
+
+[9]
+Overfull \hbox (7.74313pt too wide) in paragraph at lines 56--59
+[]\OT1/cmr/m/n/12 Sequential switch-ing be-tween Tent and Lo-gis-tic maps (SWIT
+CH) SWITCH
+ []
+
+[10]
+
+LaTeX Warning: Reference `fig:peril' on page 11 undefined on input line 95.
+
+[11] <Figuras/SwitchParImpar.pdf, id=53, 825.25447pt x 740.92189pt>
+File: Figuras/SwitchParImpar.pdf Graphic file (type pdf)
+
+<use Figuras/SwitchParImpar.pdf>
+Package pdftex.def Info: Figuras/SwitchParImpar.pdf used on input line 139.
+(pdftex.def)             Requested size: 288.69228pt x 259.19604pt.
+File: Figuras/SwitchParImpar.pdf Graphic file (type pdf)
+ <use Figuras/SwitchParImpar.pdf>
+Package pdftex.def Info: Figuras/SwitchParImpar.pdf used on input line 146.
+(pdftex.def)             Requested size: 288.69228pt x 259.19604pt.
+
+<Figuras/Hhist_tentB10.pdf, id=54, 1204.51004pt x 903.38504pt>
+File: Figuras/Hhist_tentB10.pdf Graphic file (type pdf)
+
+<use Figuras/Hhist_tentB10.pdf>
+Package pdftex.def Info: Figuras/Hhist_tentB10.pdf used on input line 152.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Hbp_tentB10.pdf, id=55, 1204.51004pt x 903.38504pt>
+File: Figuras/Hbp_tentB10.pdf Graphic file (type pdf)
+
+<use Figuras/Hbp_tentB10.pdf>
+Package pdftex.def Info: Figuras/Hbp_tentB10.pdf used on input line 153.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Miss_tentB10.pdf, id=56, 1204.51004pt x 903.38504pt>
+File: Figuras/Miss_tentB10.pdf Graphic file (type pdf)
+
+<use Figuras/Miss_tentB10.pdf>
+Package pdftex.def Info: Figuras/Miss_tentB10.pdf used on input line 154.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HhistHbp_tentB10.pdf, id=57, 1204.51004pt x 903.38504pt>
+File: Figuras/HhistHbp_tentB10.pdf Graphic file (type pdf)
+
+<use Figuras/HhistHbp_tentB10.pdf>
+Package pdftex.def Info: Figuras/HhistHbp_tentB10.pdf used on input line 155.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HbpCbp_tentB10.pdf, id=58, 1204.51004pt x 903.38504pt>
+File: Figuras/HbpCbp_tentB10.pdf Graphic file (type pdf)
+
+<use Figuras/HbpCbp_tentB10.pdf>
+Package pdftex.def Info: Figuras/HbpCbp_tentB10.pdf used on input line 156.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HbpCbp_tentB2.pdf, id=59, 1204.51004pt x 903.38504pt>
+File: Figuras/HbpCbp_tentB2.pdf Graphic file (type pdf)
+
+<use Figuras/HbpCbp_tentB2.pdf>
+Package pdftex.def Info: Figuras/HbpCbp_tentB2.pdf used on input line 157.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--158
+[][] [] []
+ []
+
+<Figuras/Hhist_logisticoB10.pdf, id=60, 1204.51004pt x 903.38504pt>
+File: Figuras/Hhist_logisticoB10.pdf Graphic file (type pdf)
+
+<use Figuras/Hhist_logisticoB10.pdf>
+Package pdftex.def Info: Figuras/Hhist_logisticoB10.pdf used on input line 164.
+
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Hbp_logisticoB10.pdf, id=61, 1204.51004pt x 903.38504pt>
+File: Figuras/Hbp_logisticoB10.pdf Graphic file (type pdf)
+
+<use Figuras/Hbp_logisticoB10.pdf>
+Package pdftex.def Info: Figuras/Hbp_logisticoB10.pdf used on input line 165.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Cbp_logisticoB10.pdf, id=62, 1204.51004pt x 903.38504pt>
+File: Figuras/Cbp_logisticoB10.pdf Graphic file (type pdf)
+
+<use Figuras/Cbp_logisticoB10.pdf>
+Package pdftex.def Info: Figuras/Cbp_logisticoB10.pdf used on input line 166.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Miss_logisticoB10.pdf, id=63, 1204.51004pt x 903.38504pt>
+File: Figuras/Miss_logisticoB10.pdf Graphic file (type pdf)
+
+<use Figuras/Miss_logisticoB10.pdf>
+Package pdftex.def Info: Figuras/Miss_logisticoB10.pdf used on input line 167.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HhistHbp_logisticoB10.pdf, id=64, 1204.51004pt x 903.38504pt>
+File: Figuras/HhistHbp_logisticoB10.pdf Graphic file (type pdf)
+
+<use Figuras/HhistHbp_logisticoB10.pdf>
+Package pdftex.def Info: Figuras/HhistHbp_logisticoB10.pdf used on input line 1
+68.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HbpCbp_logisticoB10.pdf, id=65, 1204.51004pt x 903.38504pt>
+File: Figuras/HbpCbp_logisticoB10.pdf Graphic file (type pdf)
+
+<use Figuras/HbpCbp_logisticoB10.pdf>
+Package pdftex.def Info: Figuras/HbpCbp_logisticoB10.pdf used on input line 169
+.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--170
+[][] [] []
+ []
+
+<Figuras/Hhist_logisticoB2.pdf, id=66, 1204.51004pt x 903.38504pt>
+File: Figuras/Hhist_logisticoB2.pdf Graphic file (type pdf)
+
+<use Figuras/Hhist_logisticoB2.pdf>
+Package pdftex.def Info: Figuras/Hhist_logisticoB2.pdf used on input line 175.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Hbp_logisticoB2.pdf, id=67, 1204.51004pt x 903.38504pt>
+File: Figuras/Hbp_logisticoB2.pdf Graphic file (type pdf)
+
+<use Figuras/Hbp_logisticoB2.pdf>
+Package pdftex.def Info: Figuras/Hbp_logisticoB2.pdf used on input line 176.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Cbp_logisticoB2.pdf, id=68, 1204.51004pt x 903.38504pt>
+File: Figuras/Cbp_logisticoB2.pdf Graphic file (type pdf)
+
+<use Figuras/Cbp_logisticoB2.pdf>
+Package pdftex.def Info: Figuras/Cbp_logisticoB2.pdf used on input line 177.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Miss_logisticoB2.pdf, id=69, 1204.51004pt x 903.38504pt>
+File: Figuras/Miss_logisticoB2.pdf Graphic file (type pdf)
+
+<use Figuras/Miss_logisticoB2.pdf>
+Package pdftex.def Info: Figuras/Miss_logisticoB2.pdf used on input line 178.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HhistHbp_logisticoB2.pdf, id=70, 1204.51004pt x 903.38504pt>
+File: Figuras/HhistHbp_logisticoB2.pdf Graphic file (type pdf)
+
+<use Figuras/HhistHbp_logisticoB2.pdf>
+Package pdftex.def Info: Figuras/HhistHbp_logisticoB2.pdf used on input line 17
+9.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HbpCbp_logisticoB2.pdf, id=71, 1204.51004pt x 903.38504pt>
+File: Figuras/HbpCbp_logisticoB2.pdf Graphic file (type pdf)
+
+<use Figuras/HbpCbp_logisticoB2.pdf>
+Package pdftex.def Info: Figuras/HbpCbp_logisticoB2.pdf used on input line 180.
+
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--181
+[][] [] []
+ []
+
+<Figuras/Hhist_switchB10.pdf, id=72, 1204.51004pt x 903.38504pt>
+File: Figuras/Hhist_switchB10.pdf Graphic file (type pdf)
+
+<use Figuras/Hhist_switchB10.pdf>
+Package pdftex.def Info: Figuras/Hhist_switchB10.pdf used on input line 187.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Hbp_switchB10.pdf, id=73, 1204.51004pt x 903.38504pt>
+File: Figuras/Hbp_switchB10.pdf Graphic file (type pdf)
+
+<use Figuras/Hbp_switchB10.pdf>
+Package pdftex.def Info: Figuras/Hbp_switchB10.pdf used on input line 188.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Cbp_switchB10.pdf, id=74, 1204.51004pt x 903.38504pt>
+File: Figuras/Cbp_switchB10.pdf Graphic file (type pdf)
+
+<use Figuras/Cbp_switchB10.pdf>
+Package pdftex.def Info: Figuras/Cbp_switchB10.pdf used on input line 189.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Miss_switchB10.pdf, id=75, 1204.51004pt x 903.38504pt>
+File: Figuras/Miss_switchB10.pdf Graphic file (type pdf)
+
+<use Figuras/Miss_switchB10.pdf>
+Package pdftex.def Info: Figuras/Miss_switchB10.pdf used on input line 190.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HhistHbp_switchB10.pdf, id=76, 1204.51004pt x 903.38504pt>
+File: Figuras/HhistHbp_switchB10.pdf Graphic file (type pdf)
+
+<use Figuras/HhistHbp_switchB10.pdf>
+Package pdftex.def Info: Figuras/HhistHbp_switchB10.pdf used on input line 191.
+
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HbpCbp_switchB10.pdf, id=77, 1204.51004pt x 903.38504pt>
+File: Figuras/HbpCbp_switchB10.pdf Graphic file (type pdf)
+
+<use Figuras/HbpCbp_switchB10.pdf>
+Package pdftex.def Info: Figuras/HbpCbp_switchB10.pdf used on input line 192.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--193
+[][] [] []
+ []
+
+<Figuras/Hhist_switchB2.pdf, id=78, 1204.51004pt x 903.38504pt>
+File: Figuras/Hhist_switchB2.pdf Graphic file (type pdf)
+
+<use Figuras/Hhist_switchB2.pdf>
+Package pdftex.def Info: Figuras/Hhist_switchB2.pdf used on input line 199.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Hbp_switchB2.pdf, id=79, 1204.51004pt x 903.38504pt>
+File: Figuras/Hbp_switchB2.pdf Graphic file (type pdf)
+
+<use Figuras/Hbp_switchB2.pdf>
+Package pdftex.def Info: Figuras/Hbp_switchB2.pdf used on input line 200.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Cbp_switchB2.pdf, id=80, 1204.51004pt x 903.38504pt>
+File: Figuras/Cbp_switchB2.pdf Graphic file (type pdf)
+
+<use Figuras/Cbp_switchB2.pdf>
+Package pdftex.def Info: Figuras/Cbp_switchB2.pdf used on input line 201.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Miss_switchB2.pdf, id=81, 1204.51004pt x 903.38504pt>
+File: Figuras/Miss_switchB2.pdf Graphic file (type pdf)
+
+<use Figuras/Miss_switchB2.pdf>
+Package pdftex.def Info: Figuras/Miss_switchB2.pdf used on input line 202.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HhistHbp_switchB2.pdf, id=82, 1204.51004pt x 903.38504pt>
+File: Figuras/HhistHbp_switchB2.pdf Graphic file (type pdf)
+
+<use Figuras/HhistHbp_switchB2.pdf>
+Package pdftex.def Info: Figuras/HhistHbp_switchB2.pdf used on input line 203.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HbpCbp_switchB2.pdf, id=83, 1204.51004pt x 903.38504pt>
+File: Figuras/HbpCbp_switchB2.pdf Graphic file (type pdf)
+
+<use Figuras/HbpCbp_switchB2.pdf>
+Package pdftex.def Info: Figuras/HbpCbp_switchB2.pdf used on input line 204.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--205
+[][] [] []
+ []
+
+<Figuras/Hhist_parB10.pdf, id=84, 1204.51004pt x 903.38504pt>
+File: Figuras/Hhist_parB10.pdf Graphic file (type pdf)
+
+<use Figuras/Hhist_parB10.pdf>
+Package pdftex.def Info: Figuras/Hhist_parB10.pdf used on input line 211.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Hbp_parB10.pdf, id=85, 1204.51004pt x 903.38504pt>
+File: Figuras/Hbp_parB10.pdf Graphic file (type pdf)
+
+<use Figuras/Hbp_parB10.pdf>
+Package pdftex.def Info: Figuras/Hbp_parB10.pdf used on input line 212.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Cbp_parB10.pdf, id=86, 1204.51004pt x 903.38504pt>
+File: Figuras/Cbp_parB10.pdf Graphic file (type pdf)
+
+<use Figuras/Cbp_parB10.pdf>
+Package pdftex.def Info: Figuras/Cbp_parB10.pdf used on input line 213.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Miss_parB10.pdf, id=87, 1204.51004pt x 903.38504pt>
+File: Figuras/Miss_parB10.pdf Graphic file (type pdf)
+
+<use Figuras/Miss_parB10.pdf>
+Package pdftex.def Info: Figuras/Miss_parB10.pdf used on input line 214.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HhistHbp_parB10.pdf, id=88, 1204.51004pt x 903.38504pt>
+File: Figuras/HhistHbp_parB10.pdf Graphic file (type pdf)
+
+<use Figuras/HhistHbp_parB10.pdf>
+Package pdftex.def Info: Figuras/HhistHbp_parB10.pdf used on input line 215.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HbpCbp_parB10.pdf, id=89, 1204.51004pt x 903.38504pt>
+File: Figuras/HbpCbp_parB10.pdf Graphic file (type pdf)
+
+<use Figuras/HbpCbp_parB10.pdf>
+Package pdftex.def Info: Figuras/HbpCbp_parB10.pdf used on input line 216.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--217
+[][] [] []
+ []
+
+<Figuras/Hhist_parB2.pdf, id=90, 1204.51004pt x 903.38504pt>
+File: Figuras/Hhist_parB2.pdf Graphic file (type pdf)
+
+<use Figuras/Hhist_parB2.pdf>
+Package pdftex.def Info: Figuras/Hhist_parB2.pdf used on input line 222.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Hbp_parB2.pdf, id=91, 1204.51004pt x 903.38504pt>
+File: Figuras/Hbp_parB2.pdf Graphic file (type pdf)
+
+<use Figuras/Hbp_parB2.pdf>
+Package pdftex.def Info: Figuras/Hbp_parB2.pdf used on input line 223.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Cbp_parB2.pdf, id=92, 1204.51004pt x 903.38504pt>
+File: Figuras/Cbp_parB2.pdf Graphic file (type pdf)
+
+<use Figuras/Cbp_parB2.pdf>
+Package pdftex.def Info: Figuras/Cbp_parB2.pdf used on input line 224.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Miss_parB2.pdf, id=93, 1204.51004pt x 903.38504pt>
+File: Figuras/Miss_parB2.pdf Graphic file (type pdf)
+
+<use Figuras/Miss_parB2.pdf>
+Package pdftex.def Info: Figuras/Miss_parB2.pdf used on input line 225.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HhistHbp_parB2.pdf, id=94, 1204.51004pt x 903.38504pt>
+File: Figuras/HhistHbp_parB2.pdf Graphic file (type pdf)
+
+<use Figuras/HhistHbp_parB2.pdf>
+Package pdftex.def Info: Figuras/HhistHbp_parB2.pdf used on input line 226.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HbpCbp_parB2.pdf, id=95, 1204.51004pt x 903.38504pt>
+File: Figuras/HbpCbp_parB2.pdf Graphic file (type pdf)
+
+<use Figuras/HbpCbp_parB2.pdf>
+Package pdftex.def Info: Figuras/HbpCbp_parB2.pdf used on input line 227.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--228
+[][] [] []
+ []
+
+<Figuras/Hhist_imparB10.pdf, id=96, 1204.51004pt x 903.38504pt>
+File: Figuras/Hhist_imparB10.pdf Graphic file (type pdf)
+
+<use Figuras/Hhist_imparB10.pdf>
+Package pdftex.def Info: Figuras/Hhist_imparB10.pdf used on input line 234.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Hbp_imparB10.pdf, id=97, 1204.51004pt x 903.38504pt>
+File: Figuras/Hbp_imparB10.pdf Graphic file (type pdf)
+
+<use Figuras/Hbp_imparB10.pdf>
+Package pdftex.def Info: Figuras/Hbp_imparB10.pdf used on input line 235.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Cbp_imparB10.pdf, id=98, 1204.51004pt x 903.38504pt>
+File: Figuras/Cbp_imparB10.pdf Graphic file (type pdf)
+
+<use Figuras/Cbp_imparB10.pdf>
+Package pdftex.def Info: Figuras/Cbp_imparB10.pdf used on input line 236.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Miss_imparB10.pdf, id=99, 1204.51004pt x 903.38504pt>
+File: Figuras/Miss_imparB10.pdf Graphic file (type pdf)
+
+<use Figuras/Miss_imparB10.pdf>
+Package pdftex.def Info: Figuras/Miss_imparB10.pdf used on input line 237.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HhistHbp_imparB10.pdf, id=100, 1204.51004pt x 903.38504pt>
+File: Figuras/HhistHbp_imparB10.pdf Graphic file (type pdf)
+
+<use Figuras/HhistHbp_imparB10.pdf>
+Package pdftex.def Info: Figuras/HhistHbp_imparB10.pdf used on input line 238.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HbpCbp_imparB10.pdf, id=101, 1204.51004pt x 903.38504pt>
+File: Figuras/HbpCbp_imparB10.pdf Graphic file (type pdf)
+
+<use Figuras/HbpCbp_imparB10.pdf>
+Package pdftex.def Info: Figuras/HbpCbp_imparB10.pdf used on input line 239.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--240
+[][] [] []
+ []
+
+<Figuras/Hhist_imparB2.pdf, id=102, 1204.51004pt x 903.38504pt>
+File: Figuras/Hhist_imparB2.pdf Graphic file (type pdf)
+
+<use Figuras/Hhist_imparB2.pdf>
+Package pdftex.def Info: Figuras/Hhist_imparB2.pdf used on input line 245.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Hbp_imparB2.pdf, id=103, 1204.51004pt x 903.38504pt>
+File: Figuras/Hbp_imparB2.pdf Graphic file (type pdf)
+
+<use Figuras/Hbp_imparB2.pdf>
+Package pdftex.def Info: Figuras/Hbp_imparB2.pdf used on input line 246.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Cbp_imparB2.pdf, id=104, 1204.51004pt x 903.38504pt>
+File: Figuras/Cbp_imparB2.pdf Graphic file (type pdf)
+
+<use Figuras/Cbp_imparB2.pdf>
+Package pdftex.def Info: Figuras/Cbp_imparB2.pdf used on input line 247.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/Miss_imparB2.pdf, id=105, 1204.51004pt x 903.38504pt>
+File: Figuras/Miss_imparB2.pdf Graphic file (type pdf)
+
+<use Figuras/Miss_imparB2.pdf>
+Package pdftex.def Info: Figuras/Miss_imparB2.pdf used on input line 248.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HhistHbp_imparB2.pdf, id=106, 1204.51004pt x 903.38504pt>
+File: Figuras/HhistHbp_imparB2.pdf Graphic file (type pdf)
+
+<use Figuras/HhistHbp_imparB2.pdf>
+Package pdftex.def Info: Figuras/HhistHbp_imparB2.pdf used on input line 249.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+<Figuras/HbpCbp_imparB2.pdf, id=107, 1204.51004pt x 903.38504pt>
+File: Figuras/HbpCbp_imparB2.pdf Graphic file (type pdf)
+
+<use Figuras/HbpCbp_imparB2.pdf>
+Package pdftex.def Info: Figuras/HbpCbp_imparB2.pdf used on input line 250.
+(pdftex.def)             Requested size: 118.80121pt x 89.0894pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--251
+[][] [] []
+ []
+
+<Figuras/MeanPeriod_logisticoB10.pdf, id=108, 1204.5pt x 903.375pt>
+File: Figuras/MeanPeriod_logisticoB10.pdf Graphic file (type pdf)
+
+<use Figuras/MeanPeriod_logisticoB10.pdf>
+Package pdftex.def Info: Figuras/MeanPeriod_logisticoB10.pdf used on input line
+ 258.
+(pdftex.def)             Requested size: 316.80121pt x 237.60127pt.
+) (Conclusions.tex)
+(SwitchingPaper.bbl [12] [13 <./Figuras/SwitchParImpar.pdf>] [14 <./Figuras/Hhi
+st_tentB10.pdf> <./Figuras/Hbp_tentB10.pdf> <./Figuras/Miss_tentB10.pdf> <./Fig
+uras/HhistHbp_tentB10.pdf> <./Figuras/HbpCbp_tentB10.pdf> <./Figuras/HbpCbp_ten
+tB2.pdf> <./Figuras/Hhist_logisticoB10.pdf> <./Figuras/Hbp_logisticoB10.pdf> <.
+/Figuras/Cbp_logisticoB10.pdf> <./Figuras/Miss_logisticoB10.pdf> <./Figuras/Hhi
+stHbp_logisticoB10.pdf> <./Figuras/HbpCbp_logisticoB10.pdf>] [15 <./Figuras/Hhi
+st_logisticoB2.pdf> <./Figuras/Hbp_logisticoB2.pdf> <./Figuras/Cbp_logisticoB2.
+pdf> <./Figuras/Miss_logisticoB2.pdf> <./Figuras/HhistHbp_logisticoB2.pdf> <./F
+iguras/HbpCbp_logisticoB2.pdf> <./Figuras/Hhist_switchB10.pdf> <./Figuras/Hbp_s
+witchB10.pdf> <./Figuras/Cbp_switchB10.pdf> <./Figuras/Miss_switchB10.pdf> <./F
+iguras/HhistHbp_switchB10.pdf> <./Figuras/HbpCbp_switchB10.pdf>] [16 <./Figuras
+/Hhist_switchB2.pdf> <./Figuras/Hbp_switchB2.pdf> <./Figuras/Cbp_switchB2.pdf> 
+<./Figuras/Miss_switchB2.pdf> <./Figuras/HhistHbp_switchB2.pdf> <./Figuras/HbpC
+bp_switchB2.pdf> <./Figuras/Hhist_parB10.pdf> <./Figuras/Hbp_parB10.pdf> <./Fig
+uras/Cbp_parB10.pdf> <./Figuras/Miss_parB10.pdf> <./Figuras/HhistHbp_parB10.pdf
+> <./Figuras/HbpCbp_parB10.pdf>] [17 <./Figuras/Hhist_parB2.pdf> <./Figuras/Hbp
+_parB2.pdf> <./Figuras/Cbp_parB2.pdf> <./Figuras/Miss_parB2.pdf> <./Figuras/Hhi
+stHbp_parB2.pdf> <./Figuras/HbpCbp_parB2.pdf> <./Figuras/Hhist_imparB10.pdf> <.
+/Figuras/Hbp_imparB10.pdf> <./Figuras/Cbp_imparB10.pdf> <./Figuras/Miss_imparB1
+0.pdf> <./Figuras/HhistHbp_imparB10.pdf> <./Figuras/HbpCbp_imparB10.pdf>]
+[18 <./Figuras/Hhist_imparB2.pdf> <./Figuras/Hbp_imparB2.pdf> <./Figuras/Cbp_im
+parB2.pdf> <./Figuras/Miss_imparB2.pdf> <./Figuras/HhistHbp_imparB2.pdf> <./Fig
+uras/HbpCbp_imparB2.pdf> <./Figuras/MeanPeriod_logisticoB10.pdf>]
+Missing character: There is no Ð in font cmr10!
+Missing character: There is no Ð in font cmr10!
+Missing character: There is no — in font cmr10!
+Missing character: There is no Ð in font cmr10!
+Missing character: There is no Ð in font cmr10!
+ [19]
+Missing character: There is no ó in font cmr10!
+)
+[20] (SwitchingPaper.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3631 strings out of 493622
+ 57983 string characters out of 3141217
+ 126582 words of memory out of 3000000
+ 6939 multiletter control sequences out of 15000+200000
+ 12547 words of font info for 49 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 44i,18n,42p,1125b,264s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmtt12.pfb>
+Output written on SwitchingPaper.pdf (20 pages, 4948407 bytes).
+PDF statistics:
+ 323 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
+
