@@ -10,8 +10,8 @@
 
 int main()
 {
-    float Base, Presition, Map;
-
+    float Base, Presition, Map, Map0;
+/**
     printf("Tent precisión flotante de 32 bits\n");
     Map = .3;
     for (int i = 0; i < 27; i++) // Va sorteando condiciones iniciales
@@ -27,7 +27,7 @@ int main()
         }
     }
     printf("\n");
-
+/**
     printf("Tent decimal de un fraccional con floor\n");
     Map = .3;
     for (int i = 0; i < 27; i++) // Va sorteando condiciones iniciales
@@ -65,7 +65,7 @@ int main()
         }
     }
     printf("\n");
-
+/**/
     printf("Tent decimal de un fraccional con round\n");
     Map = .3;
     for (int i = 0; i < 27; i++) // Va sorteando condiciones iniciales
@@ -103,7 +103,7 @@ int main()
         }
     }
     printf("\n");
-
+/**
     printf("Tent binario de cinco fraccionales con floor\n");
     Map = .3;
     for (int i = 0; i < 8; i++) // Va sorteando condiciones iniciales
@@ -140,5 +140,51 @@ int main()
                 printf("\t*.03125\t%.30f\n", Map);
         }
     }
+    printf("\n");
+/**
+    printf("Logístico binario de un fraccional con round\n");
+    Map = .5;
+    for (int i = 0; i < 8; i++) // Va sorteando condiciones iniciales
+    {
+        printf("%.30f\n", Map);
+
+        Map0 = Map;
+        Map = 1 - Map0;
+                printf("\t1-Map\t%.30f\n", Map);
+            Map = Map0*Map;
+                printf("\t*Map\t%.30f\n", Map);
+            Map = 2*Map;
+                printf("\t*2\t%.30f\n", Map);
+            Map = round(Map);
+                printf("\tround\t%.30f\n", Map);
+            Map = .5*Map;
+                printf("\t*.5\t%.30f\n", Map);
+            Map = 4*Map;
+                printf("\t*4\t%.30f\n", Map);
+    }
+    printf("\n");
+/**
+    printf("Pruebas de redondeo\n");
+
+    Map0 = .5;
+        printf("\tValor\t%.30f\n", Map0);
+
+    Map = round(Map0);
+        printf("\t\tround\t%.30f\n", Map);
+
+    Map = nearbyintf(Map0);
+        printf("\t\tnearbyintf\t%.30f\n", Map);
+
+    Map0 = *.3;
+        printf("\tValor\t%.30f\n", Map0);
+
+    Map = round(Map0);
+        printf("\t\tround\t%.30f\n", Map);
+
+    Map = nearbyintf(Map0);
+        printf("\t\tnearbyintf\t%.30f\n", Map);
+
+    printf("\n");
+/**/
 }
 
