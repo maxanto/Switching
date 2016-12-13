@@ -12,11 +12,11 @@ int main()
 {
     int Bases[] = {10}; // Vector con las bases que quiero probar
         int NBases = (sizeof(Bases)/sizeof(Bases[0]));
-    int Precisions[] = {1, 2};//, 3 ,4 ,5 ,6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15}; //Contiene todas las precisiones que voy barriendo
+    int Precisions[] = {1, 2, 3 ,4 ,5 ,6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15}; //Contiene todas las precisiones que voy barriendo
         int NPrecisions = (sizeof(Precisions)/sizeof(Precisions[0])); // Cantidad de precisiones
-    double Margins[2] = {0, 1};
+    double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
     unsigned long int NInitialConditions = 100; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
-    unsigned long int NIter = 1e3;//1e7; // Es el largo de cada atractor
+    unsigned long int NIter = 1e7; // Es el largo de cada atractor
 
     unsigned long int Bins = 1024; // Cantidad de bines del histograma
     unsigned long int DimEmb = 6; // Dimensión de embedding para MP, BP y BPW
@@ -53,11 +53,11 @@ int main()
 
             Scale = pow((double)Bases[iBases],(double)Precisions[iPrecisions]); // calculo el valor de la escala para redondear. pow sirve para double
             InvScale = 1/Scale;
-printf("%.16e %.16e\n", Scale, InvScale);
+
             for (unsigned int iInitialCondition = 0; iInitialCondition < NInitialConditions; iInitialCondition++) // Va sorteando condiciones iniciales
             {
 
-                Map[1] = InvScale*floor(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de round
+                Map[1] = InvScale*round(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de round
 
                 printf("\t\tCondicion inicial %d/%d = %.32f\n", (int)iInitialCondition+1, (int)NInitialConditions, Map[1]); // Para debuguear
 
@@ -69,7 +69,7 @@ printf("%.16e %.16e\n", Scale, InvScale);
                     }
                     else
                     {
-                        Map[iMap+1] = InvScale*(floor(Scale*2*(1 - Map[iMap])));
+                        Map[iMap+1] = InvScale*(round(Scale*2*(1 - Map[iMap])));
                     }
                 } // Acá ya tengo el atractor guardado en el vector Map
 
@@ -96,7 +96,6 @@ printf("%.16e %.16e\n", Scale, InvScale);
 
                 sprintf(StrAux, "B%d_P%d_CI%d", Bases[iBases], Precisions[iPrecisions],iInitialCondition);
                 fprintf(ResultsLog,"%s\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\n", StrAux, Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period); //Guarda los valores en el archivo de salida, escribo la condición inicial para evaluar el comportamiento del rand()
-save_vector(Map,StrAux);
             }
         }
     }

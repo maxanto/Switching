@@ -14,7 +14,7 @@ int main()
         int NBases = (sizeof(Bases)/sizeof(Bases[0]));
     int Precisions[] = {1, 2, 3 ,4 ,5 ,6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15}; //Contiene todas las precisiones que voy barriendo
         int NPrecisions = (sizeof(Precisions)/sizeof(Precisions[0])); // Cantidad de precisiones
-    double Margins[2] = {0, 1};
+    double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
     unsigned long int NInitialConditions = 100; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
     unsigned long int NIter = 1e7; // Es el largo de cada atractor
 
@@ -54,28 +54,16 @@ int main()
             Scale = pow((double)Bases[iBases],(double)Precisions[iPrecisions]); // calculo el valor de la escala para redondear. pow sirve para double
             InvScale = 1/Scale;
 
-            Hval = 0;
-            Qval = 0;
-            Cval = 0;
-            Hbp = 0;
-            Qbp = 0;
-            Cbp = 0;
-            Hbpw = 0;
-            Qbpw = 0;
-            Cbpw = 0;
-            MP = 0;
-            Period = 0;
-
             for (unsigned int iInitialCondition = 0; iInitialCondition < NInitialConditions; iInitialCondition++) // Va sorteando condiciones iniciales
             {
 
-                Map[1] = InvScale*floor(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de round
+                Map[1] = InvScale*round(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de round
 
                 printf("\t\tCondicion inicial %d/%d = %.32f\n", (int)iInitialCondition+1, (int)NInitialConditions, Map[1]); // Para debuguear
 
                 for (unsigned long int iMap = 1; iMap < NIter; iMap++) // Va riterando el mapa logístico
                 {
-                    Map[iMap+1] =  4*InvScale*floor(Scale*Map[iMap]*(1-Map[iMap])); // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
+                    Map[iMap+1] =  4*InvScale*round(Scale*Map[iMap]*(1-Map[iMap])); // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
                 } // Acá ya tengo el atractor guardado en el vector Map
 
                 double* PDFval = PDF_val(Map, Bins, Margins, "normalyzed"); // Genera el histograma de patrones de órden
