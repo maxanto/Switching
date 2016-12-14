@@ -12,7 +12,7 @@ int main()
 {
     int Bases[] = {2}; // Vector con las bases que quiero probar
         int NBases = (sizeof(Bases)/sizeof(Bases[0]));
-    int Precisions[] = {1, 2, 3 ,4 ,5 ,6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52}; //Contiene todas las precisiones que voy barriendo
+    int Precisions[] = {1, 2, 3, 4, 5, 6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52}; //Contiene todas las precisiones que voy barriendo
         int NPrecisions = (sizeof(Precisions)/sizeof(Precisions[0])); // Cantidad de precisiones
     double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
     unsigned long int NInitialConditions = 100; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
@@ -22,8 +22,8 @@ int main()
     unsigned long int DimEmb = 6; // Dimensión de embedding para MP, BP y BPW
 
     double* Map; //Declare the pointer
-    Map = (double*) malloc (sizeof(double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
-    Map[0] = (double)NIter;
+        Map = (double*) malloc (sizeof(double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
+        Map[0] = (double)NIter;
 
     char StrAux[32]; // Acá armo los nombres de los archivos
     double Scale; // Es la escala que utilizo para multiplicar y dividir en el floor
@@ -61,7 +61,7 @@ int main()
 
                 printf("\t\tCondicion inicial %d/%d = %.32f\n", (int)iInitialCondition+1, (int)NInitialConditions, Map[1]); // Para debuguear
 
-                for (unsigned long int iMap = 1; iMap < NIter; iMap = iMap++) // Va iterando switch
+                for (unsigned long int iMap = 1; iMap < NIter; iMap++) // Va riterando el mapa logístico
                 {
                     //Itero tent
                     if (Map[iMap] < 0.5)

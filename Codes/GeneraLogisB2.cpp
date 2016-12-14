@@ -22,8 +22,8 @@ int main()
     unsigned long int DimEmb = 6; // Dimensión de embedding para MP, BP y BPW
 
     double* Map; //Declare the pointer
-    Map = (double*) malloc (sizeof(double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
-    Map[0] = (double)NIter;
+        Map = (double*) malloc (sizeof(double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
+        Map[0] = (double)NIter;
 
     char StrAux[32]; // Acá armo los nombres de los archivos
     double Scale; // Es la escala que utilizo para multiplicar y dividir en el floor
