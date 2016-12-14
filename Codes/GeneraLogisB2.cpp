@@ -12,11 +12,11 @@ int main()
 {
     int Bases[] = {2}; // Vector con las bases que quiero probar
         int NBases = (sizeof(Bases)/sizeof(Bases[0]));
-    int Precisions[] = {1, 2, 3}; //,4 ,5 ,6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52}; //Contiene todas las precisiones que voy barriendo
+    int Precisions[] = {1, 2, 3, 4, 5, 6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52}; //Contiene todas las precisiones que voy barriendo
         int NPrecisions = (sizeof(Precisions)/sizeof(Precisions[0])); // Cantidad de precisiones
     double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
     unsigned long int NInitialConditions = 10; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
-    unsigned long int NIter = 1e2; // Es el largo de cada atractor
+    unsigned long int NIter = 1e7; // Es el largo de cada atractor
 
     unsigned long int Bins = 1024; // Cantidad de bines del histograma
     unsigned long int DimEmb = 6; // Dimensión de embedding para MP, BP y BPW
@@ -65,8 +65,7 @@ int main()
                 {
                     Map[iMap+1] =  4*InvScale*floor(Scale*Map[iMap]*(1-Map[iMap])); // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
                 } // Acá ya tengo el atractor guardado en el vector Map
-sprintf(StrAux,"LogisB2_P%d_IC%d.dat",Precisions[iPrecisions],(int)iInitialCondition+1);
-save_vector(Map,StrAux);
+
                 double* PDFval = PDF_val(Map, Bins, Margins, "normalyzed"); // Genera el histograma de patrones de órden
                 Hval = entropy(PDFval, "normalyzed"); // Le calcula la entropía y la suma para el promedio
                 Qval = disequilibrum(PDFval, "normalyzed"); // Le calcula el desequilibrio
