@@ -57,14 +57,14 @@ int main()
             for (unsigned int iInitialCondition = 0; iInitialCondition < NInitialConditions; iInitialCondition++) // Va sorteando condiciones iniciales
             {
 
-                Map[1] = InvScale*round(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de round
+                Map[1] = InvScale*floor(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de floor
 
                 printf("\t\tCondicion inicial %d/%d = %.32f\n", (int)iInitialCondition+1, (int)NInitialConditions, Map[1]); // Para debuguear
 
                 for (unsigned long int iMap = 1; iMap < NIter; iMap = iMap++) // Va iterando switch
                 {
                     //Itero logistico
-                    Map[iMap+1] =  4*InvScale*round(Scale*Map[iMap]*(1-Map[iMap]));
+                    Map[iMap+1] =  4*InvScale*floor(Scale*Map[iMap]*(1-Map[iMap]));
 
                     //Itero tent
                     if (Map[iMap] < 0.5)
@@ -73,7 +73,7 @@ int main()
                     }
                     else
                     {
-                        Map[iMap+1] = InvScale*(round(Scale*2*(1 - Map[iMap+1])));
+                        Map[iMap+1] = InvScale*(floor(Scale*2*(1 - Map[iMap+1])));
                     }
 
                 }//Acá ya tengo el atractor guardado en el vector Map
