@@ -7,8 +7,8 @@ clc
 
 %% Parámetros generales
 
-Mapa = 'LogisticoB2';
-Bases = 10;
+Mapa = 'SwitchOddB2';
+Bases = 2;
 Precisiones = 1:52;
 D = 6;
 NMap = 1E7;

@@ -30,7 +30,7 @@ int main()
 /**
     printf("Tent decimal de un fraccional con floor\n");
     Map = .3;
-    for (int i = 0; i < 27; i++) // Va sorteando condiciones iniciales
+    for (int i = 0; i < 5; i++) // Va sorteando condiciones iniciales
     {
         printf("%.30f\n", Map);
         if (Map < .5)
@@ -60,50 +60,50 @@ int main()
                 printf("\t*10\t%.30f\n", Map);
             Map = floor(Map);
                 printf("\tfloor\t%.30f\n", Map);
-            Map = .1*Map;
-                printf("\t*.1\t%.30f\n", Map);
-        }
-    }
-    printf("\n");
-/**/
-    printf("Tent decimal de un fraccional con round\n");
-    Map = .3;
-    for (int i = 0; i < 27; i++) // Va sorteando condiciones iniciales
-    {
-        printf("%.30f\n", Map);
-        if (Map < .5)
-        {
-            Map = 2*Map;
-                printf("\t2*Map\t%.30f\n", Map);
-            Map = 10*Map;
-                printf("\t*10\t%.30f\n", Map);
-            Map = round(Map);
-                printf("\tround\t%.30f\n", Map);
-            Map = .1*Map;
-                printf("\t*.1\t%.30f\n", Map);
-        }
-        else
-        {
-            Map = 1-Map;
-                printf("\t1-Map\t%.30f\n", Map);
-            Map = 10*Map;
-                printf("\t*10\t%.30f\n", Map);
-            Map = round(Map);
-                printf("\tround\t%.30f\n", Map);
-            Map = .1*Map;
-                printf("\t*.1\t%.30f\n", Map);
-            Map = 2*Map;
-                printf("\t2*Map\t%.30f\n", Map);
-            Map = 10*Map;
-                printf("\t*10\t%.30f\n", Map);
-            Map = round(Map);
-                printf("\tround\t%.30f\n", Map);
             Map = .1*Map;
                 printf("\t*.1\t%.30f\n", Map);
         }
     }
     printf("\n");
 /**
+    printf("Tent decimal de un fraccional con round\n");
+    Map = .3;
+    for (int i = 0; i < 5; i++) // Va sorteando condiciones iniciales
+    {
+        printf("%.30f\n", Map);
+        if (Map < .5)
+        {
+            Map = 2*Map;
+                printf("\t2*Map\t%.30f\n", Map);
+            Map = 10*Map;
+                printf("\t*10\t%.30f\n", Map);
+            Map = round(Map);
+                printf("\tround\t%.30f\n", Map);
+            Map = .1*Map;
+                printf("\t*.1\t%.30f\n", Map);
+        }
+        else
+        {
+            Map = 1-Map;
+                printf("\t1-Map\t%.30f\n", Map);
+            Map = 10*Map;
+                printf("\t*10\t%.30f\n", Map);
+            Map = round(Map);
+                printf("\tround\t%.30f\n", Map);
+            Map = .1*Map;
+                printf("\t*.1\t%.30f\n", Map);
+            Map = 2*Map;
+                printf("\t2*Map\t%.30f\n", Map);
+            Map = 10*Map;
+                printf("\t*10\t%.30f\n", Map);
+            Map = round(Map);
+                printf("\tround\t%.30f\n", Map);
+            Map = .1*Map;
+                printf("\t*.1\t%.30f\n", Map);
+        }
+    }
+    printf("\n");
+/**/
     printf("Tent binario de cinco fraccionales con floor\n");
     Map = .3;
     for (int i = 0; i < 8; i++) // Va sorteando condiciones iniciales
