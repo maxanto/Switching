@@ -1,0 +1,794 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.31)  16 DEC 2016 14:47
+entering extended mode
+**./SwitchingPaper.tex
+(SwitchingPaper.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 70 language(s) loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\elsevier\elsart.cls"
+Document Class: elsart 2007/08/16, 2.20: Elsevier
+\@frontmatterwidth=\dimen102
+\@bls=\dimen103
+\eqntopsep=\skip41
+\eqnarraycolsep=\dimen104
+\labelwidthi=\dimen105
+\labelwidthii=\dimen106
+\labelwidthiii=\dimen107
+\labelwidthiv=\dimen108
+\@maxlistdepth=\count79
+\eqnbaselineskip=\skip42
+\eqnlineskip=\skip43
+\mathindent=\dimen109
+\rulepreskip=\dimen110
+\rulepostskip=\dimen111
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+\c@thm=\count85
+\c@alg=\count86
+\c@algorithm=\count87
+\c@note=\count88
+\c@summ=\count89
+\c@case=\count90
+\@tempcntc=\count91
+\c@figure=\count92
+\c@table=\count93
+\t@glob@notes=\toks14
+\t@loc@notes=\toks15
+\note@cnt=\count94
+\corauth@text=\toks16
+\email@text=\toks17
+\url@text=\toks18
+\c@corauth=\count95
+\c@author=\count96
+\n@author=\count97
+\c@collab=\count98
+\n@collab=\count99
+\c@address=\count100
+\sv@mathsurround=\dimen112
+\sv@hyphenpenalty=\count101
+\prev@elem=\count102
+\cur@elem=\count103
+\fm@box=\box26
+\fm@size=\dimen113
+\t@abstract=\box27
+\t@keyword=\box28
+\t@xtheight=\dimen114
+\@logoheight=\dimen115
+\@pubyear=\count104
+\c@firstpage=\count105
+\c@lastpage=\count106
+\slashbox=\box29
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1415.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1415.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1415.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 1415.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+\Slashbox=\box30
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 1416.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1416.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks19
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count107
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+\abovecaptionskip=\skip44
+\belowcaptionskip=\skip45
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = macro:->\@makefigurecaption .
+\c@ContinuedFloat=\count108
+)
+\c@KVtest=\count109
+\sf@farskip=\skip46
+\sf@captopadj=\dimen125
+\sf@capskip=\skip47
+\sf@nearskip=\skip48
+\c@subfigure=\count110
+\c@subfigure@save=\count111
+\c@lofdepth=\count112
+\c@subtable=\count113
+\c@subtable@save=\count114
+\c@lotdepth=\count115
+\sf@top=\skip49
+\sf@bottom=\skip50
+)
+
+LaTeX Warning: Unused global option(s):
+    [a4paper].
+
+(SwitchingPaper.aux
+
+LaTeX Warning: Label `eq:vectores' multiply defined.
+
+
+LaTeX Warning: Label `eq:permuta' multiply defined.
+
+
+LaTeX Warning: Label `eq:frequ' multiply defined.
+
+
+LaTeX Warning: Label `fig:seqimparbin' multiply defined.
+
+)
+\openout1 = `SwitchingPaper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count116
+\scratchdimen=\dimen126
+\scratchbox=\box31
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen127
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks22
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(Frontmatter.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 16.
+Missing character: There is no Â in font cmr10!
+Missing character: There is no « in font cmr10!
+\c@sv@footnote=\count122
+) (Introduction.tex [1{C:/Users/Maxi/AppData/Local/MiKTeX/2.9/pdftex/config/pdf
+tex.map}]
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [2]
+
+LaTeX Warning: Reference `sec:quanti' on page 3 undefined on input line 33.
+
+) (ITQs.tex
+
+LaTeX Warning: Citation `aka varios' on page 3 undefined on input line 2.
+
+[3] [4] [5] [6]
+
+LaTeX Warning: Reference `fig:planezone' on page 7 undefined on input line 179.
+
+
+) (Results.tex [7]
+Missing character: There is no Â in font cmr12!
+Missing character: There is no « in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no « in font cmr12!
+
+
+LaTeX Warning: Reference `fig:tent' on page 8 undefined on input line 31.
+
+
+LaTeX Warning: Reference `fig:tent' on page 8 undefined on input line 31.
+
+
+LaTeX Warning: Reference `fig:tent' on page 8 undefined on input line 31.
+
+
+LaTeX Warning: Reference `fig:tent' on page 8 undefined on input line 31.
+
+
+LaTeX Warning: Reference `fig:tent' on page 8 undefined on input line 34.
+
+
+LaTeX Warning: Reference `fig:tent' on page 8 undefined on input line 37.
+
+
+LaTeX Warning: Reference `fig:tent' on page 8 undefined on input line 38.
+
+[8]
+
+LaTeX Warning: Reference `fig:LOGdecimal' on page 9 undefined on input line 48.
+
+
+
+LaTeX Warning: Reference `fig:LOGbin' on page 9 undefined on input line 49.
+
+[9]
+Overfull \hbox (7.74313pt too wide) in paragraph at lines 56--59
+[]\OT1/cmr/m/n/12 Sequential switch-ing be-tween Tent and Lo-gis-tic maps (SWIT
+CH) SWITCH
+ []
+
+
+LaTeX Warning: Reference `fig:seqdec' on page 10 undefined on input line 67.
+
+[10]
+
+LaTeX Warning: Reference `fig:seqpardec' on page 11 undefined on input line 88.
+
+
+
+LaTeX Warning: Reference `fig:peril' on page 11 undefined on input line 95.
+
+[11] <Figs/SwitchParImpar.pdf, id=53, 825.25447pt x 740.92189pt>
+File: Figs/SwitchParImpar.pdf Graphic file (type pdf)
+
+<use Figs/SwitchParImpar.pdf>
+Package pdftex.def Info: Figs/SwitchParImpar.pdf used on input line 138.
+(pdftex.def)             Requested size: 288.69228pt x 259.19604pt.
+
+<Figs/Hval_LogisticoB2.pdf, id=54, 3179.88pt x 2457.18pt>
+File: Figs/Hval_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/Hval_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/Hval_LogisticoB2.pdf used on input line 168.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hbp_LogisticoB2.pdf, id=55, 3179.88pt x 2457.18pt>
+File: Figs/Hbp_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/Hbp_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/Hbp_LogisticoB2.pdf used on input line 169.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hbpw_LogisticoB2.pdf, id=56, 3179.88pt x 2457.18pt>
+File: Figs/Hbpw_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/Hbpw_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/Hbpw_LogisticoB2.pdf used on input line 170.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Cbp_LogisticoB2.pdf, id=57, 3179.88pt x 2457.18pt>
+File: Figs/Cbp_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/Cbp_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/Cbp_LogisticoB2.pdf used on input line 171.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Cbpw_LogisticoB2.pdf, id=58, 3179.88pt x 2457.18pt>
+File: Figs/Cbpw_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/Cbpw_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/Cbpw_LogisticoB2.pdf used on input line 172.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/MP_LogisticoB2.pdf, id=59, 3179.88pt x 2457.18pt>
+File: Figs/MP_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/MP_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/MP_LogisticoB2.pdf used on input line 173.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Period_LogisticoB2.pdf, id=60, 3179.88pt x 2457.18pt>
+File: Figs/Period_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/Period_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/Period_LogisticoB2.pdf used on input line 174.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/HbpHval_LogisticoB2.pdf, id=61, 3179.88pt x 2457.18pt>
+File: Figs/HbpHval_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/HbpHval_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/HbpHval_LogisticoB2.pdf used on input line 175.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/HbpwHval_LogisticoB2.pdf, id=62, 3179.88pt x 2457.18pt>
+File: Figs/HbpwHval_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/HbpwHval_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/HbpwHval_LogisticoB2.pdf used on input line 176.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/CbpHbp_LogisticoB2.pdf, id=63, 3179.88pt x 2457.18pt>
+File: Figs/CbpHbp_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/CbpHbp_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/CbpHbp_LogisticoB2.pdf used on input line 177.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/CbpwHbpw_LogisticoB2.pdf, id=64, 3179.88pt x 2457.18pt>
+File: Figs/CbpwHbpw_LogisticoB2.pdf Graphic file (type pdf)
+
+<use Figs/CbpwHbpw_LogisticoB2.pdf>
+Package pdftex.def Info: Figs/CbpwHbpw_LogisticoB2.pdf used on input line 178.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hval_TentB2.pdf, id=65, 3179.88pt x 2457.18pt>
+File: Figs/Hval_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/Hval_TentB2.pdf>
+Package pdftex.def Info: Figs/Hval_TentB2.pdf used on input line 197.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+ <Figs/Hbp_TentB2.pdf, id=66, 3179.88pt x 2457.18pt>
+File: Figs/Hbp_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/Hbp_TentB2.pdf>
+Package pdftex.def Info: Figs/Hbp_TentB2.pdf used on input line 198.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+ <Figs/Hbpw_TentB2.pdf, id=67, 3179.88pt x 2457.18pt>
+File: Figs/Hbpw_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/Hbpw_TentB2.pdf>
+Package pdftex.def Info: Figs/Hbpw_TentB2.pdf used on input line 199.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+ <Figs/Cbp_TentB2.pdf, id=68, 3179.88pt x 2457.18pt>
+File: Figs/Cbp_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/Cbp_TentB2.pdf>
+Package pdftex.def Info: Figs/Cbp_TentB2.pdf used on input line 200.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+ <Figs/Cbpw_TentB2.pdf, id=69, 3179.88pt x 2457.18pt>
+File: Figs/Cbpw_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/Cbpw_TentB2.pdf>
+Package pdftex.def Info: Figs/Cbpw_TentB2.pdf used on input line 201.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+ <Figs/MP_TentB2.pdf, id=70, 3179.88pt x 2457.18pt>
+File: Figs/MP_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/MP_TentB2.pdf>
+Package pdftex.def Info: Figs/MP_TentB2.pdf used on input line 202.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Period_TentB2.pdf, id=71, 3179.88pt x 2457.18pt>
+File: Figs/Period_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/Period_TentB2.pdf>
+Package pdftex.def Info: Figs/Period_TentB2.pdf used on input line 203.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/HbpHval_TentB2.pdf, id=72, 3179.88pt x 2457.18pt>
+File: Figs/HbpHval_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/HbpHval_TentB2.pdf>
+Package pdftex.def Info: Figs/HbpHval_TentB2.pdf used on input line 204.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/HbpwHval_TentB2.pdf, id=73, 3179.88pt x 2457.18pt>
+File: Figs/HbpwHval_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/HbpwHval_TentB2.pdf>
+Package pdftex.def Info: Figs/HbpwHval_TentB2.pdf used on input line 205.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/CbpHbp_TentB2.pdf, id=74, 3179.88pt x 2457.18pt>
+File: Figs/CbpHbp_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/CbpHbp_TentB2.pdf>
+Package pdftex.def Info: Figs/CbpHbp_TentB2.pdf used on input line 206.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/CbpwHbpw_TentB2.pdf, id=75, 3179.88pt x 2457.18pt>
+File: Figs/CbpwHbpw_TentB2.pdf Graphic file (type pdf)
+
+<use Figs/CbpwHbpw_TentB2.pdf>
+Package pdftex.def Info: Figs/CbpwHbpw_TentB2.pdf used on input line 207.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hval_SwitchB2.pdf, id=76, 3179.88pt x 2457.18pt>
+File: Figs/Hval_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/Hval_SwitchB2.pdf>
+Package pdftex.def Info: Figs/Hval_SwitchB2.pdf used on input line 225.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hbp_SwitchB2.pdf, id=77, 3179.88pt x 2457.18pt>
+File: Figs/Hbp_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/Hbp_SwitchB2.pdf>
+Package pdftex.def Info: Figs/Hbp_SwitchB2.pdf used on input line 226.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hbpw_SwitchB2.pdf, id=78, 3179.88pt x 2457.18pt>
+File: Figs/Hbpw_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/Hbpw_SwitchB2.pdf>
+Package pdftex.def Info: Figs/Hbpw_SwitchB2.pdf used on input line 227.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Cbp_SwitchB2.pdf, id=79, 3179.88pt x 2457.18pt>
+File: Figs/Cbp_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/Cbp_SwitchB2.pdf>
+Package pdftex.def Info: Figs/Cbp_SwitchB2.pdf used on input line 228.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Cbpw_SwitchB2.pdf, id=80, 3179.88pt x 2457.18pt>
+File: Figs/Cbpw_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/Cbpw_SwitchB2.pdf>
+Package pdftex.def Info: Figs/Cbpw_SwitchB2.pdf used on input line 229.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/MP_SwitchB2.pdf, id=81, 3179.88pt x 2457.18pt>
+File: Figs/MP_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/MP_SwitchB2.pdf>
+Package pdftex.def Info: Figs/MP_SwitchB2.pdf used on input line 230.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Period_SwitchB2.pdf, id=82, 3179.88pt x 2457.18pt>
+File: Figs/Period_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/Period_SwitchB2.pdf>
+Package pdftex.def Info: Figs/Period_SwitchB2.pdf used on input line 231.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/HbpHval_SwitchB2.pdf, id=83, 3179.88pt x 2457.18pt>
+File: Figs/HbpHval_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/HbpHval_SwitchB2.pdf>
+Package pdftex.def Info: Figs/HbpHval_SwitchB2.pdf used on input line 232.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/HbpwHval_SwitchB2.pdf, id=84, 3179.88pt x 2457.18pt>
+File: Figs/HbpwHval_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/HbpwHval_SwitchB2.pdf>
+Package pdftex.def Info: Figs/HbpwHval_SwitchB2.pdf used on input line 233.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/CbpHbp_SwitchB2.pdf, id=85, 3179.88pt x 2457.18pt>
+File: Figs/CbpHbp_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/CbpHbp_SwitchB2.pdf>
+Package pdftex.def Info: Figs/CbpHbp_SwitchB2.pdf used on input line 234.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/CbpwHbpw_SwitchB2.pdf, id=86, 3179.88pt x 2457.18pt>
+File: Figs/CbpwHbpw_SwitchB2.pdf Graphic file (type pdf)
+
+<use Figs/CbpwHbpw_SwitchB2.pdf>
+Package pdftex.def Info: Figs/CbpwHbpw_SwitchB2.pdf used on input line 235.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hval_SwitchEvenB2.pdf, id=87, 3179.88pt x 2457.18pt>
+File: Figs/Hval_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/Hval_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/Hval_SwitchEvenB2.pdf used on input line 253.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hbp_SwitchEvenB2.pdf, id=88, 3179.88pt x 2457.18pt>
+File: Figs/Hbp_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/Hbp_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/Hbp_SwitchEvenB2.pdf used on input line 254.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hbpw_SwitchEvenB2.pdf, id=89, 3179.88pt x 2457.18pt>
+File: Figs/Hbpw_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/Hbpw_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/Hbpw_SwitchEvenB2.pdf used on input line 255.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Cbp_SwitchEvenB2.pdf, id=90, 3179.88pt x 2457.18pt>
+File: Figs/Cbp_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/Cbp_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/Cbp_SwitchEvenB2.pdf used on input line 256.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Cbpw_SwitchEvenB2.pdf, id=91, 3179.88pt x 2457.18pt>
+File: Figs/Cbpw_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/Cbpw_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/Cbpw_SwitchEvenB2.pdf used on input line 257.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/MP_SwitchEvenB2.pdf, id=92, 3179.88pt x 2457.18pt>
+File: Figs/MP_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/MP_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/MP_SwitchEvenB2.pdf used on input line 258.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Period_SwitchEvenB2.pdf, id=93, 3179.88pt x 2457.18pt>
+File: Figs/Period_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/Period_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/Period_SwitchEvenB2.pdf used on input line 259.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/HbpHval_SwitchEvenB2.pdf, id=94, 3179.88pt x 2457.18pt>
+File: Figs/HbpHval_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/HbpHval_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/HbpHval_SwitchEvenB2.pdf used on input line 260.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/HbpwHval_SwitchEvenB2.pdf, id=95, 3179.88pt x 2457.18pt>
+File: Figs/HbpwHval_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/HbpwHval_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/HbpwHval_SwitchEvenB2.pdf used on input line 261.
+
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/CbpHbp_SwitchEvenB2.pdf, id=96, 3179.88pt x 2457.18pt>
+File: Figs/CbpHbp_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/CbpHbp_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/CbpHbp_SwitchEvenB2.pdf used on input line 262.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/CbpwHbpw_SwitchEvenB2.pdf, id=97, 3179.88pt x 2457.18pt>
+File: Figs/CbpwHbpw_SwitchEvenB2.pdf Graphic file (type pdf)
+
+<use Figs/CbpwHbpw_SwitchEvenB2.pdf>
+Package pdftex.def Info: Figs/CbpwHbpw_SwitchEvenB2.pdf used on input line 263.
+
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hval_SwitchOddB2.pdf, id=98, 3179.88pt x 2457.18pt>
+File: Figs/Hval_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/Hval_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/Hval_SwitchOddB2.pdf used on input line 269.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hbp_SwitchOddB2.pdf, id=99, 3179.88pt x 2457.18pt>
+File: Figs/Hbp_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/Hbp_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/Hbp_SwitchOddB2.pdf used on input line 270.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Hbpw_SwitchOddB2.pdf, id=100, 3179.88pt x 2457.18pt>
+File: Figs/Hbpw_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/Hbpw_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/Hbpw_SwitchOddB2.pdf used on input line 271.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Cbp_SwitchOddB2.pdf, id=101, 3179.88pt x 2457.18pt>
+File: Figs/Cbp_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/Cbp_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/Cbp_SwitchOddB2.pdf used on input line 272.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Cbpw_SwitchOddB2.pdf, id=102, 3179.88pt x 2457.18pt>
+File: Figs/Cbpw_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/Cbpw_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/Cbpw_SwitchOddB2.pdf used on input line 273.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/MP_SwitchOddB2.pdf, id=103, 3179.88pt x 2457.18pt>
+File: Figs/MP_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/MP_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/MP_SwitchOddB2.pdf used on input line 274.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/Period_SwitchOddB2.pdf, id=104, 3179.88pt x 2457.18pt>
+File: Figs/Period_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/Period_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/Period_SwitchOddB2.pdf used on input line 275.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/HbpHval_SwitchOddB2.pdf, id=105, 3179.88pt x 2457.18pt>
+File: Figs/HbpHval_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/HbpHval_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/HbpHval_SwitchOddB2.pdf used on input line 276.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/HbpwHval_SwitchOddB2.pdf, id=106, 3179.88pt x 2457.18pt>
+File: Figs/HbpwHval_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/HbpwHval_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/HbpwHval_SwitchOddB2.pdf used on input line 277.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/CbpHbp_SwitchOddB2.pdf, id=107, 3179.88pt x 2457.18pt>
+File: Figs/CbpHbp_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/CbpHbp_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/CbpHbp_SwitchOddB2.pdf used on input line 278.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+
+<Figs/CbpwHbpw_SwitchOddB2.pdf, id=108, 3179.88pt x 2457.18pt>
+File: Figs/CbpwHbpw_SwitchOddB2.pdf Graphic file (type pdf)
+
+<use Figs/CbpwHbpw_SwitchOddB2.pdf>
+Package pdftex.def Info: Figs/CbpwHbpw_SwitchOddB2.pdf used on input line 279.
+(pdftex.def)             Requested size: 126.7229pt x 97.89552pt.
+) (Conclusions.tex) (SwitchingPaper.bbl
+[12]
+Missing character: There is no Ð in font cmr10!
+ [13 <./Figs/SwitchParImpar.pdf>]
+Missing character: There is no Ð in font cmr10!
+ [14 <./Figs/Hval_LogisticoB2.pdf> <./Figs/Hbp_LogisticoB2.pdf> <./Figs/Hbpw_Lo
+gisticoB2.pdf> <./Figs/Cbp_LogisticoB2.pdf> <./Figs/Cbpw_LogisticoB2.pdf> <./Fi
+gs/MP_LogisticoB2.pdf> <./Figs/Period_LogisticoB2.pdf> <./Figs/HbpHval_Logistic
+oB2.pdf> <./Figs/HbpwHval_LogisticoB2.pdf> <./Figs/CbpHbp_LogisticoB2.pdf> <./F
+igs/CbpwHbpw_LogisticoB2.pdf>]
+Missing character: There is no — in font cmr10!
+ [15 <./Figs/Hval_TentB2.pdf> <./Figs/Hbp_TentB2.pdf> <./Figs/Hbpw_TentB2.pdf> 
+<./Figs/Cbp_TentB2.pdf> <./Figs/Cbpw_TentB2.pdf> <./Figs/MP_TentB2.pdf> <./Figs
+/Period_TentB2.pdf> <./Figs/HbpHval_TentB2.pdf> <./Figs/HbpwHval_TentB2.pdf> <.
+/Figs/CbpHbp_TentB2.pdf> <./Figs/CbpwHbpw_TentB2.pdf>] [16 <./Figs/Hval_SwitchB
+2.pdf> <./Figs/Hbp_SwitchB2.pdf> <./Figs/Hbpw_SwitchB2.pdf> <./Figs/Cbp_SwitchB
+2.pdf> <./Figs/Cbpw_SwitchB2.pdf> <./Figs/MP_SwitchB2.pdf> <./Figs/Period_Switc
+hB2.pdf> <./Figs/HbpHval_SwitchB2.pdf> <./Figs/HbpwHval_SwitchB2.pdf> <./Figs/C
+bpHbp_SwitchB2.pdf> <./Figs/CbpwHbpw_SwitchB2.pdf>]
+Missing character: There is no Ð in font cmr10!
+Missing character: There is no Ð in font cmr10!
+ [17 <./Figs/Hval_SwitchEvenB2.pdf> <./Figs/Hbp_SwitchEvenB2.pdf> <./Figs/Hbpw_
+SwitchEvenB2.pdf> <./Figs/Cbp_SwitchEvenB2.pdf> <./Figs/Cbpw_SwitchEvenB2.pdf> 
+<./Figs/MP_SwitchEvenB2.pdf> <./Figs/Period_SwitchEvenB2.pdf> <./Figs/HbpHval_S
+witchEvenB2.pdf> <./Figs/HbpwHval_SwitchEvenB2.pdf> <./Figs/CbpHbp_SwitchEvenB2
+.pdf> <./Figs/CbpwHbpw_SwitchEvenB2.pdf>] [18 <./Figs/Hval_SwitchOddB2.pdf> <./
+Figs/Hbp_SwitchOddB2.pdf> <./Figs/Hbpw_SwitchOddB2.pdf> <./Figs/Cbp_SwitchOddB2
+.pdf> <./Figs/Cbpw_SwitchOddB2.pdf> <./Figs/MP_SwitchOddB2.pdf> <./Figs/Period_
+SwitchOddB2.pdf> <./Figs/HbpHval_SwitchOddB2.pdf> <./Figs/HbpwHval_SwitchOddB2.
+pdf> <./Figs/CbpHbp_SwitchOddB2.pdf> <./Figs/CbpwHbpw_SwitchOddB2.pdf>]
+Missing character: There is no ó in font cmr10!
+) [19] (SwitchingPaper.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3628 strings out of 493622
+ 57664 string characters out of 3141217
+ 120513 words of memory out of 3000000
+ 6936 multiletter control sequences out of 15000+200000
+ 12547 words of font info for 49 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 44i,18n,42p,1128b,264s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmtt12.pfb>
+Output written on SwitchingPaper.pdf (19 pages, 3322866 bytes).
+PDF statistics:
+ 1197 PDF objects out of 1200 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
+
