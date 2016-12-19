@@ -67,13 +67,13 @@ int main()
                     Map[iMap+1] =  4*InvScale*floor(Scale*Map[iMap]*(1-Map[iMap]));
 
                     //Itero tent
-                    if (Map[iMap] < 0.5)
+                    if (Map[iMap+1] < 0.5)
                     {
-                        Map[iMap+1] = 2*Map[iMap];
+                        Map[iMap+1] = 2*Map[iMap+1];
                     }
                     else
                     {
-                        Map[iMap+1] = InvScale*(floor(Scale*2*(1 - Map[iMap])));
+                        Map[iMap+1] = InvScale*(floor(Scale*2*(1 - Map[iMap+1])));
                     }
 
                 }//Acá ya tengo el atractor guardado en el vector Map

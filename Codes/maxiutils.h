@@ -422,7 +422,7 @@ unsigned long int find_period(double x_vec[], unsigned long int Dim)
         if (iseq == 1)
         {
             free(LastDimVec);
-            return LengthVec - i_Vec - Dim;
+            return LengthVec - i_Vec - Dim + 1;
         }
     }
 

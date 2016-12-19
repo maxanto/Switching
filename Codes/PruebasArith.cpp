@@ -11,6 +11,7 @@
 int main()
 {
     float Base, Presition, Map, Map0;
+    double DoubleAux;
 /**
     printf("Tent precisión flotante de 32 bits\n");
     Map = .3;
@@ -103,7 +104,7 @@ int main()
         }
     }
     printf("\n");
-/**/
+/**
     printf("Tent binario de cinco fraccionales con floor\n");
     Map = .3;
     for (int i = 0; i < 8; i++) // Va sorteando condiciones iniciales
@@ -185,6 +186,64 @@ int main()
         printf("\t\tnearbyintf\t%.30f\n", Map);
 
     printf("\n");
-/**/
+/**
+    printf("Odd Switch P = 1\n");
+    Map = .5;
+
+    for (int i = 0; i < 8; i++) // Va sorteando condiciones iniciales
+    {
+        printf("%.30f\n", Map);
+
+        Map0 = Map;
+
+        puts("Logistico");
+        Map = 1 - Map0;
+            printf("\t1-Map\t%.30f\n", Map);
+        Map = Map0*Map;
+            printf("\t*Map\t%.30f\n", Map);
+        Map = 2*Map;
+            printf("\t*2\t%.30f\n", Map);
+        Map = floor(Map);
+            printf("\tfloor\t%.30f\n", Map);
+        Map = .5*Map;
+            printf("\t*.5\t%.30f\n", Map);
+        Map = 4*Map;
+            printf("\t*4\t%.30f\n", Map);
+
+        puts("Tent");
+        if (Map < .5)
+        {
+            Map = 2*Map;
+                printf("\t2*Map\t%.30f\n", Map);
+            Map = 2*Map;
+                printf("\t*2\t%.30f\n", Map);
+            Map = floor(Map);
+                printf("\tfloor\t%.30f\n", Map);
+            Map = .5*Map;
+                printf("\t*.5\t%.30f\n", Map);
+        }
+        else
+        {
+            Map = 1-Map;
+                printf("\t1-Map\t%.30f\n", Map);
+            Map = 2*Map;
+                printf("\t*2\t%.30f\n", Map);
+            Map = floor(Map);
+                printf("\tfloor\t%.30f\n", Map);
+            Map = .5*Map;
+                printf("\t*.5\t%.30f\n", Map);
+            Map = 2*Map;
+                printf("\t2*Map\t%.30f\n", Map);
+            Map = 2*Map;
+                printf("\t*2\t%.30f\n", Map);
+            Map = floor(Map);
+                printf("\tfloor\t%.30f\n", Map);
+            Map = .5*Map;
+                printf("\t*.03125\t%.30f\n", Map);
+        }
+    }
+    printf("\n");
+    /**/
+
 }
 

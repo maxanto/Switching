@@ -61,7 +61,7 @@ int main()
 
                 printf("\t\tCondicion inicial %d/%d = %.32f\n", (int)iInitialCondition+1, (int)NInitialConditions, Map[1]); // Para debuguear
 
-                for (unsigned long int iMap = 1; iMap < NIter; iMap++) // Va riterando el mapa logístico
+                for (unsigned long int iMap = 1; iMap < NIter; iMap++) // Va iterando switch
                 {
                     //Itero tent
                     if (Map[iMap] < 0.5)
