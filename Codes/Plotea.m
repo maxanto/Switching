@@ -8,7 +8,7 @@ clc
 
 %% Parámetros Generales
 
-Mapa = 'SwitchOddB2';
+Mapa = 'LogisticoB2';
 
 %% Carga los datos
 
@@ -33,7 +33,7 @@ for i_cuanti = 1:length(Cuantis);
     
     Cuanti = char(Cuantis(i_cuanti)); %Carga el nombre del cuantificador y lo pasa a string
     eval(['Datos = ' Cuanti ';']); %Carga los datos a plotear
-    meanDatos = mean(Datos);
+    MeanDatos = mean(Datos);
     
     NombreCuanti = char(NombresCuantis(i_cuanti)); %Carga el nombre del cuantificador y lo pasa a string
     
@@ -46,7 +46,7 @@ for i_cuanti = 1:length(Cuantis);
     set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
     axis([0 Precisiones(NPrecisiones) 0 MaxCuanti(i_cuanti)]);
     
-    plot(Precisiones,meanDatos,'.:k','LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
+    plot(Precisiones,MeanDatos,'.:k','LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
     plot(Precisiones,Datos,'.r', 'MarkerSize', MarcaSize)    
 
     set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
@@ -58,25 +58,30 @@ end
 %% Plotea período
 
     Datos = Period;
-    meanDatos = mean(Datos);
     
-    NombreCuanti = 'Period'; %Carga el nombre del cuantificador y lo pasa a string
+    LogDatos = log10(Datos);
+    MeanDatos = mean(Datos);
+    LogMeanDatos = log10(MeanDatos);
+    fitting = fit(Precisiones(8:50)',LogMeanDatos(8:50)','poly1');
+    FitMeanDatos = feval(fitting,Precisiones);
     
+    NombreCuanti = 'log_{10}(Period)'; %Carga el nombre del cuantificador y lo pasa a string
     figure('position',PosicPlot,'visible','off'); %Abro una figura con tamaño y posición
     hold on; grid on; box on
     %title('rand-ellip; roja=pasa-altos; azul=pasa-bajos; negro=rand-matlab')
     xlabel('P'); ylabel(NombreCuanti)
     ejes=newplot; %newplot returns handle of current axes y abre una figura
-    set(ejes,'FontName','Arial','FontWeight','bold','FontSize',FuenteSize, 'YScale', 'log'); %cambiamos las letras de los ejes de la figura
+    set(ejes,'FontName','Arial','FontWeight','bold','FontSize',FuenteSize, 'YScale', 'linear'); %cambiamos las letras de los ejes de la figura
     set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
-    axis([0 Precisiones(NPrecisiones) .5 NMap]);
+    axis([0 Precisiones(NPrecisiones) .4 log10(NMap)]);
     
-    semilogy(Precisiones,meanDatos, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
-    semilogy(Precisiones,Datos,'.r', 'MarkerSize', MarcaSize)  
+    plot(Precisiones,LogMeanDatos, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
+    plot(Precisiones,LogDatos,'.r', 'MarkerSize', MarcaSize)
+    plot(Precisiones,FitMeanDatos)
     
-    set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
-    saveas(gcf,['Period_' Mapa],'pdf')
-    close
+%     set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
+%     saveas(gcf,['Period_' Mapa],'pdf')
+%     close
     
 %% Plotea plano Hval-Hbp
 
