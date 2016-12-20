@@ -29,7 +29,7 @@ int main()
     double Scale; // Es la escala que utilizo para multiplicar y dividir en el floor
     double InvScale; // Guardo acá la inversa de la escala para cambiar una división por una multiplicación en cada iteración del mapa
 
-    double Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period; // Vectores en donde van guardados los cuantificadores
+    double Period; // Vectores en donde van guardados los cuantificadores
 
     double InitialConditions[NInitialConditions]; // Declaro el vector de condiciones iniciales
     random_device rd;
@@ -41,8 +41,8 @@ int main()
     }
     printf("Generadas %ld condiciones iniciales\n\n", NInitialConditions);
 
-    FILE *ResultsLog = fopen("LogisticoB2.dat","w"); //Abre archivo de resultados
-    fprintf(ResultsLog, "Map\tHval\tQval\tCval\tHbp\tQbp\tCbp\tHbpw\tQbpw\tCbpw\tMP\tPeriod\n"); //Escribe encabezado en archivo
+    FILE *ResultsLog = fopen("LogisticoB2Redondeo2.dat","w"); //Abre archivo de resultados
+    fprintf(ResultsLog, "Map\tPeriod\n"); //Escribe encabezado en archivo
 
     for (int iBases = 0; iBases <  NBases; iBases++) // Va recorriendo el vector de bases
     {
@@ -63,32 +63,14 @@ int main()
 
                 for (unsigned long int iMap = 1; iMap < NIter; iMap++) // Va riterando el mapa logístico
                 {
-                    Map[iMap+1] =  4*InvScale*floor(Scale*Map[iMap]*(1-Map[iMap])); // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
+                    Map[iMap+1] =  InvScale*floor(Scale*4*Map[iMap]*(1-Map[iMap])); // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
                 } // Acá ya tengo el atractor guardado en el vector Map
 
-                double* PDFval = PDF_val(Map, Bins, Margins, "normalyzed"); // Genera el histograma de patrones de órden
-                Hval = entropy(PDFval, "normalyzed"); // Le calcula la entropía y la suma para el promedio
-                Qval = disequilibrum(PDFval, "normalyzed"); // Le calcula el desequilibrio
-                Cval = Hval*Qval; // Le calcula la complejidad
-                free(PDFval); // Libera el vector que contiene al histograma
-
-                double* PDFbp = PDF_BP(Map, DimEmb, "overlapped", "normalyzed"); // Genera el histograma de patrones de órden
-                Hbp = entropy(PDFbp, "normalyzed"); // Le calcula la entropía
-                Qbp = disequilibrum(PDFbp, "normalyzed"); // Le calcula el desequilibrio
-                Cbp = Hbp*Qbp; // Le calcula la complejidad
-                MP = missing_patterns(PDFbp);
-                free(PDFbp); // Libera el vector que contiene al histograma
-
-                double* PDFbpw = PDF_BPW(Map, DimEmb, "overlapped"); // Genera el histograma de patrones de órden
-                Hbpw = entropy(PDFbpw, "normalyzed"); // Le calcula la entropía
-                Qbpw = disequilibrum(PDFbpw, "normalyzed"); // Le calcula el desequilibrio
-                Cbpw = Hbpw*Qbpw; // Le calcula la complejidad
-                free(PDFbpw); // Libera el vector que contiene al histograma
 
                 Period = find_period(Map, 1); //Para mapas unidimensionales, para los switch voy a tener que usar dimensión 2.
 
                 sprintf(StrAux, "B%d_P%d_CI%d", Bases[iBases], Precisions[iPrecisions],iInitialCondition);
-                fprintf(ResultsLog,"%s\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\n", StrAux, Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period); //Guarda los valores en el archivo de salida, escribo la condición inicial para evaluar el comportamiento del rand()
+                fprintf(ResultsLog,"%s\t%.8e\n", StrAux, Period); //Guarda los valores en el archivo de salida, escribo la condición inicial para evaluar el comportamiento del rand()
             }
         }
     }

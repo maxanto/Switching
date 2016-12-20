@@ -52,6 +52,6 @@ Temporary Items
 *.log
 *.pdf
 *.exe
-*.0
+*.o
 *.dat
 *.mat
