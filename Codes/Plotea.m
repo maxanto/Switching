@@ -29,7 +29,7 @@ Cuantis = {'Hval', 'Qval', 'Cval', 'Hbp', 'Qbp', 'Cbp', 'Hbpw', 'Qbpw', 'Cbpw', 
 NombresCuantis = {'H_{val}', 'Q_{val}', 'C_{val}', 'H_{BP}', 'Q_{BP}', 'C_{BP}', 'H_{BPW}', 'Q_{BPW}', 'C_{BPW}', 'MP'};
 MaxCuanti = [1, 1, .5, 1, 1, .5, 1, 1, .5, factorial(D)];
 
-for i_cuanti = 1:length(Cuantis);
+for i_cuanti = 1:length(Cuantis)
     
     Cuanti = char(Cuantis(i_cuanti)); %Carga el nombre del cuantificador y lo pasa a string
     eval(['Datos = ' Cuanti ';']); %Carga los datos a plotear
@@ -73,15 +73,17 @@ end
     ejes=newplot; %newplot returns handle of current axes y abre una figura
     set(ejes,'FontName','Arial','FontWeight','bold','FontSize',FuenteSize, 'YScale', 'linear'); %cambiamos las letras de los ejes de la figura
     set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
-    axis([0 Precisiones(NPrecisiones) .4 log10(NMap)]);
+    xlim([0 Precisiones(NPrecisiones)]);
     
     plot(Precisiones,LogMeanDatos, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
     plot(Precisiones,LogDatos,'.r', 'MarkerSize', MarcaSize)
     plot(Precisiones,FitMeanDatos)
     
-%     set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
-%     saveas(gcf,['Period_' Mapa],'pdf')
-%     close
+    set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
+    saveas(gcf,['Period_' Mapa],'pdf')
+    close
+    
+    save(['FitPeriod_' Mapa], 'fitting');
     
 %% Plotea plano Hval-Hbp
 
