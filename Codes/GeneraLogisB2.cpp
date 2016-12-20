@@ -12,11 +12,11 @@ int main()
 {
     int Bases[] = {2}; // Vector con las bases que quiero probar
         int NBases = (sizeof(Bases)/sizeof(Bases[0]));
-    int Precisions[] = {1, 2, 3, 4, 5, 6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52}; //Contiene todas las precisiones que voy barriendo
+    int Precisions[] = {7}; //Contiene todas las precisiones que voy barriendo
         int NPrecisions = (sizeof(Precisions)/sizeof(Precisions[0])); // Cantidad de precisiones
     double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
-    unsigned long int NInitialConditions = 100; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
-    unsigned long int NIter = 1e7; // Es el largo de cada atractor
+    unsigned long int NInitialConditions = 10; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
+    unsigned long int NIter = 1e3; // Es el largo de cada atractor
 
     unsigned long int Bins = 1024; // Cantidad de bines del histograma
     unsigned long int DimEmb = 6; // Dimensión de embedding para MP, BP y BPW
@@ -41,7 +41,7 @@ int main()
     }
     printf("Generadas %ld condiciones iniciales\n\n", NInitialConditions);
 
-    FILE *ResultsLog = fopen("LogisticoB2.dat","w"); //Abre archivo de resultados
+    FILE *ResultsLog = fopen("LogisticoB2P7.dat","w"); //Abre archivo de resultados
     fprintf(ResultsLog, "Map\tHval\tQval\tCval\tHbp\tQbp\tCbp\tHbpw\tQbpw\tCbpw\tMP\tPeriod\n"); //Escribe encabezado en archivo
 
     for (int iBases = 0; iBases <  NBases; iBases++) // Va recorriendo el vector de bases
@@ -89,6 +89,8 @@ int main()
 
                 sprintf(StrAux, "B%d_P%d_CI%d", Bases[iBases], Precisions[iPrecisions],iInitialCondition);
                 fprintf(ResultsLog,"%s\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\n", StrAux, Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period); //Guarda los valores en el archivo de salida, escribo la condición inicial para evaluar el comportamiento del rand()
+                strcat(StrAux,".dat");
+                save_vector(Map, StrAux);
             }
         }
     }
