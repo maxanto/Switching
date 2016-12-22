@@ -25,7 +25,7 @@ int main()
 
     double Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period; // Vectores en donde van guardados los cuantificadores
 
-    FILE *Results = fopen("LogisticoB2.dat","w"); //Abre archivo de resultados
+    FILE *Results = fopen("Flotante.dat","w"); //Abre archivo de resultados
     fprintf(Results, "Map\tHval\tQval\tCval\tHbp\tQbp\tCbp\tHbpw\tQbpw\tCbpw\tMP\tPeriod\n"); //Escribe encabezado en archivo
 
     double InitialConditions[NInitialConditions]; // Declaro el vector de condiciones iniciales
