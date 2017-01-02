@@ -7,7 +7,7 @@ clc
 
 %% Parámetros generales
 
-Mapa = 'SwitchOddB2';
+Mapa = 'Logistico';
 Bases = 2;
 Precisiones = 1:52;
 D = 6;
@@ -16,6 +16,7 @@ NCI = 100;
 
 %% Carga los datos
 Importa
+ImportaFlotantes
 load CotasInferiores
 load CotasSuperiores
 %% Acomoda los datos
