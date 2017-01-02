@@ -15,7 +15,7 @@ NMap = 1E7;
 NCI = 100;
 
 %% Carga los datos
-Importa
+ImportaB2
 ImportaFlotantes
 load CotasInferiores
 load CotasSuperiores

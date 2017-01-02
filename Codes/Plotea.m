@@ -8,7 +8,7 @@ clc
 
 %% Parámetros Generales
 
-Mapa = 'LogisticoB2';
+Mapa = 'Logistico';
 
 %% Carga los datos
 
@@ -33,7 +33,10 @@ for i_cuanti = 1:length(Cuantis)
     
     Cuanti = char(Cuantis(i_cuanti)); %Carga el nombre del cuantificador y lo pasa a string
     eval(['Datos = ' Cuanti ';']); %Carga los datos a plotear
-    MeanDatos = mean(Datos);
+    MeanDatos = mean(Datos); %Promedia datos
+    eval(['DatosFlotante = Float' Cuanti ';']); %Carga los datos en flotante
+    RepeatDatosFlotante = repmat(DatosFlotante,1,NPrecisiones);
+    MeanDatosFlotante = mean(RepeatDatosFlotante); %Promendia datos en flotante
     
     NombreCuanti = char(NombresCuantis(i_cuanti)); %Carga el nombre del cuantificador y lo pasa a string
     
@@ -46,9 +49,11 @@ for i_cuanti = 1:length(Cuantis)
     set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
     axis([0 Precisiones(NPrecisiones) 0 MaxCuanti(i_cuanti)]);
     
-    plot(Precisiones,MeanDatos,'.:k','LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
-    plot(Precisiones,Datos,'.r', 'MarkerSize', MarcaSize)    
-
+    plot(Precisiones, MeanDatos,'.:k','LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
+    plot(Precisiones, Datos,'.r', 'MarkerSize', MarcaSize)
+    plot(Precisiones, RepeatDatosFlotante', '--b', 'LineWidth', LineaAncho2)
+    plot(Precisiones, MeanDatosFlotante,'k', 'LineWidth', LineaAncho1);
+    
     set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
     saveas(gcf,[Cuanti '_' Mapa],'pdf')
     close
@@ -65,6 +70,12 @@ end
     fitting = fit(Precisiones(8:50)',LogMeanDatos(8:50)','poly1');
     FitMeanDatos = feval(fitting,Precisiones);
     
+    DatosFlotante = FloatPeriod; %Carga los datos en flotante
+    
+    LogDatosFlotante = log10(DatosFlotante);
+    RepeatLogDatosFlotante = repmat(LogDatosFlotante,1,NPrecisiones);
+    MeanLogDatosFlotante = mean(RepeatLogDatosFlotante); %Promendia datos en flotante
+    
     NombreCuanti = 'log_{10}(Period)'; %Carga el nombre del cuantificador y lo pasa a string
     figure('position',PosicPlot,'visible','off'); %Abro una figura con tamaño y posición
     hold on; grid on; box on
@@ -79,6 +90,10 @@ end
     plot(Precisiones,LogDatos,'.r', 'MarkerSize', MarcaSize)
     plot(Precisiones,FitMeanDatos)
     
+    
+    plot(Precisiones, RepeatLogDatosFlotante', '--b', 'LineWidth', LineaAncho2)
+    plot(Precisiones, MeanLogDatosFlotante,'k', 'LineWidth', LineaAncho1);
+    
     set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
     saveas(gcf,['Period_' Mapa],'pdf')
     close
@@ -87,13 +102,17 @@ end
     
 %% Plotea plano Hval-Hbp
 
-  	Datos1 = Hval; %Carga el nombre del cuantificador y lo pasa a string
+  	Datos1 = Hval;
     Datos2 = Hbp;
+    DatosFlotante1 = FloatHval;
+    DatosFlotante2 = FloatHbp;
     
     meanDatos1 = mean(Datos1);
     meanDatos2 = mean(Datos2);
+    meanDatosFlotante1 = mean(DatosFlotante1);
+    meanDatosFlotante2 = mean(DatosFlotante2);
     
-    NombreCuanti1 = 'H_{Val}'; %Carga el nombre del cuantificador y lo pasa a string
+    NombreCuanti1 = 'H_{Val}';
     NombreCuanti2 = 'H_{BP}';
     
     figure('position',PosicPlot,'visible','off'); %Abro una figura con tamaño y posición
@@ -107,6 +126,8 @@ end
 
     plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
     plot(Datos1,Datos2,'.r', 'MarkerSize', MarcaSize)
+    plot(meanDatosFlotante1,meanDatosFlotante2, 'ok', 'MarkerSize', MarcaSize)
+    plot(DatosFlotante1,DatosFlotante2,'.b', 'MarkerSize', MarcaSize)
     
     set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
     saveas(gcf,['HbpHval_' Mapa],'pdf')
@@ -116,9 +137,13 @@ end
 
   	Datos1 = Hval; %Carga el nombre del cuantificador y lo pasa a string
     Datos2 = Hbpw;
+    DatosFlotante1 = FloatHval;
+    DatosFlotante2 = FloatHbpw;
     
     meanDatos1 = mean(Datos1);
     meanDatos2 = mean(Datos2);
+    meanDatosFlotante1 = mean(DatosFlotante1);
+    meanDatosFlotante2 = mean(DatosFlotante2);
     
     NombreCuanti1 = 'H_{Val}'; %Carga el nombre del cuantificador y lo pasa a string
     NombreCuanti2 = 'H_{BPW}';
@@ -134,6 +159,8 @@ end
 
     plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
     plot(Datos1,Datos2,'.r', 'MarkerSize', MarcaSize)
+    plot(meanDatosFlotante1,meanDatosFlotante2, 'ok', 'MarkerSize', MarcaSize)
+    plot(DatosFlotante1,DatosFlotante2,'.b', 'MarkerSize', MarcaSize)
     
     set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
     saveas(gcf,['HbpwHval_' Mapa],'pdf')
@@ -143,9 +170,13 @@ end
 
   	Datos1 = Hbp; %Carga el nombre del cuantificador y lo pasa a string
     Datos2 = Cbp;
+    DatosFlotante1 = FloatHbp;
+    DatosFlotante2 = FloatCbp;
     
     meanDatos1 = mean(Datos1);
     meanDatos2 = mean(Datos2);
+    meanDatosFlotante1 = mean(DatosFlotante1);
+    meanDatosFlotante2 = mean(DatosFlotante2);
     
     NombreCuanti1 = 'H_{BP}'; %Carga el nombre del cuantificador y lo pasa a string
     NombreCuanti2 = 'C_{BP}';
@@ -161,6 +192,8 @@ end
 
     plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
     plot(Datos1,Datos2,'.r', 'MarkerSize', MarcaSize)
+    plot(meanDatosFlotante1,meanDatosFlotante2, 'ok', 'MarkerSize', MarcaSize)
+    plot(DatosFlotante1,DatosFlotante2,'.b', 'MarkerSize', MarcaSize)
     plot(CotasInferiores(:,1), CotasInferiores(:,2), '-.', 'LineWidth', LineaAncho2, 'Color', [.5 .5 1])
    	plot(CotasSuperiores(:,1), CotasSuperiores(:,2), '-.', 'LineWidth', LineaAncho2, 'Color', [.5 .5 1])
     
@@ -172,9 +205,13 @@ end
 
   	Datos1 = Hbpw; %Carga el nombre del cuantificador y lo pasa a string
     Datos2 = Cbpw;
+    DatosFlotante1 = FloatHbpw;
+    DatosFlotante2 = FloatCbpw;
     
     meanDatos1 = mean(Datos1);
     meanDatos2 = mean(Datos2);
+    meanDatosFlotante1 = mean(DatosFlotante1);
+    meanDatosFlotante2 = mean(DatosFlotante2);
     
     NombreCuanti1 = 'H_{BPW}'; %Carga el nombre del cuantificador y lo pasa a string
     NombreCuanti2 = 'C_{BPW}';
@@ -190,6 +227,8 @@ end
 
     plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
     plot(Datos1,Datos2,'.r', 'MarkerSize', MarcaSize)
+    plot(meanDatosFlotante1,meanDatosFlotante2, 'ok', 'MarkerSize', MarcaSize)
+    plot(DatosFlotante1,DatosFlotante2,'.b', 'MarkerSize', MarcaSize)
     plot(CotasInferiores(:,1), CotasInferiores(:,2), '-.', 'LineWidth', LineaAncho2, 'Color', [.5 .5 1])
    	plot(CotasSuperiores(:,1), CotasSuperiores(:,2), '-.', 'LineWidth', LineaAncho2, 'Color', [.5 .5 1])
     
