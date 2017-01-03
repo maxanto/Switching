@@ -1,6 +1,11 @@
 \section{Results}\label{sec:resultados}
 Five pseudo chaotic maps were studied. For each one a floating point representation, a decimal numbers representation with $1\leq P \leq 27$ and a binary numbers representation with $1\leq B \leq 27$ are considered. For each representation $1000$ time series were generated using randomly chosen initial conditions within the interval $[0,1]$. 
-The studied maps are tent (TENT), logistic (LOG) a sequential switching between TENT and LOG (SWITCH). Furthermore a skipping randomization procedure is applied to SWITCH \cite{DeMicco2008}, discarding the values in the odd positions (EVEN) or the values in the even positions (ODD) respectively. Let us detail our results for each of these maps. 
+The studied maps are tent (TENT), logistic (LOG) a sequential switching between TENT and LOG (SWITCH). Furthermore a skipping randomization procedure is applied to SWITCH \cite{DeMicco2008}, discarding the values in the odd positions (EVEN) or the values in the even positions (ODD) respectively. Let us detail our results for each of these maps.
+
+\input{Period}
+
+%\input{Hbp}
+
 \subsection {Simple maps.}\label{subsec:simples}
 Here we report our results for both maps:
 \begin{enumerate}
@@ -87,51 +92,7 @@ Results in binary numbers are similar to those obtained for the equivalent numbe
 \end{enumerate}
 In Figs. \ref{fig:seqpardec} and Figs. \ref{fig:seqparbin} are shown the results for EVEN. We do not give the Figs. for ODD because they are very similar, as pointed above. 
 %
-\subsection{Period $T$ as a function of $P$ and $B$}
-The issue of how the period $T$ is related with the representation with $P$ decimal digits was studied by Grebogi and coworkers \cite{Grebogi1988}. There they shaw that the period $T$ scales with roundoff $\epsilon$ as
-$T\sim\epsilon^{-d/2}$ where $d$ is the correlation dimension of
-the chaotic attractor. Nagaraj et al \cite{Nagaraj2008} studied the case of switching between two maps. They shaw that the period $T$ of the
-compound map obtained by switching between two chaotic maps is
-higher than the period of each map and they found that a ''random" switching improves the results. Here we considered  sequential switching to avoid the use of another random variable, because it can include its own statistical properties in the time series. We studied decimal and binary numbers representations. Fig. \ref{fig:peril} shows  $T$ vs $P$ in semi logarithmic scale. 
-% OJO ACA REVISAR SI ESTA BIEN
-A straight line can fit the points and has the expression  $log_{10}T=m \times P + b$ for decimal numbers and  $log_{2}T=m \times B + b$ for binary numbers, where $m$ is the slope and $b$ is the $y$-intercept. Results for all considered maps are summarized in Table \ref{tabla:tab1} and \ref{tabla:tab2}.
 
-\begin{table}
-% table caption is above the table
-\caption{Period $T$ as a function of $P$ for the maps considered}
-\label{tabla:tab1}       % Give a unique label
-% For LaTeX tables use
-\begin{tabular}{lll}
-\hline\noalign{\smallskip}
-map & m & b  \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-TENT&0.436 & -0.0705 \\
-LOG &0.422 & 0.0141 \\
-SWITCH &0.438 & 0.0276 \\
-EVEN &0.438 & -~0.2734 \\
-ODD &0.438 & -~0.2734 \\
-\noalign{\smallskip}\hline
-\end{tabular}
-\end{table}
-%
-\begin{table}
-% table caption is above the table
-\caption{Period $T$ as a function of $B$ for the maps considered}
-\label{tabla:tab2}       % Give a unique label
-% For LaTeX tables use
-\begin{tabular}{lll}
-\hline\noalign{\smallskip}
-map & m & b  \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-TENT&0 & 0 \\
-LOG &0.139 & -0.6188 \\
-SWITCH &0.1462 & -0.5115 \\
-EVEN &0.1447 & -0.7783 \\
-ODD &0.1444 & -0.7683 \\
-\noalign{\smallskip}\hline
-\end{tabular}
-\end{table}
-Results are compatible for those obtained in \cite{Nagaraj2008}. Switching between maps increase de period $T$ but the skipping procedure decrease it esentially to one half. 
 % 
 
 \begin{figure}
@@ -280,8 +241,3 @@ Results are compatible for those obtained in \cite{Nagaraj2008}. Switching betwe
 	\caption{Statistical properties of EVEN, obtained by skipping the values in the odd position of the time series of  SWITCH,  using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{hist},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers.  } \label{fig:seqimparbin}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Fig.11
-%\center
-%\begin{figure}
-%	\includegraphics[width=0.8\textwidth]{MeanPeriod_logisticoB10}
-%	\caption{Period $T$ as a function of de number of decimal digits $P$ for the LOG map.} \label{fig:perio}
-%\end{figure}
