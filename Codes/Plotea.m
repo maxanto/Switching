@@ -8,7 +8,7 @@ clc
 
 %% Parámetros Generales
 
-Mapa = 'Logistico';
+Mapa = 'SwitchOdd';
 
 %% Carga los datos
 
