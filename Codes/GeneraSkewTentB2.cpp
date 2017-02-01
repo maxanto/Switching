@@ -17,7 +17,7 @@ int main()
     double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
     unsigned long int NInitialConditions = 100; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
     unsigned long int NIter = 1e7; // Es el largo de cada atractor
-    
+
     double gamma = .51; //Es el parámetro del skew tent, para gamma = .5 el mapa es el tent del otro código
 
     unsigned long int Bins = 1024; // Cantidad de bines del histograma
@@ -43,7 +43,7 @@ int main()
     }
     printf("Generadas %ld condiciones iniciales\n\n", NInitialConditions);
 
-    FILE *ResultsLog = fopen("TentSkewB2.dat","w"); //Abre archivo de resultados
+    FILE *ResultsLog = fopen("SkewTentB2.dat","w"); //Abre archivo de resultados
     fprintf(ResultsLog, "Map\tHval\tQval\tCval\tHbp\tQbp\tCbp\tHbpw\tQbpw\tCbpw\tMP\tPeriod\n"); //Escribe encabezado en archivo
 
     for (int iBases = 0; iBases <  NBases; iBases++) // Va recorriendo el vector de bases
