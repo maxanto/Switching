@@ -7,7 +7,7 @@ clc
 
 %% Parámetros generales
 
-Mapa = 'SwitchOdd';
+Mapa = 'SkewTent';
 Bases = 2;
 Precisiones = 1:52;
 D = 6;
