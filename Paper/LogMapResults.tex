@@ -2,12 +2,25 @@
 
 Logistic map is representative of the very large family of quadratic maps. 
 \begin{equation}\label{eq:logimap}
- x_{n+1}~=~4~x_n~(1-x_n) \ ,
+ x_{[n+1]}=4x_{[n]}(1-x_{[n]}) \,
 \end{equation}
 with $x_n\in\mathcal{R}$.
- 
-Figs. \ref{fig:LOGdecimal} (a) to (f) show the statistical properties of LOG map in floating point and decimal numbers representation. This map does not show the anomalies pointed above for the tent map. For $P\geq 10$ the values of $H_{hist}$, $H_{BP}$ and $C_{BP}$ remains almost identical to the values for the floating point representation. Their values are: $<H_{hist}>=0.8621$ with variance $\sigma_{H_{hist}}=0.062 \times 10^{-6}$; $<H_{BP}>=0.6292$ with variance $\sigma_{H_{BP}}=0.060 \times 10^{-6}$; $<C_{BP}>=0.4842$ with variance $\sigma_{C_{BP}}=0.0195 \times 10^{-6}$. Missing patterns stabilize in $645$ for $P \geq 8$ making $H_{BP}$ to rise to its floating point value $<H_{BP}>=0.629$ with variance $\sigma_{H_{BP}}=0.060 \times 10^{-8}$. Note again that the stable value of mission patters missing patterns $645$ makes the optimum $H_{BP} \leq ln(75)/ln(720) \simeq 0.65$. Then $P=10$ is the most convenient choice because an increase in the number of decimal figures does not improve the statistical properties. 
-Figs. \ref{fig:LOGbin} show the corresponding figures for binary representations. The histogram entropy $H_{hist}$ does not reach its floating point value within the maximum number of bits used. In the case of missing patterns the stable number $645$ is obtained with $B \geq 25$. It means that using $B=25$ one obtains a time series with good statistical properties regarding the missing patterns, but distribution among the allowed binary values is not as uniform as can be obtained with a higher value of $B$. 
+
+In Base-2 fractional numbers rounding, equation \ref{eq:logimap} became
+\begin{equation}\label{eq:logimapB2}
+x_{n+1}=4 \epsilon floor\{\frac{x_n(1-x_n)}{\epsilon}\} \,
+\end{equation}
+with $\epsilon = 2^B$ where $B$ is the length of fractional part.
+
+Figs. \ref{fig:LOGbinario} (a) to (f) show the statistical properties of LOG map in floating point and fixed point representation.
+All figures shows: in red dots the results of each run (100 point for each presicion), in black dots the mean of these 100 points (dashed black line connects black dots), in dashed blue lines the results of each run in floating point and (100 horizontal blue dashed lines) and in black the mean for floating point.
+
+For $B\geq 30$ the value of $H_{val}$ remains almost identical to the values for the floating point representation whereas $H_{BP}$ and $C_{BP}$ stabilizes at $B>21$.
+Their values are: $<H_{hist}>=0.8621$; $<H_{BP}>=0.6292$; $<C_{BP}>=0.4842$.
+Missing patterns stabilize in $645$ for $B > 18$ making $H_{BP}$ to rise to its floating point value $<H_{BP}>=0.629$.
+Note that the stable value of missing patterns $645$ makes the optimum $H_{BP} \leq ln(75)/ln(720) \simeq 0.65$. Then $B=30$ is the most convenient choice because an increase in the number of fractional figures does not improve the statistical properties.
+
+We can extract some conclussions when compare \textit{BP} with \textit{BPW} cuantifiers. ACÁ PONER LO QUE ESTÁ MARCADO EN EL PAPER CON *****
 
 \begin{figure}
 	\includegraphics[width=.32\textwidth]{Hval_Logistico}
