@@ -2,16 +2,16 @@
 Five pseudo chaotic maps were studied. For each one a floating point representation, a decimal numbers representation with $1\leq P \leq 27$ and a binary numbers representation with $1\leq B \leq 27$ are considered. For each representation $1000$ time series were generated using randomly chosen initial conditions within the interval $[0,1]$. 
 The studied maps are tent (TENT), logistic (LOG) a sequential switching between TENT and LOG (SWITCH). Furthermore a skipping randomization procedure is applied to SWITCH \cite{DeMicco2008}, discarding the values in the odd positions (EVEN) or the values in the even positions (ODD) respectively. Let us detail our results for each of these maps.
 
-\subsection {Simple maps.}\label{subsec:simples}
+\subsection {Simple maps.}\label{subsec:SimpleMaps}
 Here we report our results for both maps:
-
-\input{TentMapResults}
 
 \input{LogMapResults}
 
-In summary, a comparison between LOG and TENT maps shows that, in the case of decimal representation, the best choice for TENT ($P=11$) produces a higher value for $H_{hist}$ than the best choice for LOG ($P=10$). Ordering patterns and the statistical properties related to them, are almost identical for the optimum choices in both maps. In the case of binary numbers  only LOG  can be used because TENT is highly anomalous. 
+\input{TentMapResults}
 
-\subsection{Sequential switching}
+In summary, a comparison between LOG and TENT maps shows that only LOG  can be used because TENT is highly anomalous. 
+
+\subsection{Sequential switching}\label{subsec:SecSwitch}
 
 \input{SwitchMapResults}
 

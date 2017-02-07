@@ -6,7 +6,7 @@ Logistic map is representative of the very large family of quadratic maps.
 \end{equation}
 with $x_n\in\mathcal{R}$.
 
-In Base-2 fractional numbers rounding, equation \ref{eq:logimap} became
+Note that to effectively work in a given representation it is necessary to change the expression of the map in order to make all the operations in the chosen representation numbers. For example, in the case of LOG the expression in binary fixed point numbers is:
 \begin{equation}\label{eq:logimapB2}
 x_{n+1}=4 \epsilon floor\{\frac{x_n(1-x_n)}{\epsilon}\} \,
 \end{equation}
@@ -14,13 +14,19 @@ with $\epsilon = 2^B$ where $B$ is the length of fractional part.
 
 Figs. \ref{fig:LOGbinario} (a) to (f) show the statistical properties of LOG map in floating point and fixed point representation.
 All figures shows: in red dots the results of each run (100 point for each presicion), in black dots the mean of these 100 points (dashed black line connects black dots), in dashed blue lines the results of each run in floating point and (100 horizontal blue dashed lines) and in black the mean for floating point.
+In figures (d) and (e) the star corresponds to the floating point case.
 
 For $B\geq 30$ the value of $H_{val}$ remains almost identical to the values for the floating point representation whereas $H_{BP}$ and $C_{BP}$ stabilizes at $B>21$.
 Their values are: $<H_{hist}>=0.8621$; $<H_{BP}>=0.6292$; $<C_{BP}>=0.4842$.
 Missing patterns stabilize in $645$ for $B > 18$ making $H_{BP}$ to rise to its floating point value $<H_{BP}>=0.629$.
-Note that the stable value of missing patterns $645$ makes the optimum $H_{BP} \leq ln(75)/ln(720) \simeq 0.65$. Then $B=30$ is the most convenient choice because an increase in the number of fractional figures does not improve the statistical properties.
+Note that the stable value of missing patterns $645$ makes the optimum $H_{BP} \leq ln(75)/ln(720) \simeq 0.65$.
+Then $B=30$ is the most convenient choice because an increase in the number of fractional figures does not improve the statistical properties.
 
-We can extract some conclussions when compare \textit{BP} with \textit{BPW} cuantifiers. ACÁ PONER LO QUE ESTÁ MARCADO EN EL PAPER CON *****
+We can extract some conclussions when compare \textit{BP} with \textit{BPW} quantifiers.
+We can see that for $B=1, 2, 3 and 4$, $BP$ quantifiers is almost $0$ and $BPW$ quantifiers not exists in the mean, the initial condition of some atractors was rounded to $0$ and $BPW$ histogram not exist.
+For $B=7, 9 and 12$, an high dispersion in $BPW$ are showed, but not in $BP$ graphs, atractor falls to a fixed point with an short transitory in these cases.
+Finally, for $B = 45, 49, 51 and 52$ some $BP$ quantifiers has a low value, but $BPW$ quantifiers has a more predictible behavior, we can see that these atractors falls to a fixed point with a long trnsitory.
+In this case the problem has to do with the plataform that we use, the miltiplication needs the double of bits to be represented but the machine has only $64$.
 
 \begin{figure}
 	\includegraphics[width=.32\textwidth]{Hval_Logistico}
