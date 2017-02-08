@@ -52,7 +52,7 @@ Temporary Items
 *.bbl
 *.blg
 *.log
-*.pdf
+#*.pdf
 *.gz
 *.exe
 *.mat
