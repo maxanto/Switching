@@ -9,19 +9,25 @@
 	Ingenier\'ia, Universidad de Buenos Aires, Ciudad Aut\'onoma de
 	Buenos Aires, Argentina.\\
 
-\begin{abstract} 
-%redactarlo de nuevo extractando lo mas importante y sin referencias, porque esta repetido de la introduccin
-In the last years digital measuring systems become the standard in
-all experimental sciences because new programable electronic
-devices, such as Digital Signal Processors ($DSP$) and Field
-Programmable Gate Arrays ($FPGA$) allow experimenters to design and
-modify their own measuring systems.
+\begin{abstract}
+In the last years, digital systems such as Digital Signal Processors (DSP), Field Programmable Gate Arrays (FPGA) and Application-Specific Integrated Circuits (ASIC), became the standard in all experimental sciences.
+This systems allow experimenters to design and modify their own signal generators, measuring systems, simulation models, etc.
+All these adventages gave as result the emergence of High Performance Computing (HPC) as a new research field.
 
-The effect of finite precision in these new devices needs to be
-investigated, specially in the case of chaotic systems, because due to roundoff errors digital implementations will always become periodic with a period $T$. Furthermore floating point, decimal numbers with a finite number of digits and binary numbers are numerical representations available in new programmable devices and each of them produces specific statistical characteristics. It has been recently shown that it is convenient to describe the statistical characteristic using both, a non causal and a causal probability distribution function ($PDF$). The corresponding entropies, must be evaluated to quantify these $PDF$«s. The period $T$ needs  also to be evaluated. 
 
-In this paper we study  two well
-known chaotic maps: the tent map and the logistic map. All the above mentioned numerical representations are considered. Furthermore sequential switching between both maps is evaluated as a tool to improve the statistical characteristics. 
+In these systems digital implementations has a custom made numerical system, therefore finite arithmetic needs to be investigated.
+Fixed point representation is prefered over floating point when  speed, low power and/or small circuit area is necessary.
+
+Chaotic systems implemented in finite preceision will always became periodic with period T.
+Furthermore binary floating and fixed point are numerical representations available, each of them produces specific period and statistical characteristics that needs to be evaluated.
+
+In [REF NEEDED] a complete study about period was carried out.
+It has been recently shown that it is convenient to describe the statistical characteristic using both, a non causal and a causal probability distribution function ($PDF$).
+The corresponding entropies, must be evaluated to quantify these $PDF$'s.  
+
+In this paper we study two well known chaotic maps: the tent map and the logistic map.
+All the above mentioned numerical representations are considered.
+Furthermore sequential switching between both maps is evaluated as a tool to improve the statistical characteristics.
 
 \end{abstract}
 \maketitle
