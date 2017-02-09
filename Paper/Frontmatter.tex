@@ -11,23 +11,19 @@
 
 \begin{abstract}
 In the last years, digital systems such as Digital Signal Processors (DSP), Field Programmable Gate Arrays (FPGA) and Application-Specific Integrated Circuits (ASIC), became the standard in all experimental sciences.
-This systems allow experimenters to design and modify their own signal generators, measuring systems, simulation models, etc.
-All these adventages gave as result the emergence of High Performance Computing (HPC) as a new research field.
-
+Experimenters may design and modify their own systems.
 
 In these systems digital implementations has a custom made numerical system, therefore finite arithmetic needs to be investigated.
 Fixed point representation is prefered over floating point when  speed, low power and/or small circuit area is necessary.
 
 Chaotic systems implemented in finite preceision will always became periodic with period T.
-Furthermore binary floating and fixed point are numerical representations available, each of them produces specific period and statistical characteristics that needs to be evaluated.
-
-In [REF NEEDED] a complete study about period was carried out.
 It has been recently shown that it is convenient to describe the statistical characteristic using both, a non causal and a causal probability distribution function ($PDF$).
 The corresponding entropies, must be evaluated to quantify these $PDF$'s.  
 
-In this paper we study two well known chaotic maps: the tent map and the logistic map.
-All the above mentioned numerical representations are considered.
-Furthermore sequential switching between both maps is evaluated as a tool to improve the statistical characteristics.
+Binary floating and fixed point are the numerical representations available, each of them produces specific period and statistical characteristics that needs to be evaluated.
+
+In \cite{Nagaraj2008} a complete study about period was carried out using as an example two well known chaotic maps: the tent map and the logistic map. After that, switching techniques between these two maps were tested.
+In this paper we characterize the behaviour of these maps when precision varies from an statistical point of view, using causal and non causal entropires.
 
 \end{abstract}
 \maketitle
