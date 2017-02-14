@@ -20,28 +20,38 @@ x_{n+1}~=~ \left\{ \begin{array}{ll}
 \end{equation}
 with $\epsilon=2^{-B}$ for binary numbers.
 
-When this map is implemented in a computer using any numerical representation system (even floating point!) truncation errors rapidly increases and makes the unstable fixed point in $x^*=0$ becomes stable producing a short transitory followed by an infinite number of  $0$'s\cite{Jessa1993,Callegari1997}.
-This issue is easily explained in [with chaos meet computers], problem appears but all itarations has an shift-to-left operation that carry the $0's$ from right side.
+When this map is implemented in a computer using any numerical representation system (even floating point!) truncation errors rapidly increases and makes the unstable fixed point in $x^*=0$ becomes stable producing a short transitory of length between $0$ and $B$ followed by an infinite number of  $0$'s\cite{Jessa1993,Callegari1997}.
+This issue is easily explained in [with chaos meet computers], problem appears because all itarations has an shift-to-left operation that carry the $0's$ from right side.
 Some authors \cite{buscar} have proposed to add a random perturbation to avoid this drawback of the Tent map. But this procedure introduces statistical properties of the random perturbation that are mixed with those of the Tent map itself.
 Skew Tent is an option that allows reach nice statistical properties even in base 2 fractional numbers.
 Here we study the Tent map "as it is" without any artifact to evaluate its real instead of theoretical statistical properties. 
 
-Figs. \ref{fig:tent} (a) to (e) show the different quantifiers for floating point and fixed point numerical representation.
-This map falls to $0$ in all cases with a short transitory between $0$ and $B$
-Again $BPW$ quantifiers is diferent of $0$ because this procedure discards the elements once they reach the fixed point.
-Because of this TENT map is not possible to use in 2-bassed computer.
+Figs. \ref{fig:TENT_QuantiB} (a) to (e) show the different quantifiers for floating point and fixed point numerical representation.
+Quantifiers $H_{val}$, $H_{BP}$ and $C_{BP}$ are equal to zero for all presitions, this refcts that the series remains in the same value for almost all samples. 
+When we compares with $H_{BP}$ and $C_{BP}$ quantifiers they are different of $0$ because  $BPW$ procedure discards the elements once they reach the fixed point.
 
 \begin{figure}
-	\includegraphics[width=.32\textwidth]{Hval_Tent}
-	\includegraphics[width=.32\textwidth]{Hbp_Tent}
-	\includegraphics[width=.32\textwidth]{Hbpw_Tent}
-	\includegraphics[width=.32\textwidth]{Cbp_Tent}
-	\includegraphics[width=.32\textwidth]{Cbpw_Tent}
-	\includegraphics[width=.32\textwidth]{MP_Tent}
-	\includegraphics[width=.32\textwidth]{Period_Tent}
-	\includegraphics[width=.32\textwidth]{HbpHval_Tent}
-	\includegraphics[width=.32\textwidth]{HbpwHval_Tent}
-	\includegraphics[width=.32\textwidth]{CbpHbp_Tent}
-	\includegraphics[width=.32\textwidth]{CbpwHbpw_Tent}
-	\caption{Statistical properties of the TENT map using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{hist},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers. (The star represents the state for floating points numbers). } \label{fig:tent}
+	\includegraphics[width=.49\textwidth]{Hval_Tent}
+	\includegraphics[width=.49\textwidth]{Hbp_Tent}
+	\includegraphics[width=.49\textwidth]{Hbpw_Tent}
+	\includegraphics[width=.49\textwidth]{Cbp_Tent}
+	\includegraphics[width=.49\textwidth]{Cbpw_Tent}
+	\includegraphics[width=.49\textwidth]{MP_Tent}
+	\caption{Statistical properties of the TENT map using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{hist},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers. (The star represents the state for floating points numbers). } \label{fig:TENT_QuantiB}
+\end{figure}
+
+\textcolor{red}{ACÁ PONER ALGO DE LOS PLANOS DOBLE ENTROPÍA}
+
+\begin{figure}
+	\includegraphics[width=.49\textwidth]{HbpHval_Tent}
+	\includegraphics[width=.49\textwidth]{HbpwHval_Tent}
+	\caption{Statistical properties of the TENT map using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{hist},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers. (The star represents the state for floating points numbers). } \label{fig:TENT_HH}
+\end{figure}
+
+\textcolor{red}{ACÁ PONER ALGO DE LOS PLANOS ENTROPÍA-COMPLEJIDAD}
+
+\begin{figure}
+	\includegraphics[width=.49\textwidth]{CbpHbp_Tent}
+	\includegraphics[width=.49\textwidth]{CbpwHbpw_Tent}
+	\caption{Statistical properties of the TENT map using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{hist},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers. (The star represents the state for floating points numbers). } \label{fig:TENT_HC}
 \end{figure}
