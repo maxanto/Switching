@@ -1,6 +1,6 @@
 \subsubsection{Tent map (TENT)} \label{sssec:tent}
 
-The Tent map has been extensively studied in the literature because theoretically it has nice  statistical properties that can be analytically obtained. For example it is easy to proof that it has a uniform histogram and consequently an ideal $H_{hist}=1$. The Perron-Frobenius operator and its corresponding eigenvalues and eigenfunctions may be also be analytically obtained for this map \cite{tent}. 
+The Tent map has been extensively studied in the literature because theoretically it has nice  statistical properties that can be analytically obtained. For example it is easy to proof that it has a uniform histogram and consequently an ideal $H_{val}=1$. The Perron-Frobenius operator and its corresponding eigenvalues and eigenfunctions may be also be analytically obtained for this map \cite{tent}. 
 
 This map is represented with the equation:
 \begin{equation}\label{eq:tentmap}
@@ -27,8 +27,9 @@ Skew Tent is an option that allows reach nice statistical properties even in bas
 Here we study the Tent map "as it is" without any artifact to evaluate its real instead of theoretical statistical properties. 
 
 Figs. \ref{fig:TENT_QuantiB} (a) to (e) show the different quantifiers for floating point and fixed point numerical representation.
-Quantifiers $H_{val}$, $H_{BP}$ and $C_{BP}$ are equal to zero for all presitions, this refcts that the series remains in the same value for almost all samples. 
-When we compares with $H_{BP}$ and $C_{BP}$ quantifiers they are different of $0$ because  $BPW$ procedure discards the elements once they reach the fixed point.
+Quantifiers $H_{val}$, $H_{BP}$ and $C_{BP}$ are equal to zero for all presitions, this reflects that the series remains in a fixed point for almost all samples. 
+When we compares with $H_{BPW}$ and $C_{BPW}$ quantifiers they are different of $0$ because $BPW$ procedure discards the elements once they reach the fixed point.
+High dispersions in $H_{BPW}$, $C_{BPW}$ and $MP$ are related with the short length of data taken into account, transient to fixed point has a maximum length of $B$ iterations for fixed point arithmetic and $54$ for floating point.
 
 \begin{figure}
 	\includegraphics[width=.49\textwidth]{Hval_Tent}
@@ -37,21 +38,15 @@ When we compares with $H_{BP}$ and $C_{BP}$ quantifiers they are different of $0
 	\includegraphics[width=.49\textwidth]{Cbp_Tent}
 	\includegraphics[width=.49\textwidth]{Cbpw_Tent}
 	\includegraphics[width=.49\textwidth]{MP_Tent}
-	\caption{Statistical properties of the TENT map using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{hist},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers. (The star represents the state for floating points numbers). } \label{fig:TENT_QuantiB}
+	\caption{Statistical properties of the TENT map using binary representation: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) Number of missing ordering patterns $MP$ vs $B$.}
+	\label{fig:TENT_QuantiB}
 \end{figure}
 
-\textcolor{red}{ACÁ PONER ALGO DE LOS PLANOS DOBLE ENTROPÍA}
+When fixed point is discarded, complexity remains near maximum for all presicions.
+It can be seen in Fig. \ref{fig:TENT_HC}, where all points are close to superior margin.
 
 \begin{figure}
-	\includegraphics[width=.49\textwidth]{HbpHval_Tent}
-	\includegraphics[width=.49\textwidth]{HbpwHval_Tent}
-	\caption{Statistical properties of the TENT map using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{hist},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers. (The star represents the state for floating points numbers). } \label{fig:TENT_HH}
-\end{figure}
-
-\textcolor{red}{ACÁ PONER ALGO DE LOS PLANOS ENTROPÍA-COMPLEJIDAD}
-
-\begin{figure}
-	\includegraphics[width=.49\textwidth]{CbpHbp_Tent}
 	\includegraphics[width=.49\textwidth]{CbpwHbpw_Tent}
-	\caption{Statistical properties of the TENT map using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{hist},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers. (The star represents the state for floating points numbers). } \label{fig:TENT_HC}
+	\caption{Evolution of statistical properties in entropy-complexity plane of LOG map using binary representation: $C_{BPW}$ vs $H_{BPW}$.}
+	\label{fig:TENT_HC}
 \end{figure}

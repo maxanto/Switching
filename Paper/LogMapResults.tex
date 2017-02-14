@@ -21,9 +21,9 @@ Note that the stable value of missing patterns $645$ makes the optimum $H_{BP} \
 Then $B=30$ is the most convenient choice because an increase in the number of fractional figures does not improve the statistical properties.
 
 We can extract some conclussions when compare \textit{BP} with \textit{BPW} quantifiers.
-We can see that for $B=1, 2, 3 and 4$, $BP$ quantifiers is almost $0$ and $BPW$ quantifiers not exists in the mean, the initial condition of some atractors was rounded to $0$ and $BPW$ histogram not exist.
+For $B=1, 2, 3 and 4$, $BP$ quantifiers is almost $0$ and $BPW$ quantifiers not exists in the mean, the initial condition of some atractors was rounded to $0$ and $BPW$ histogram not exist.
 For $B=7, 9 and 12$, an high dispersion in $BPW$ are showed, but not in $BP$ graphs, atractor falls to a fixed point with an short transitory in these cases.
-Finally, for $B = 45, 49, 51 and 52$ some $BP$ quantifiers has a low value, but $BPW$ quantifiers has a more predictible behavior, we can see that these atractors falls to a fixed point with a long trnsitory.
+Finally, for $B = 45, 49, 51 and 52$ some $BP$ quantifiers has a low value, but $BPW$ quantifiers has a more predictible behavior, we can see that these atractors falls to a fixed point with a long transitory.
 In this case the problem has to do with the plataform that we use, the miltiplication needs the double of bits to be represented but the machine has only $64$.
 
 \begin{figure}
@@ -33,7 +33,8 @@ In this case the problem has to do with the plataform that we use, the miltiplic
 	\includegraphics[width= .49\textwidth]{Cbp_Logistico}
 	\includegraphics[width= .49\textwidth]{Cbpw_Logistico}
 	\includegraphics[width= .49\textwidth]{MP_Logistico}
-	\caption{Statistical properties of the LOG map using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (d) representation in the $H_{hist},H_{BP}$ plane in the the decimal numerical system.  The star represents the state for floating points numbers. (e) representation in the $H_{hist},H_{BP}$ plane. The star represents the state for floating point numbers; (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane for binary numerical system.  The star represents the state for floating points numbers. } \label{fig:LOG_QuantiB}
+	\caption{Statistical properties of the LOG map using binary representation: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) Number of missing ordering patterns $MP$ vs $B$.}
+	\label{fig:LOG_QuantiB}
 \end{figure}
 
 In Fig. \ref{fig:LOG_HH} double entropy planes are showed.
@@ -48,7 +49,8 @@ Accross $B=20$, $H_{val}$ improves but $H_{BP}$ stay around its maximum.
 \begin{figure}
 	\includegraphics[width= .49\textwidth]{HbpHval_Logistico}
 	\includegraphics[width= .49\textwidth]{HbpwHval_Logistico}
-	\caption{Statistical properties of the LOG map using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (d) representation in the $H_{hist},H_{BP}$ plane in the the decimal numerical system.  The star represents the state for floating points numbers. (e) representation in the $H_{hist},H_{BP}$ plane. The star represents the state for floating point numbers; (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane for binary numerical system.  The star represents the state for floating points numbers. } \label{fig:LOG_HH}
+	\caption{Evolution of statistical properties in double entropy plane of LOG map using binary representation: (a) $H_{val}$ vs $H_{BP}$ (b) $H_{val}$ vs $H_{BPW}$.}
+	\label{fig:LOG_HH}
 \end{figure}
 
 In Fig. \ref{fig:LOG_HC} we shows the entropy-complexity planes.
@@ -58,5 +60,6 @@ There results characterize an chaotic behaviour, in $H_{BP}-C_{BP}$ plane we can
 \begin{figure}
 	\includegraphics[width= .49\textwidth]{CbpHbp_Logistico}
 	\includegraphics[width= .49\textwidth]{CbpwHbpw_Logistico}
-	\caption{Statistical properties of the LOG map using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (d) representation in the $H_{hist},H_{BP}$ plane in the the decimal numerical system.  The star represents the state for floating points numbers. (e) representation in the $H_{hist},H_{BP}$ plane. The star represents the state for floating point numbers; (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane for binary numerical system.  The star represents the state for floating points numbers. } \label{fig:LOG_HC}
+	\caption{Evolution of statistical properties in entropy-complexity plane of LOG map using binary representation: (a) $C_{BP}$ vs $H_{BP}$ (b) $C_{BPW}$ vs $H_{BPW}$.}
+	\label{fig:LOG_HC}
 \end{figure}
