@@ -1,34 +1,50 @@
 \subsubsection{Sequential switching between Tent and Logistic maps (SWITCH)} \label{sssec:switch}
 
-SWITCH may be expressed as a composition between $M_1 \circ M_2$ given by the following recurrence:
-%
+SWITCH may be expressed as:
+
+\textcolor{red}{ESTA ECUACIÓN HAY QUE REVISARLA, CREO QUE CON PONER QUE n ES UN NÚMERO PAR INCLUÍDO EL CERO ES SUFICIENTE}
 \[ \left\{ \begin{array}{ccc}\label{eq:seq}
-x_{n+2}~=~ 4~x_{n+1}~(1-{n+1}) \\
-x_{n+1}~=~ \left\{ \begin{array}{ll}
-2~{x_n} & \textrm{if $0\leq x_n\leq 1/2$}\\
-2~(1-{x_n}) & \textrm{if $1/2<x_n\leq 1$} 
-\end{array} \right.  \end{array}\right. \] 
-with $x_n\in\mathcal{R}$.
-%
-Results with sequential switching are shown in Figs. \ref{fig:seqbin} (a) to (f).
-The floating point entropy value is $H_{hist}=0.8658$, a higher value to that obtained for LOG. 
-For binary numbers this value is reached for $B=24$, but it is stable from $B=28$.
+	x_{n+1}&~=&~ \left\{ \begin{array}{ll}
+		2~{x_n}  \textrm{if $0\leq x_n\leq 1/2$}\\
+		2~(1-{x_n})  \textrm{if $1/2<x_n\leq 1$} 
+	\end{array} \right 
+	\\ x_{n+2}&~=&~ 4~x_{n+1}~(1-x_{n+1}) \\
+\end{array}\right. \] 
+with $x_n\in\mathcal{R}$ and $n$ an even number.
+
+Results with sequential switching are shown in Figs. \ref{fig:SWITCH_QuantiB} (a) to (f).
+The floating point entropy value is $H_{val}=0.9722$, a marginal increment value to that obtained for LOG. 
+For fractinal numbers this value is reached for $B=24$, but it is stable from $B=28$.
 Regarding ordering patterns the number of MP decreases to $586$, a value lower than the one obtained for LOG.
 It means the entropy $H_{BP}$ may increase up to $ln(134)/ln(720)\simeq 0.74$.
-$BP$ and $BPW$ quantifiers reachs their maximum at $B=16$, but they stabilishes at $B=24$.
-This means that an amount of $B \geq 28$ is necessary to obtain optimal results.
-We can see some points with anomalies from $B \geq 49$ due to same problem of LOG map.
+$BP$ and $BPW$ quantifiers reachs their maximum of $H_{BP}=0.6546$ and $H_{BPW}=0.6313$ at $B=16$, but they stabilishes at $B=24$.
+Complexities are lower than LOG, $C_{BP}=0.4580$ and $C_{BPW}=0.4578$, these values are reached for $B \geq 15$ but is stable from $B \geq 23$.
+Compared with LOG, statistical proerties are better and they are reached with a less amount of bits, for $B \geq 24$ this map reachs optimal characteristics.
+
+We can see some points with anomalies from $B \geq 49$ due to same problem of LOG map, an multiplication needs double of precision to be done.
+Furthermore, we encountred one initial condition in fixed point with an anomalous behaviour.
 
 \begin{figure}
-	\includegraphics[width=.32\textwidth]{Hval_Switch}
-	\includegraphics[width=.32\textwidth]{Hbp_Switch}
-	\includegraphics[width=.32\textwidth]{Hbpw_Switch}
-	\includegraphics[width=.32\textwidth]{Cbp_Switch}
-	\includegraphics[width=.32\textwidth]{Cbpw_Switch}
-	\includegraphics[width=.32\textwidth]{MP_Switch}
-	\includegraphics[width=.32\textwidth]{HbpHval_Switch}
-	\includegraphics[width=.32\textwidth]{HbpwHval_Switch}
-	\includegraphics[width=.32\textwidth]{CbpHbp_Switch}
-	\includegraphics[width=.32\textwidth]{CbpwHbpw_Switch}
-	\caption{Statistical properties of SWITCH,  using binary representation: (a) $H_{hist}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{hist},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers.  } \label{fig:seqbin}
+	\includegraphics[width=.49\textwidth]{Hval_Switch}
+	\includegraphics[width=.49\textwidth]{Hbp_Switch}
+	\includegraphics[width=.49\textwidth]{Hbpw_Switch}
+	\includegraphics[width=.49\textwidth]{Cbp_Switch}
+	\includegraphics[width=.49\textwidth]{Cbpw_Switch}
+	\includegraphics[width=.49\textwidth]{MP_Switch}
+	\caption{Statistical properties of the SWITCH map using binary representation: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) Number of missing ordering patterns $MP$ vs $B$.}
+	\label{fig:SWITCH_QuantiB}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=.49\textwidth]{HbpHval_Switch}
+	\includegraphics[width=.49\textwidth]{HbpwHval_Switch}
+	\caption{Evolution of statistical properties in double entropy plane of SWITCH map using binary representation: (a) $H_{val}$ vs $H_{BP}$ (b) $H_{val}$ vs $H_{BPW}$.}
+	\label{fig:SWITCH_HH}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=.49\textwidth]{CbpHbp_Switch}
+	\includegraphics[width=.49\textwidth]{CbpwHbpw_Switch}
+	\caption{Evolution of statistical properties in entropy-complexity plane of SWITCH map using binary representation: (a) $C_{BP}$ vs $H_{BP}$ (b) $C_{BPW}$ vs $H_{BPW}$.}
+	\label{fig:SWITCH_HC}
 \end{figure}
