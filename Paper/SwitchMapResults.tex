@@ -3,13 +3,18 @@
 SWITCH may be expressed as:
 
 \textcolor{red}{ESTA ECUACIÓN HAY QUE REVISARLA, CREO QUE CON PONER QUE n ES UN NÚMERO PAR INCLUÍDO EL CERO ES SUFICIENTE}
-\[ \left\{ \begin{array}{ccc}\label{eq:seq}
-	x_{n+1}&~=&~ \left\{ \begin{array}{ll}
-		2~{x_n}  \textrm{if $0\leq x_n\leq 1/2$}\\
-		2~(1-{x_n})  \textrm{if $1/2<x_n\leq 1$} 
-	\end{array} \right 
-	\\ x_{n+2}&~=&~ 4~x_{n+1}~(1-x_{n+1}) \\
-\end{array}\right. \] 
+
+\begin{equation}
+\begin{cases}
+	x_{n+1}=
+	\begin{cases}
+		2x_n, & \mbox{if } 0\leq x_n\leq 1/2 \\
+		2(1-x_n ), & \mbox{if } 1/2<x_n\leq 1
+	\end{cases} \\
+	x_{n+2}=4x_{n+1}(1-x_{n+1})
+\end{cases}
+\end{equation}
+
 with $x_n\in\mathcal{R}$ and $n$ an even number.
 
 Results with sequential switching are shown in Figs. \ref{fig:SWITCH_QuantiB} (a) to (f).

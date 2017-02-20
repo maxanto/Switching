@@ -17,6 +17,7 @@ In the case under consideration we study Even and Odd skipping of the sequential
 \end{figure}
 
 The reason for studying even and odd skipping cases is the sequential switching map $M_{switch}$ is the composition of two different maps. Even skipping may be expressed as $M_{TENT}\circ M_{LOG}$ while odd skipping may be expressed as $M_{LOG} \circ M_{TENT}$.
+The evolution of period as function of resicion was reported in \
 
 Quantifiers related to the normalized histogram of values slightly degrades with the skipping procedure. For example $H_{val}$ reduces from $0.9722$ without skipping to $0.9459$ for EVEN and $0.9706$ for ODD. 
 This difference between EVEN and ODD is because in floating point an high dispersion was obtained for $H_{val}$, $H_{BP}$ and $C_{BP}$ but not for $H_{BPW}$ or $C_{BPW}$.
@@ -32,53 +33,55 @@ Amount of bits to represent the fractional part was $B>40$ for both EVEN and ODD
 In Figs. \ref{fig:EVEN_QuantiB} and Figs. \ref{fig:ODD_QuantiB} are shown the results for EVEN and ODD respsctivelly.
 
 \begin{figure}
-	\includegraphics[width=.32\textwidth]{Hval_SwitchEven}
-	\includegraphics[width=.32\textwidth]{Hbp_SwitchEven}
-	\includegraphics[width=.32\textwidth]{Hbpw_SwitchEven}
-	\includegraphics[width=.32\textwidth]{Cbp_SwitchEven}
-	\includegraphics[width=.32\textwidth]{Cbpw_SwitchEven}
-	\includegraphics[width=.32\textwidth]{MP_SwitchEven}
+	\includegraphics[width=.49\textwidth]{Hval_SwitchEven}
+	\includegraphics[width=.49\textwidth]{Hbp_SwitchEven}
+	\includegraphics[width=.49\textwidth]{Hbpw_SwitchEven}
+	\includegraphics[width=.49\textwidth]{Cbp_SwitchEven}
+	\includegraphics[width=.49\textwidth]{Cbpw_SwitchEven}
+	\includegraphics[width=.49\textwidth]{MP_SwitchEven}
 	\caption{Statistical properties of the EVEN map using binary representation: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) Number of missing ordering patterns $MP$ vs $B$.}
 	\label{fig:EVEN_QuantiB}
 \end{figure}
 
 \begin{figure}
-	\includegraphics[width=.32\textwidth]{Hval_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{Hbp_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{Hbpw_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{Cbp_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{Cbpw_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{MP_SwitchOdd}
+	\includegraphics[width=.49\textwidth]{Hval_SwitchOdd}
+	\includegraphics[width=.49\textwidth]{Hbp_SwitchOdd}
+	\includegraphics[width=.49\textwidth]{Hbpw_SwitchOdd}
+	\includegraphics[width=.49\textwidth]{Cbp_SwitchOdd}
+	\includegraphics[width=.49\textwidth]{Cbpw_SwitchOdd}
+	\includegraphics[width=.49\textwidth]{MP_SwitchOdd}
 	\caption{Statistical properties of the LOG map using binary representation: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) Number of missing ordering patterns $MP$ vs $B$.}
 	\label{fig:ODD_QuantiB}
 	\end{figure}
 
-
+\textcolor{red}{PLANOS DOBLE ENTROPÍA}
 
 \begin{figure}
-	\includegraphics[width=.32\textwidth]{Hval_SwitchEven}
-	\includegraphics[width=.32\textwidth]{Hbp_SwitchEven}
-	\includegraphics[width=.32\textwidth]{Hbpw_SwitchEven}
-	\includegraphics[width=.32\textwidth]{Cbp_SwitchEven}
-	\includegraphics[width=.32\textwidth]{Cbpw_SwitchEven}
-	\includegraphics[width=.32\textwidth]{MP_SwitchEven}
-	\includegraphics[width=.32\textwidth]{HbpHval_SwitchEven}
-	\includegraphics[width=.32\textwidth]{HbpwHval_SwitchEven}
-	\includegraphics[width=.32\textwidth]{CbpHbp_SwitchEven}
-	\includegraphics[width=.32\textwidth]{CbpwHbpw_SwitchEven}
-	\caption{Statistical properties of EVEN, obtained by skipping the values in the odd position of the time series of  SWITCH,  using binary representation: (a) $H_{val}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{val},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers.  } \label{fig:even}
+	\includegraphics[width=.49\textwidth]{HbpHval_SwitchEven}
+	\includegraphics[width=.49\textwidth]{HbpwHval_SwitchEven}
+	\caption{Evolution of statistical properties in double entropy plane of LOG map using binary representation: (a) $H_{val}$ vs $H_{BP}$ (b) $H_{val}$ vs $H_{BPW}$.}
+	\label{fig:EVEN_HH}
 \end{figure}
 
 \begin{figure}
-	\includegraphics[width=.32\textwidth]{Hval_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{Hbp_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{Hbpw_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{Cbp_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{Cbpw_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{MP_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{HbpHval_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{HbpwHval_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{CbpHbp_SwitchOdd}
-	\includegraphics[width=.32\textwidth]{CbpwHbpw_SwitchOdd}
-	\caption{Statistical properties of ODD, obtained by skipping the values in the odd position of the time series of  SWITCH,  using binary representation: (a) $H_{val}$ vs $P$ (b) $H_{BP}$ vs $P$ (c) $C_{BP}$ vs $P$ (d) Number of missing ordering patterns $MP$ vs $P$. In Figures (a) to (d) dashed line correspond to floating point numbers. (e) representation in the $H_{val},H_{BP}$ plane in the the binary numerical system.  The star represents the state for floating points numbers. (f) representation in the $H_{BP},C_{BP}$ plane.  The star represents the state for floating points numbers.  } \label{fig:odd}
+	\includegraphics[width=.49\textwidth]{HbpHval_SwitchOdd}
+	\includegraphics[width=.49\textwidth]{HbpwHval_SwitchOdd}
+	\caption{Evolution of statistical properties in double entropy plane of LOG map using binary representation: (a) $H_{val}$ vs $H_{BP}$ (b) $H_{val}$ vs $H_{BPW}$.}
+	\label{fig:ODD_HH}
+\end{figure}
+
+\textcolor{red}{PLANOS ENTROPÍA-COMPLEJIDAD}
+
+\begin{figure}
+	\includegraphics[width=.49\textwidth]{CbpHbp_SwitchEven}
+	\includegraphics[width=.49\textwidth]{CbpwHbpw_SwitchEven}
+	\caption{Evolution of statistical properties in entropy-complexity plane of LOG map using binary representation: (a) $C_{BP}$ vs $H_{BP}$ (b) $C_{BPW}$ vs $H_{BPW}$.}
+	\label{fig:EVEN_HC}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=.49\textwidth]{CbpHbp_SwitchOdd}
+	\includegraphics[width=.49\textwidth]{CbpwHbpw_SwitchOdd}
+	\caption{Evolution of statistical properties in entropy-complexity plane of LOG map using binary representation: (a) $C_{BP}$ vs $H_{BP}$ (b) $C_{BPW}$ vs $H_{BPW}$.}
+	\label{fig:ODD_HC}
 \end{figure}
