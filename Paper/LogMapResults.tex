@@ -1,6 +1,7 @@
 \subsubsection{Logistic map (LOG)} \label{subsubsec:log}
 
-Logistic map is representative of the very large family of quadratic maps. 
+Logistic map is representative of the very large family of quadratic maps.
+This expression is:
 \begin{equation}\label{eq:logimap}
  x_{[n+1]}=4x_{[n]}(1-x_{[n]}) \,
 \end{equation}
@@ -10,20 +11,21 @@ Note that to effectively work in a given representation it is necessary to chang
 \begin{equation}\label{eq:logimapB2}
 x_{n+1}=4 \epsilon floor\{\frac{x_n(1-x_n)}{\epsilon}\} \,
 \end{equation}
-with $\epsilon = 2^B$ where $B$ is the length of fractional part.
+with $\epsilon = 2^B$ where $B$ is the number of bits that represents the fractional part.
 
+According B grows, statistical properties varies until it stabilizes.
 Figs. \ref{fig:LOG_QuantiB} (a) to (f) show the statistical properties of LOG map in floating point and fixed point representation.
-All these figures shows: in red dots the results of each run (100 point for each presicion), in black dots the mean of these 100 points (dashed black line connects black dots), in dashed blue lines the results of each run in floating point and (100 horizontal blue dashed lines) and in black the mean for floating point.
+All these figures shows: in red dots the results of each run (100 point for each presicion), in black dots the mean of these 100 points (dashed black line connects black dots), in dashed blue lines the results of each run in floating point (100 horizontal blue dashed lines) and in black line the mean for floating point.
 
 For $B\geq 30$ the value of $H_{val}$ remains almost identical to the values for the floating point representation whereas $H_{BP}$ and $C_{BP}$ stabilizes at $B>21$.
 Their values are: $<H_{val}>=0.9669$; $<H_{BP}>=0.6269$; $<C_{BP}>=0.4843$.
-Note that the stable value of missing patterns $645$ makes the optimum $H_{BP} \leq ln(75)/ln(720) \simeq 0.65$, this value of $MP$ is reached for $B>21$, the same of $<H_{BP}>=0.6269$ and $<C_{BP}>=0.4843$.
+Note that the stable value of missing patterns $MP=645$ makes the optimum $H_{BP} \leq ln(75)/ln(720) \simeq 0.65$, this value of $MP$ is reached for $B>21$, the same of $<H_{BP}>=0.6269$ and $<C_{BP}>=0.4843$.
 Then $B=30$ is the most convenient choice because an increase in the number of fractional figures does not improve the statistical properties.
 
 We can extract some conclussions when compare \textit{BP} with \textit{BPW} quantifiers.
-For $B=1, 2, 3 and 4$, $BP$ quantifiers is almost $0$ and $BPW$ quantifiers not exists in the mean, the initial condition of some atractors was rounded to $0$ and $BPW$ histogram not exist.
-For $B=7, 9 and 12$, an high dispersion in $BPW$ are showed, but not in $BP$ graphs, atractor falls to a fixed point with an short transitory in these cases.
-Finally, for $B = 45, 49, 51 and 52$ some $BP$ quantifiers has a low value, but $BPW$ quantifiers has a more predictible behavior, we can see that these atractors falls to a fixed point with a long transitory.
+For $B=1, 2, 3$ and $4$, $BP$ quantifiers is almost $0$ and $BPW$ quantifiers not exists in the mean, the initial condition of some atractors was rounded to $0$ and $BPW$ histogram not exist.
+For $B=7, 9$ and $12$, an high dispersion in $BPW$ are showed, but not in $BP$ graphs, atractor falls to a fixed point with an short transitory in these cases.
+Finally, for $B = 45, 49, 51$ and $52$ some $BP$ quantifiers has a low value, but $BPW$ quantifiers has a more predictible behavior, we can see that these atractors falls to a fixed point with a long transitory.
 In this case the problem has to do with the plataform that we use, the miltiplication needs the double of bits to be represented but the machine has only $64$.
 
 \begin{figure}
@@ -39,11 +41,10 @@ In this case the problem has to do with the plataform that we use, the miltiplic
 
 In Fig. \ref{fig:LOG_HH} double entropy planes are showed.
 Red points are each individual measurement and black points their mean.
-Black dashed line shows the evolution of the mean in this plane when $B$ growths.
+Black dashed line shows the evolution of the mean as $B$ growths.
 Blue points shows each individual measurement in floating point and their mean with an star.
 
-Although the distribution of values reaches high values, their mixing is poor.
-It can be seen in the evolution of the mean values according $B$ growths.
+Although the distribution of values reaches high values their mixing is poor, this can be seen in the evolution of the mean values according $B$ growths.
 Accross $B=20$, $H_{val}$ improves but $H_{BP}$ stay around its maximum.
 
 \begin{figure}
@@ -54,7 +55,7 @@ Accross $B=20$, $H_{val}$ improves but $H_{BP}$ stay around its maximum.
 \end{figure}
 
 In Fig. \ref{fig:LOG_HC} we shows the entropy-complexity planes.
-Dotted gray lines are the superior and inferior margins, is spected that an chaotic system remain near superior margin.
+Dotted gray lines are the upper and lower margins, is spected that an chaotic system remain near upper margin.
 There results characterize an chaotic behaviour, in $H_{BP}-C_{BP}$ plane we can see a low entropy and high complexity.
 
 \begin{figure}
