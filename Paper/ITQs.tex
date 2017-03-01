@@ -1,12 +1,15 @@
 \section{Information theory quantifiers}\label{sec:quanti}
 
-The first step to quantify the statistical properties of the values (amplitude statistics) of a time series $\{x_i,~(i=1,...,N)\}$, using information theory is to determine the concomitant PDF because all the quantifiers are functionals of the PDF associated to the time series. This is an issue studied in detail in previous papers \cite{aka varios}. Let us summarize the procedure:
+All the statistical quantifiers are functionals of the PDF associated to the time series.
+The first step to quantify the statistical properties of the values (amplitude statistics) of a time series $\{x_i,~(i=1,...,N)\}$ using information theory is to determine the concomitant PDF.
+This is an issue studied in detail in previous papers \cite{aka varios}.
+Let us summarize the procedure:
 
 \begin{enumerate} 
 \item \label{1} a finite alphabet with $M$ symbols $\mathcal{A}=\{a_1,...,a_M\}$ is chosen. 
 \item \label{2} one of these symbols is assigned: (a) to each value of the time series of (b) to each portion of length $D$ of the trajectory. 
-\item \label{3} the normalized histogram of the symbols is the desired $PDF$.
-\item \label{3} an ramdomness quantifier is calculated over desired PDF. In our case we calculate (a) normalyzed Shannon entropy $H$, (b) normalyzed statistical complexity $C$ and (d) missing patterns MP.
+\item \label{3} the normalized histogram of the symbols is the desired PDF.
+\item \label{3} an ramdomness quantifier is calculated over desired PDF. In our case we calculate (a) normalyzed Shannon entropy $H$, (b) normalyzed statistical complexity $C$ and (d) missing patterns $MP$.
 \end{enumerate}
 
 Note that if option (a) is chosen in step \ref{2} then the PDF is \textit{non causal}, because all the information about the time evolution of the system generating $\{x_i\}$ is completely lost.
@@ -95,14 +98,14 @@ The complexity $C[P]$ is independent from the entropy $H[P]$, as far as differen
 The number of symbols $M$ is equal to $N$ for $H_{hist}$ and it is equal to $D!$ for $H_{BP}$ and $H_{BPW}$.
 
 Two representation planes are considered: $H_{BP}$ vs $H_{hist}$ \cite{DeMicco2008} and $H_{BP}$ vs $C_{BP}$ \cite{Rosso2007C}.
-In the first plane a higher value in any of the entropies, $H_{BP}$ and $H_{hist}$, implies an increase in the uniformity of the involved $PDF$.
+In the first plane a higher value in any of the entropies, $H_{BP}$ and $H_{hist}$, implies an increase in the uniformity of the involved PDF.
 The point $(1,1)$ represents the ideal case with uniform histogram and uniform distribution of ordering patterns.
 In the second plane not the entire region $0<H_{BP}<1$, $0<C_{BP}<1$ is achievable.
-In fact for any $PDF$ the pairs $(H,C)$ of possible values fall between two extreme curves in the plane $H$-$C$ \cite{Anteneodo1996}.
+In fact for any PDF the pairs $(H,C)$ of possible values fall between two extreme curves in the plane $H$-$C$ \cite{Anteneodo1996}.
 Fig. \ref{fig:planezone} shows two regions labeled as \textit{deterministic} and \textit{stochastic}.
 In fact transition from one region to the other are smooth and the division is a bit arbitrary.
 A more detailed discussion can be seen in \cite{Rosso2007C}.
-Ideal random systems having uniform Bandt \& Pompe $PDF$, are represented by the point $(1,0)$ \cite{Gonzalez2005} and a delta-like $PDF$ corresponds with the point $(0,0)$.
+Ideal random systems having uniform Bandt \& Pompe PDF, are represented by the point $(1,0)$ \cite{Gonzalez2005} and a delta-like PDF corresponds with the point $(0,0)$.
 
 We also used the number of missing patterns $MP$ as a quantifier\cite{Rosso2012}.
 As shown recently by Amig\'o {\it et al.} \cite{Amigo2006,Amigo2007,Amigo2008,Amigo2010}, in the case of deterministic one-dimensional maps, not all the possible ordinal patterns can be effectively materialized into orbits, which in a sense makes these patterns ``forbidden".

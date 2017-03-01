@@ -1,26 +1,28 @@
 \section{Introduction} \label{sec:intro}
 
-In the last years digital measuring systems become the standard in all experimental sciences.
-By using \textit{virtual instruments}, new programable electronic devices, such as Digital Signal Processors ($DSP$) and Field Programmable Gate Arrays ($FPGA$) and Application-Specific Integrated Circuits (ASIC), became the standard in all experimental sciences.
-This systems allow experimenters to design and modify their own signal generators, measuring systems, simulation models, etc.
+In the last years digital systems became the standard in all experimental sciences.
+By using \textit{virtual instruments}, new programable electronic devices such as Digital Signal Processors ($DSP$), Reconfigurable electronics such as Field Programmable Gate Arrays ($FPGA$) and Application-Specific Integrated Circuits (ASIC), allow experimenters to design and modify their own signal generators, measuring systems, simulation models, etc.
 
 The effect of finite precision in these new devices needs to be investigated.
-Floating point is not always available when speed, low power and/or small circuit area are is needed, a fixed point solution is better i these cases.
-This issue is critical if chaotic systems must be implemented, because due to roundoff errors digital implementations will always become periodic with a period $T$ and unstable orbits with a low period may become stable destroying completely the chaotic behavior.
+Floating point is not always available when speed, low power and/or small circuit area are is needed, a fixed point solution is better in these cases.
+Fixed point representation is critical if chaotic systems must be implemented, because due to roundoff errors digital implementations will always become periodic with period $T$ and unstable orbits with a low periods may become stable destroying completely the chaotic behavior.
 
 Grebogi and coworkers \cite{Grebogi1988} studied this subject and they shaw that the period $T$ scales with roundoff $\epsilon$ as $T\sim\epsilon^{-d/2}$ where $d$ is the correlation dimension of the chaotic attractor.
-To have a large period $T$ is one an important property of a chaotic map, in \cite{Nagaraj2008} Nagaraj et. als studies the effect of switching over the average period lengths of chaotic maps in finite precision.
+To have a large period $T$ is an important property of a chaotic map, in \cite{Nagaraj2008} Nagaraj et. als studies the effect of switching over the average period lengths of chaotic maps in finite precision.
 They shaw that the period $T$ of the compound map obtained by switching between two chaotic maps is higher than the period of each map.
 Liu et al \cite{Liu2006} studied different switching rules applied to linear systems to generate chaos.
 Switching chaos was also addressed in \cite{Gluskin2008}.
 Switching systems naturally arise in power electronics and many other areas in digital electronics.
 They have also interest in transport problems in deterministic ratchets \cite{Zarlenga2009} and it is known that synchronization of the switching procedure affects the output of the controlled system.
 
+Skipping values of the time series is a simple technique used to increase mixing in chaotic maps \cite{DeMicco2008}.
+\textcolor{red}{VER SI LA REFERENCIA USA SKIPPING, ACÁ HAY QUE REMAR UN POCO UN PÁRRAFO}
+
 Stochasticity and mixing are also relevant, to characterize these properties several quantifiers were studied \cite{DeMicco2009}.
 Among them the use of an entropy-complexity representation ($H-C$ plane) and causal-noncausal entropy ($H_{BP}-H_{Val}$ plane) deserves special consideration \cite{Rosso2007C,DeMicco2008,DeMicco2011,DeMicco2009,Rosso2009}[Poner Paper mío].
-A fundamental issue is the criterium to select the distribution function ($PDF$) assigned to the time series.
-Causal and non causal options are possible
-Here we consider the non-causal traditional $PDF$ obtained by normalization of the histogram of the time series.
+A fundamental issue is the criterium to select the probability distribution function ($PDF$) assigned to the time series.
+Causal and non causal options are possible.
+Here we consider the non-causal traditional $PDF$ obtained by normalizing the histogram of the time series.
 Its statistical quantifier is the normalized entropy $H_{Val}$ that is a measure of equiprobability among all allowed values.
 We also consider a causal $PDF$ that is obtained by assigning ordering patterns to segments of trajectory of length $D$.
 This PDF were first proposed by Bandt \& Pompe in a seminal paper \cite{Pompe2002}.
@@ -30,20 +32,19 @@ Essentialy they reported the presence of forbidden patterns as an indicator of c
 Recently it was shown that the name forbidden patterns is not convenient and it was replaced by \textit{missing patterns }(MP) \cite{Rosso2012b}.
 \textcolor{red}{PONER ALGO DE BPW}
 
-Skipping values of the time series is another simple technique used to increase mixing in chaotic maps \cite{DeMicco2008}.
-\textcolor{red}{VER SI LA REFERENCIA USA SKIPPING}
-
-In this paper we study the statistical characteristic of two well known maps: the tent map (TENT) and logistic map (LOG).
+In this paper we study the statistical characteristics of two well known maps: the tent map (TENT) and logistic map (LOG).
 Three additional maps are generated: 1) SWITCH, generated by switching between TENT and LOG; 2) EVEN, generated by skipping all the elements in odd position in SWITCH time series and 3) ODD, generated by discarding all the elements in an even position in SWITCH time series.
-Binary floating and fixed point numbers are used, these specific numerical systems may be implemented in modern programmable logic boards.
+Binary floating and fixed point numbers are used, these specific numerical systems may be implemented in modern programmable logic devices.
 
 The main contributions of this paper are:
 \begin{enumerate}
-\item the definition of different statistical quantifiers and their relationship with the properties of the time series generated by the map.
-\item the study of how this quantifiers detect the evolution of stochasticity and mixing of the chaotic maps according as the numerical precision varies.
-\item the effect of switching between two different maps, on the period and the statistical properties of the time series.
-\item the effect of skipping values in any of these maps, on the period and the statistical properties of the time series.
+\item the definition of different statistical quantifiers and their relationship with the properties of the series generated by the studied chaotic maps.
+\item the study of how these quantifiers detects the evolution of stochasticity and mixing of the chaotic maps according as the numerical precision varies.
+\item the effect on the period and the statistical properties of the time series of switching between two different maps.
+\item the effect on the period and the statistical properties of the time series of skipping values in of these map.
 \end{enumerate}
 
-Organization of the paper is as follows: section \ref{sec:quanti} describes the statistical quantifiers used in the paper and the relationship between their value and characteristics of the causal and non causal PDF considered; section \ref{sec:resultados} shows and discuss the results obtained for all the numerical representations.
+Organization of the paper is as follows:
+section \ref{sec:quanti} describes the statistical quantifiers used in the paper and the relationship between their value and characteristics of the causal and non causal PDF considered;
+section \ref{sec:resultados} shows and discusses the results obtained for all the numerical representations.
 Finally section \ref{sec:conclusions} deals with final remarks and future work.
