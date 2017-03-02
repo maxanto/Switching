@@ -1,7 +1,7 @@
 \subsubsection{Logistic map (LOG)} \label{subsubsec:log}
 
-Logistic map is representative of the very large family of quadratic maps.
-This expression is:
+Logistic map is interesting because is representative of the very large family of quadratic maps.
+Its expression is:
 \begin{equation}\label{eq:logimap}
  x_{[n+1]}=4x_{[n]}(1-x_{[n]}) \,
 \end{equation}
@@ -13,20 +13,27 @@ x_{n+1}=4 \epsilon floor\{\frac{x_n(1-x_n)}{\epsilon}\} \,
 \end{equation}
 with $\epsilon = 2^B$ where $B$ is the number of bits that represents the fractional part.
 
-According B grows, statistical properties varies until it stabilizes.
+According as B grows, statistical properties varies until they stabilize.
 Figs. \ref{fig:LOG_QuantiB} (a) to (f) show the statistical properties of LOG map in floating point and fixed point representation.
-All these figures shows: in red dots the results of each run (100 point for each presicion), in black dots the mean of these 100 points (dashed black line connects black dots), in dashed blue lines the results of each run in floating point (100 horizontal blue dashed lines) and in black line the mean for floating point.
+All these figures show: $100$ red points for each fixed point precision ($B$) and in black their average (dashed black line connecting black dots), $100$ horizontal dashed blue lines that are the results of each run in floating point and a black solid line their average.
+In this case, all the lines of the floating point are overlapped.
 
 For $B\geq 30$ the value of $H_{val}$ remains almost identical to the values for the floating point representation whereas $H_{BP}$ and $C_{BP}$ stabilizes at $B>21$.
 Their values are: $<H_{val}>=0.9669$; $<H_{BP}>=0.6269$; $<C_{BP}>=0.4843$.
-Note that the stable value of missing patterns $MP=645$ makes the optimum $H_{BP} \leq ln(75)/ln(720) \simeq 0.65$, this value of $MP$ is reached for $B>21$, the same of $<H_{BP}>=0.6269$ and $<C_{BP}>=0.4843$.
-Then $B=30$ is the most convenient choice because an increase in the number of fractional figures does not improve the statistical properties.
+Note that the stable value of missing patterns $MP=645$ makes the optimum $H_{BP} \leq ln(75)/ln(720) \simeq 0.65$.
+Then $B=30$ is the most convenient choice because an increase in the number of fractional digits does not improve the statistical properties.
 
-We can extract some conclussions when compare \textit{BP} with \textit{BPW} quantifiers.
-For $B=1, 2, 3$ and $4$, $BP$ quantifiers is almost $0$ and $BPW$ quantifiers not exists in the mean, the initial condition of some atractors was rounded to $0$ and $BPW$ histogram not exist.
-For $B=7, 9$ and $12$, an high dispersion in $BPW$ are showed, but not in $BP$ graphs, atractor falls to a fixed point with an short transitory in these cases.
-Finally, for $B = 45, 49, 51$ and $52$ some $BP$ quantifiers has a low value, but $BPW$ quantifiers has a more predictible behavior, we can see that these atractors falls to a fixed point with a long transitory.
-In this case the problem has to do with the plataform that we use, the miltiplication needs the double of bits to be represented but the machine has only $64$.
+Some conclusions can be drawn regarding \textit{BP} and \textit{BPW} quantifiers.
+
+For $B=1, 2, 3$ and $4$, the averaged $BP$ quantifiers are almost $0$ while the averaged $BPW$ quantifiers can not be calculated (seein Figs. \ref{fig:LOG_QuantiB} c and e the missing black dashed line).
+For those sequences where the initial condition where $0$ all iterations result to be a sequence of $0$s (the fixed point of the map), this happens very likely with small presitions because of the roundoffs.
+
+For $B=7, 9$ and $12$, a high dispersion in $BPW$ are showed, but not in $BP$ graphs, atractor falls to a fixed point with an short transitory in these cases.
+
+\textcolor{red}{ESTA ORACIÓN VA A DESAPARECER CON LONG DOUBLE, O NO?}
+Finally, for $B = 45, 49, 51$ and $52$ some $BP$ quantifiers have a low value, but $BPW$ quantifiers have a more predictible behavior, we can see that these atractors fall to a fixed point with a long transitory.
+In this behaviour is due to the employed plataform.
+The operation miltiplication needs the double of bits to be represented but the machine has only $64$.
 
 \begin{figure}
 	\includegraphics[width= .49\textwidth]{Hval_Logistico}

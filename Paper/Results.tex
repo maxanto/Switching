@@ -1,14 +1,17 @@
 \section{Results}\label{sec:resultados}
-Five pseudo chaotic maps were studied. For each one a floating point representation and a binary numbers representation with $1\leq B \leq 53$ are considered.
-For each representation $100$ time series were generated using randomly chosen initial conditions within the interval $[0,1]$.
-The studied maps are tent (TENT), logistic (LOG) a sequential switching between TENT and LOG (SWITCH).
-Furthermore a skipping randomization procedure is applied to SWITCH \cite{DeMicco2008}, discarding the values in the odd positions (EVEN) or the values in the even positions (ODD) respectively.
+
+Five pseudo chaotic maps were studied, two simple maps and three combination of them.
+For each one floating point representation and fixed point numbers with $1\leq B \leq 53$ representation are considered, where $B$ is the number of bits that represents the fractional part.
+For each one of these $54$ representations $100$ time series were generated using randomly chosen initial conditions within the interval $[0,1]$, that is the atraction domain.
+
+The studied maps are tent (TENT), logistic (LOG), sequential switching between TENT and LOG (SWITCH) and skipping discarding the values in the odd positions (EVEN) or the values in the even positions (ODD) respectively.
+
 Let us detail our results for each of these maps.
 
 \textcolor{red}{HAY QUE CAMBIAR EL ORDEN DE ESTE CAPÍTULO. ACÁ VA LA DESCRIPCIÓN DE CADA MAPA, ASÍ DESPUÉS PUEDO PONER LOS RESULTADOS DEL PERÍODO Y DESPUÉS LOS CUANTIS}
 
 \subsection {Simple maps.}\label{subsec:SimpleMaps}
-Here we report our results for both maps:
+Here we report our results for both simple maps:
 
 \input{LogMapResults}
 
