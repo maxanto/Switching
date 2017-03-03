@@ -28,12 +28,21 @@ Some conclusions can be drawn regarding \textit{BP} and \textit{BPW} quantifiers
 For $B=1, 2, 3$ and $4$, the averaged $BP$ quantifiers are almost $0$ while the averaged $BPW$ quantifiers can not be calculated (seein Figs. \ref{fig:LOG_QuantiB} c and e the missing black dashed line).
 For those sequences where the initial condition where $0$ all iterations result to be a sequence of $0$s (the fixed point of the map), this happens very likely with small presitions because of the roundoffs.
 
-For $B=7, 9$ and $12$, a high dispersion in $BPW$ are showed, but not in $BP$ graphs, atractor falls to a fixed point with an short transitory in these cases.
-
-\textcolor{red}{ESTA ORACIÓN VA A DESAPARECER CON LONG DOUBLE, O NO?}
+When $B$ increases, $B=7, 9$ and $12$, the used initial conditions are rounded to zero less frequently.
+So the generated sequences start from some value but many of them fall to zero with a short transitory.
+This can be seen in Figs. c and e, $BPW$ shows high dispersion unlike $BP$ quantifiers.
+This is because $BPW$ procedure takes into account only the transient discarding fixed points, unlike $BP$ procedure that considers all the sequence. 
+ 
+\textcolor{red}{ESTE PÁRRAFO VA A DESAPARECER CON LONG DOUBLE, O NO?, ADEMÁS DISTRAE DEL FOCO DEL TRABAJO. HAY QUE BUSCARLE UN LUGAR EN EL PAPER}
 Finally, for $B = 45, 49, 51$ and $52$ some $BP$ quantifiers have a low value, but $BPW$ quantifiers have a more predictible behavior, we can see that these atractors fall to a fixed point with a long transitory.
 In this behaviour is due to the employed plataform.
 The operation miltiplication needs the double of bits to be represented but the machine has only $64$.
+Acá lo que quiero decir es que en las figuras \ref{fig:LOG_QuantiB} a, b y d las corridas con punto fijo tienen alta dispersión y aparecen algunas con valores muy bajos.
+Esto es por que la aritmética de punto fijo la estamos queriendo generar artificialmente con una variable de tipo double que tiene una mantisa de 53 bits.
+Entonces en la multiplicación (que duplica la cantidad de bits necesarios) se pierden muchos fraccionarios.
+Lo mismo pasa si se usa el tipo float, que tiene 27 bits de mantisa pero mucho antes, a partir de B>24+-.
+Con long double debería desaparecer.
+Entonces hay que tener en cuenta esto cuando se simula punto fijo con la computadora, en los mapas que halla multiplicaciones.
 
 \begin{figure}
 	\includegraphics[width= .49\textwidth]{Hval_Logistico}
@@ -42,17 +51,17 @@ The operation miltiplication needs the double of bits to be represented but the 
 	\includegraphics[width= .49\textwidth]{Cbp_Logistico}
 	\includegraphics[width= .49\textwidth]{Cbpw_Logistico}
 	\includegraphics[width= .49\textwidth]{MP_Logistico}
-	\caption{Statistical properties of the LOG map using binary representation: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) Number of missing ordering patterns $MP$ vs $B$.}
+	\caption{Statistical properties of the LOG map: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
 	\label{fig:LOG_QuantiB}
 \end{figure}
 
-In Fig. \ref{fig:LOG_HH} double entropy planes are showed.
-Red points are each individual measurement and black points their mean.
-Black dashed line shows the evolution of the mean as $B$ growths.
-Blue points shows each individual measurement in floating point and their mean with an star.
+The same results are now shown in double entropy planes with the precision as parameter (Fig. \ref{fig:LOG_HH}).
+These figures show: $100$ red points for each fixed point precision ($B$) and in black their average (dashed black line connecting black dots), $100$ blue dots that are the results of each run in floating point and a black star their average.
+This last $100$ points and their average are overlapped.
 
-Although the distribution of values reaches high values their mixing is poor, this can be seen in the evolution of the mean values according $B$ growths.
-Accross $B=20$, $H_{val}$ improves but $H_{BP}$ stay around its maximum.
+As expected, the fixed point architecture implementation converges to the floating point value as $B$ increases.
+For both, Hbp-Hval and Hbpw-Hval, from $B=20$, $H_{val}$ improves but $H_{BP}$ remains constant.
+It can be seen that the distribution of values reaches high values ($<H_{val}>=0.9669$) but their mixing is poor ($<H_{BP}>=0.6269$).
 
 \begin{figure}
 	\includegraphics[width= .49\textwidth]{HbpHval_Logistico}
@@ -61,9 +70,9 @@ Accross $B=20$, $H_{val}$ improves but $H_{BP}$ stay around its maximum.
 	\label{fig:LOG_HH}
 \end{figure}
 
-In Fig. \ref{fig:LOG_HC} we shows the entropy-complexity planes.
-Dotted gray lines are the upper and lower margins, is spected that an chaotic system remain near upper margin.
-There results characterize an chaotic behaviour, in $H_{BP}-C_{BP}$ plane we can see a low entropy and high complexity.
+In Fig. \ref{fig:LOG_HC} we show the entropy-complexity planes.
+Dotted gray lines are the upper and lower margins, is expected that a chaotic system remains near the upper margin.
+These results characterize a chaotic behaviour, in $H_{BP}-C_{BP}$ plane we can see a low entropy and high complexity.
 
 \begin{figure}
 	\includegraphics[width= .49\textwidth]{CbpHbp_Logistico}
