@@ -1,13 +1,14 @@
 \subsection{Period $T$ as a function of $B$}
 
-The issue of how the period $T$ is related with the representation with $P$ decimal digits was studied by Grebogi and coworkers \cite{Grebogi1988}.
-There they shaw that the period $T$ scales with roundoff $\epsilon$ as $T\sim\epsilon^{-d/2}$ where $d$ is the correlation dimension of the chaotic attractor.
-Nagaraj et al \cite{Nagaraj2008} studied the case of switching between two maps.
-They shaw that the period $T$ of the compound map obtained by switching between two chaotic maps is higher than the period of each map and they found that a "random" switching improves the results.
-Here we considered  sequential switching to avoid the use of another random variable, because it can include its own statistical properties in the time series.
-We studied decimal and binary numbers representations. Fig. \ref{fig:period} shows  $T$ vs $P$ in semi logarithmic scale.
+Grebogi and coworkers \cite{Grebogi1988} have studied how the period $T$ is related with the precision.
+There they saw that the period $T$ scales with roundoff $\epsilon$ as $T\sim\epsilon^{-d/2}$ where $d$ is the correlation dimension of the chaotic attractor.
 
-A straight line can fit the points and has the expression $log_{2}T=m B + b$ where $m$ is the slope and $b$ is the $y$-intercept.
+Nagaraj et als. \cite{Nagaraj2008} studied the case of switching between two maps.
+They saw that the period $T$ of the compound map obtained by switching between two chaotic maps is higher than the period of each map and they found that a "random" switching improves the results.
+Here we have considered sequential switching to avoid the use of another random variable, because it can include its own statistical properties in the time series.
+
+Fig. \ref{fig:period} shows  $T$ vs $B$ in semi logarithmic scale.
+The experimental averaged points can be fitted by a straight line expressed as $log_{2}T=m B + b$ where $m$ is the slope and $b$ is the $y$-intercept.
 Results for all considered maps are summarized in Table \ref{tabla:periodos}.
 
 \begin{figure}
@@ -31,5 +32,5 @@ Results for all considered maps are summarized in Table \ref{tabla:periodos}.
 	\end{tabular}
 \end{table}
 
-Results are compatible for those obtained in \cite{Nagaraj2008}. Switching between maps increase de period $T$ but the skipping procedure decrease it esentially to one half. 
-
+Results are compatible for those obtained in \cite{Nagaraj2008}.
+Switching between maps increases de period $T$ but skipping procedure decreases by almost half.
