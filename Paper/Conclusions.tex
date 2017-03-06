@@ -5,11 +5,10 @@ In summary:
   \item En una máquina de cálculo "a medida", como la que puede implementarse en ASICs o FPGAs existen limitaciones en el bus de datos y en la electrónica de cálculo. Si la electrónica de cálculo debe ser reducida se recomienda usar mapas que puedan ser calculados sólo con sumas y restas de la variable pseudoaleatoria.
   \item Los mapas que sólo tienen operaciones de shifteo en la base de la máquina de cálculo inevitablemente caerán a cero en tantas iteraciones como el largo de la mantisa de representación. Por ejemplo el tent en base 2.
   \item La comparación entre BP y BPW permite detectar el comportamiento del sistema. Puede detectarse si el atractor cae a un punto fijo y diferenciar si el transitorio es corto o largo, respecto de la cantidad de itaraciones del mapa.
-  \item Como se menciona en el paper de referencia, el período del mapa iterado aumenta respecto del simple. También se nota una mejora marginal en la mezcla de la secuencia. La distribución de valores es buena en todos los casos.
+  \item Como se menciona en el paper de referencia, el período del mapa SWITCH aumenta respecto del simple. También se nota una mejora marginal en la mezcla de la secuencia. La distribución de valores es buena en todos los casos.
   \item el skipping empeora el período pero mejora sustancialmente la mezcla de los valores. Esto puede verse en BP, BPW y MP.
 \end{itemize}
 
 produces a non-monotonous evolution toward the floating point result. This result is relevant because it shows that increasing the precision is not
 always recommended.
-
-ESTA FRASE ESTABA ARRIBA, VER DONDE LA PONEMOS: It is specially interesting to note that some systems (TENT) with very nice statistical properties in the world of the real numbers, become ``pathological" when binary numerical representations are used.
+It is specially interesting to note that some systems (TENT) with very nice statistical properties in the world of the real numbers, become ``pathological" when binary numerical representations are used.
