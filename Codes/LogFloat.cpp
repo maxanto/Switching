@@ -10,26 +10,21 @@ using namespace std; // Agrego el espacio de nombres del estandar de C++, zafo d
 
 int main()
 {
-    int Bases[] = {2}; // Vector con las bases que quiero probar
-        int NBases = (sizeof(Bases)/sizeof(Bases[0]));
-    int Precisions[] = {1, 2, 3, 4, 5, 6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52}; //Contiene todas las precisiones que voy barriendo
-        int NPrecisions = (sizeof(Precisions)/sizeof(Precisions[0])); // Cantidad de precisiones
-    unsigned long int NInitialConditions = 10; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
-    unsigned long int NIter = 1e2; // Es el largo de cada atractor
+    unsigned long int NInitialConditions = 100; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
+    unsigned long int NIter = 1e7; // Es el largo de cada atractor
 
     unsigned long int Bins = 1024; // Cantidad de bines del histograma
     double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
     unsigned long int DimEmb = 6; // Dimensión de embedding para MP, BP y BPW
 
     long double* MapLD; //Declare the pointer
-        MapLD = (long double*) malloc (sizeof(long double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
-        MapLD[0] = (long double)NIter;
+    MapLD = (long double*) malloc (sizeof(long double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
+    MapLD[0] = (long double)NIter;
 
     double* Map; //Declare the pointer
         Map = (double*) malloc (sizeof(double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
         Map[0] = (double)NIter;
 
-    char StrAux[32]; // Acá armo los nombres de los archivos
     double Scale; // Es la escala que utilizo para multiplicar y dividir en el floor
     double InvScale; // Guardo acá la inversa de la escala para cambiar una división por una multiplicación en cada iteración del mapa
 
@@ -45,8 +40,8 @@ int main()
     }
     printf("Generadas %ld condiciones iniciales\n\n", NInitialConditions);
 
-    FILE *Results = fopen("Log.dat","w"); //Abre archivo de resultados
-    fprintf(Results, "Map\tHval\tQval\tCval\tHbp\tQbp\tCbp\tHbpw\tQbpw\tCbpw\tMP\tPeriod"); //Escribe encabezado en archivo
+    FILE *Results = fopen("LogFloat.dat","w"); //Abre archivo de resultados
+    fprintf(Results, "Hval\tQval\tCval\tHbp\tQbp\tCbp\tHbpw\tQbpw\tCbpw\tMP\tPeriod"); //Escribe encabezado en archivo
 
     for (int iBases = 0; iBases <  NBases; iBases++) // Va recorriendo el vector de bases
     {
@@ -61,13 +56,13 @@ int main()
             for (unsigned int iInitialCondition = 0; iInitialCondition < NInitialConditions; iInitialCondition++) // Va sorteando condiciones iniciales
             {
 
-                MapLD[1] = (long double)InvScale*floor(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de floor
+                Map[1] = InvScale*floor(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de floor
 
-                printf("\t\tCondicion inicial %d/%d = %.64f\n", (int)iInitialCondition+1, (int)NInitialConditions, (double)MapLD[1]); // Para debuguear
+                printf("\t\tCondicion inicial %d/%d = %.32f\n", (int)iInitialCondition+1, (int)NInitialConditions, Map[1]); // Para debuguear
 
                 for (unsigned long int iMap = 1; iMap < NIter; iMap++) // Va riterando el mapa logístico
                 {
-                    MapLD[iMap+1] =  4*InvScale*floor(Scale*MapLD[iMap]*(1-MapLD[iMap])); // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
+                    MapLD[iMap+1] =  4*MapLD[iMap]*(1-MapLD[iMap]); // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
                 } // Acá ya tengo el atractor guardado en el vector MapLD
 
                 for (unsigned long int iMap = 1; iMap <= NIter; iMap++) // Va riterando el mapa logístico
@@ -96,10 +91,7 @@ int main()
 
                 Period = find_period(Map, 1); //Para mapas unidimensionales, para los switch voy a tener que usar dimensión 2.
 
-                sprintf(StrAux, "B%d_P%d_CI%d", Bases[iBases], Precisions[iPrecisions],iInitialCondition);
-                fprintf(Results,"\n%s\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e", StrAux, Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period); //Guarda los valores en el archivo de salida, escribo la condición inicial para evaluar el comportamiento del rand()
-                strcat(StrAux,".dat");
-                save_vector(Map,StrAux);
+                fprintf(Results,"\n%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e", Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period); //Guarda los valores en el archivo de salida, escribo la condición inicial para evaluar el comportamiento del rand()
             }
         }
     }
