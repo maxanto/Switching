@@ -13,7 +13,7 @@ x_{n+1}=4 \epsilon floor\{\frac{x_n(1-x_n)}{\epsilon}\} \,
 \end{equation}
 with $\epsilon = 2^B$ where $B$ is the number of bits that represents the fractional part.
 
-According as B grows, statistical properties varies until they stabilize.
+According as B grows, statistical properties vary until they stabilize.
 Figs. \ref{fig:LOG_QuantiB} (a) to (f) show the statistical properties of LOG map in floating point and fixed point representation.
 All these figures show: $100$ red points for each fixed point precision ($B$) and in black their average (dashed black line connecting black dots), $100$ horizontal dashed blue lines that are the results of each run in floating point and a black solid line their average.
 In this case, all the lines of the floating point are overlapped.
@@ -21,11 +21,11 @@ In this case, all the lines of the floating point are overlapped.
 For $B\geq 30$ the value of $H_{val}$ remains almost identical to the values for the floating point representation whereas $H_{BP}$ and $C_{BP}$ stabilizes at $B>21$.
 Their values are: $<H_{val}>=0.9669$; $<H_{BP}>=0.6269$; $<C_{BP}>=0.4843$.
 Note that the stable value of missing patterns $MP=645$ makes the optimum $H_{BP} \leq ln(75)/ln(720) \simeq 0.65$.
-Then $B=30$ is the most convenient choice because an increase in the number of fractional digits does not improve the statistical properties.
+Then, $B=30$ is the most convenient choice because an increase in the number of fractional digits does not improve the statistical properties.
 
 Some conclusions can be drawn regarding \textit{BP} and \textit{BPW} quantifiers.
 For $B=1, 2, 3$ and $4$, the averaged $BP$ quantifiers are almost $0$ while the averaged $BPW$ quantifiers can not be calculated (seein Figs. \ref{fig:LOG_QuantiB} c and e the missing black dashed line).
-For those sequences where the initial condition where $0$ all iterations result to be a sequence of $0$s (the fixed point of the map), this happens very likely with small presitions because of the roundoffs.
+For those sequences where the initial condition where $0$ all iterations result to be a sequence of $0$s (the fixed point of the map), this happens very likely with small precisions because of the roundoffs.
 
 When $B$ increases, $B=7, 9$ and $12$, the used initial conditions are rounded to zero less frequently.
 So the generated sequences start from some value but many of them fall to zero with a short transitory.
