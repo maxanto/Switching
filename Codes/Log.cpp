@@ -30,8 +30,8 @@ int main()
         Map[0] = (double)NIter;
 
     char StrAux[32]; // Acá armo los nombres de los archivos
-    double Scale; // Es la escala que utilizo para multiplicar y dividir en el floor
-    double InvScale; // Guardo acá la inversa de la escala para cambiar una división por una multiplicación en cada iteración del mapa
+    long double Scale; // Es la escala que utilizo para multiplicar y dividir en el floor
+    long double InvScale; // Guardo acá la inversa de la escala para cambiar una división por una multiplicación en cada iteración del mapa
 
     double Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period; // Vectores en donde van guardados los cuantificadores
 
@@ -55,8 +55,8 @@ int main()
         {
             printf("\tPrecision %d/%d = %d\n", iPrecisions+1, NPrecisions, Precisions[iPrecisions]);
 
-            Scale = pow((double)Bases[iBases],(double)Precisions[iPrecisions]); // calculo el valor de la escala para redondear. pow sirve para double
-            InvScale = 1/Scale;
+            Scale = (long double)pow((double)Bases[iBases],(double)Precisions[iPrecisions]); // calculo el valor de la escala para redondear. pow sirve para double
+            InvScale = (long double)1/Scale;
 
             for (unsigned int iInitialCondition = 0; iInitialCondition < NInitialConditions; iInitialCondition++) // Va sorteando condiciones iniciales
             {
