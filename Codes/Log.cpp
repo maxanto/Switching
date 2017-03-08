@@ -61,13 +61,13 @@ int main()
             for (unsigned int iInitialCondition = 0; iInitialCondition < NInitialConditions; iInitialCondition++) // Va sorteando condiciones iniciales
             {
 
-                MapLD[1] = (long double)InvScale*floor(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de floor
+                MapLD[1] = (long double)InvScale*floorl(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de floor
 
                 printf("\t\tCondicion inicial %d/%d = %.64f\n", (int)iInitialCondition+1, (int)NInitialConditions, (double)MapLD[1]); // Para debuguear
 
                 for (unsigned long int iMap = 1; iMap < NIter; iMap++) // Va riterando el mapa logístico
                 {
-                    MapLD[iMap+1] =  4*InvScale*floor(Scale*MapLD[iMap]*(1-MapLD[iMap])); // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
+                    MapLD[iMap+1] =  4*InvScale*floorl(Scale*MapLD[iMap]*(1-MapLD[iMap])); // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
                 } // Acá ya tengo el atractor guardado en el vector MapLD
 
                 for (unsigned long int iMap = 1; iMap <= NIter; iMap++) // Va riterando el mapa logístico
