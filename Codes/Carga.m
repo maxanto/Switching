@@ -7,7 +7,7 @@ clc
 
 %% Parámetros generales
 
-Mapa = 'SkewTent';
+Mapa = 'Log';
 Bases = 2;
 Precisiones = 1:52;
 D = 6;
@@ -15,8 +15,8 @@ NMap = 1E7;
 NCI = 100;
 
 %% Carga los datos
-ImportaB2
-ImportaFlotantes
+Importa
+ImportaFloat
 load CotasInferiores
 load CotasSuperiores
 %% Acomoda los datos
