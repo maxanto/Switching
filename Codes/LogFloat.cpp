@@ -18,15 +18,12 @@ int main()
     unsigned long int DimEmb = 6; // Dimensión de embedding para MP, BP y BPW
 
     long double* MapLD; //Declare the pointer
-    MapLD = (long double*) malloc (sizeof(long double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
-    MapLD[0] = (long double)NIter;
+        MapLD = (long double*) malloc (sizeof(long double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
+        MapLD[0] = (long double)NIter;
 
     double* Map; //Declare the pointer
         Map = (double*) malloc (sizeof(double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
         Map[0] = (double)NIter;
-
-    double Scale; // Es la escala que utilizo para multiplicar y dividir en el floor
-    double InvScale; // Guardo acá la inversa de la escala para cambiar una división por una multiplicación en cada iteración del mapa
 
     double Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period; // Vectores en donde van guardados los cuantificadores
 
@@ -50,15 +47,12 @@ int main()
         {
             printf("\tPrecision %d/%d = %d\n", iPrecisions+1, NPrecisions, Precisions[iPrecisions]);
 
-            Scale = pow((double)Bases[iBases],(double)Precisions[iPrecisions]); // calculo el valor de la escala para redondear. pow sirve para double
-            InvScale = 1/Scale;
-
             for (unsigned int iInitialCondition = 0; iInitialCondition < NInitialConditions; iInitialCondition++) // Va sorteando condiciones iniciales
             {
 
-                Map[1] = InvScale*floor(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de floor
+                MapLD[1] = (long double)InitialConditions[iInitialCondition]; // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de floor
 
-                printf("\t\tCondicion inicial %d/%d = %.32f\n", (int)iInitialCondition+1, (int)NInitialConditions, Map[1]); // Para debuguear
+                printf("\t\tCondicion inicial %d/%d = %.64f\n", (int)iInitialCondition+1, (int)NInitialConditions, (double)MapLD[1]); // Muestra a primer posición del vector
 
                 for (unsigned long int iMap = 1; iMap < NIter; iMap++) // Va riterando el mapa logístico
                 {
@@ -67,7 +61,7 @@ int main()
 
                 for (unsigned long int iMap = 1; iMap <= NIter; iMap++) // Va riterando el mapa logístico
                 {
-                        Map[iMap] =  (double)Map[iMap]; // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
+                        Map[iMap] =  (double)MapLD[iMap]; // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
                 } // Acá ya tengo el atractor guardado en el vector Map
 
                 double* PDFval = PDF_val(Map, Bins, Margins, "normalyzed"); // Genera el histograma de patrones de órden

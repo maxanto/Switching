@@ -14,20 +14,24 @@ int main()
         int NBases = (sizeof(Bases)/sizeof(Bases[0]));
     int Precisions[] = {1, 2, 3, 4, 5, 6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52}; //Contiene todas las precisiones que voy barriendo
         int NPrecisions = (sizeof(Precisions)/sizeof(Precisions[0])); // Cantidad de precisiones
-    double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
     unsigned long int NInitialConditions = 100; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
     unsigned long int NIter = 1e7; // Es el largo de cada atractor
 
     unsigned long int Bins = 1024; // Cantidad de bines del histograma
+    double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
     unsigned long int DimEmb = 6; // Dimensión de embedding para MP, BP y BPW
 
+    long double* MapLD; //Declare the pointer
+        MapLD = (long double*) malloc (sizeof(long double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
+        MapLD[0] = (long double)NIter;
+
     double* Map; //Declare the pointer
-    Map = (double*) malloc (sizeof(double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
-    Map[0] = (double)NIter;
+        Map = (double*) malloc (sizeof(double) * (NIter + 1)); //Creates the array. It has one more postition at first for the length
+        Map[0] = (double)NIter;
 
     char StrAux[32]; // Acá armo los nombres de los archivos
-    double Scale; // Es la escala que utilizo para multiplicar y dividir en el floor
-    double InvScale; // Guardo acá la inversa de la escala para cambiar una división por una multiplicación en cada iteración del mapa
+    long double Scale; // Es la escala que utilizo para multiplicar y dividir en el floor
+    long double InvScale; // Guardo acá la inversa de la escala para cambiar una división por una multiplicación en cada iteración del mapa
 
     double Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period; // Vectores en donde van guardados los cuantificadores
 
@@ -41,8 +45,8 @@ int main()
     }
     printf("Generadas %ld condiciones iniciales\n\n", NInitialConditions);
 
-    FILE *ResultsLog = fopen("TentB2.dat","w"); //Abre archivo de resultados
-    fprintf(ResultsLog, "Map\tHval\tQval\tCval\tHbp\tQbp\tCbp\tHbpw\tQbpw\tCbpw\tMP\tPeriod\n"); //Escribe encabezado en archivo
+    FILE *Results = fopen("Tent.dat","w"); //Abre archivo de resultados
+    fprintf(Results, "Map\tHval\tQval\tCval\tHbp\tQbp\tCbp\tHbpw\tQbpw\tCbpw\tMP\tPeriod"); //Escribe encabezado en archivo
 
     for (int iBases = 0; iBases <  NBases; iBases++) // Va recorriendo el vector de bases
     {
@@ -51,26 +55,31 @@ int main()
         {
             printf("\tPrecision %d/%d = %d\n", iPrecisions+1, NPrecisions, Precisions[iPrecisions]);
 
-            Scale = pow((double)Bases[iBases],(double)Precisions[iPrecisions]); // calculo el valor de la escala para redondear. pow sirve para double
-            InvScale = 1/Scale;
+            Scale = (long double)pow((double)Bases[iBases],(double)Precisions[iPrecisions]); // calculo el valor de la escala para redondear. pow sirve para double
+            InvScale = (long double)1/Scale;
 
             for (unsigned int iInitialCondition = 0; iInitialCondition < NInitialConditions; iInitialCondition++) // Va sorteando condiciones iniciales
             {
 
-                Map[1] = InvScale*floor(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de floor
+                MapLD[1] = (long double)InvScale*floorl(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de floor
 
-                printf("\t\tCondicion inicial %d/%d = %.32f\n", (int)iInitialCondition+1, (int)NInitialConditions, Map[1]); // Para debuguear
+                printf("\t\tCondicion inicial %d/%d = %.64f\n", (int)iInitialCondition+1, (int)NInitialConditions, (double)MapLD[1]); // Muestra a primer posición del vector
 
                 for (unsigned long int iMap = 1; iMap < NIter; iMap++) // Va riterando el mapa logístico
                 {
-                    if (Map[iMap] < 0.5)
+                    if (MapLD[iMap] < 0.5)
                     {
-                        Map[iMap+1] = 2*Map[iMap];
+                        MapLD[iMap+1] = 2*MapLD[iMap];
                     }
                     else
                     {
-                        Map[iMap+1] = InvScale*(floor(Scale*2*(1 - Map[iMap])));
+                        MapLD[iMap+1] = InvScale*(floorl(Scale*2*(1 - MapLD[iMap])));
                     }
+                } // Acá ya tengo el atractor guardado en el vector Map
+
+                for (unsigned long int iMap = 1; iMap <= NIter; iMap++) // Va riterando el mapa logístico
+                {
+                        Map[iMap] =  (double)MapLD[iMap]; // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
                 } // Acá ya tengo el atractor guardado en el vector Map
 
                 double* PDFval = PDF_val(Map, Bins, Margins, "normalyzed"); // Genera el histograma de patrones de órden
@@ -95,11 +104,11 @@ int main()
                 Period = find_period(Map, 1); //Para mapas unidimensionales, para los switch voy a tener que usar dimensión 2.
 
                 sprintf(StrAux, "B%d_P%d_CI%d", Bases[iBases], Precisions[iPrecisions],iInitialCondition);
-                fprintf(ResultsLog,"%s\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\n", StrAux, Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period); //Guarda los valores en el archivo de salida, escribo la condición inicial para evaluar el comportamiento del rand()
+                fprintf(Results,"\n%s\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e\t%.8e", StrAux, Hval, Qval, Cval, Hbp, Qbp, Cbp, Hbpw, Qbpw, Cbpw, MP, Period); //Guarda los valores en el archivo de salida, escribo la condición inicial para evaluar el comportamiento del rand()
             }
         }
     }
-    fclose(ResultsLog); // Cierra el archivo de salida, queda un archivo por base para este oscilador
+    fclose(Results); // Cierra el archivo de salida, queda un archivo por base para este oscilador
     printf("\nPresionar una tecla");
     getch(); //Avisa que terminó y espera una tecla
 }
