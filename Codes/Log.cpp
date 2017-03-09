@@ -14,8 +14,8 @@ int main()
         int NBases = (sizeof(Bases)/sizeof(Bases[0]));
     int Precisions[] = {1, 2, 3, 4, 5, 6 ,7 ,8 ,9 ,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52}; //Contiene todas las precisiones que voy barriendo
         int NPrecisions = (sizeof(Precisions)/sizeof(Precisions[0])); // Cantidad de precisiones
-    unsigned long int NInitialConditions = 10; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
-    unsigned long int NIter = 1e2; // Es el largo de cada atractor
+    unsigned long int NInitialConditions = 100; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
+    unsigned long int NIter = 1e7; // Es el largo de cada atractor
 
     unsigned long int Bins = 1024; // Cantidad de bines del histograma
     double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
@@ -63,7 +63,7 @@ int main()
 
                 MapLD[1] = (long double)InvScale*floorl(Scale*InitialConditions[iInitialCondition]); // floorl sirve para long double, como son mapas positivos puedo usar floor en vez de floor
 
-                printf("\t\tCondicion inicial %d/%d = %.64f\n", (int)iInitialCondition+1, (int)NInitialConditions, (double)MapLD[1]); // Para debuguear
+                printf("\t\tCondicion inicial %d/%d = %.64f\n", (int)iInitialCondition+1, (int)NInitialConditions, (double)MapLD[1]); // Muestra a primer posición del vector
 
                 for (unsigned long int iMap = 1; iMap < NIter; iMap++) // Va riterando el mapa logístico
                 {
@@ -72,7 +72,7 @@ int main()
 
                 for (unsigned long int iMap = 1; iMap <= NIter; iMap++) // Va riterando el mapa logístico
                 {
-                        Map[iMap] =  (double)Map[iMap]; // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
+                        Map[iMap] =  (double)MapLD[iMap]; // Mapa logístico, x[n] = r*x[n-1]*(1-x[n-1]), caótico con r=4. Ni la resta ni la multiplicación por un entero generan fraccionarios
                 } // Acá ya tengo el atractor guardado en el vector Map
 
                 double* PDFval = PDF_val(Map, Bins, Margins, "normalyzed"); // Genera el histograma de patrones de órden
