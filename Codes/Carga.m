@@ -7,7 +7,7 @@ clc
 
 %% Parámetros generales
 
-Mapa = 'Log';
+Mapa = 'Tent';
 Bases = 2;
 Precisiones = 1:52;
 D = 6;
