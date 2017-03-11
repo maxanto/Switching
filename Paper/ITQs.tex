@@ -9,7 +9,7 @@ Let us summarize the procedure:
 \item \label{1} a finite alphabet with $M$ symbols $\mathcal{A}=\{a_1,...,a_M\}$ is chosen. 
 \item \label{2} one of these symbols is assigned to each: (a) value of the time series or (b)portion of length $D$ of the trajectory. 
 \item \label{3} the normalized histogram of the symbols is the desired PDF.
-\item \label{3} an ramdomness quantifier is calculated over desired PDF. In our case we calculate (a) normalyzed Shannon entropy $H$, (b) normalyzed statistical complexity $C$ and (d) missing patterns $MP$.
+\item \label{4} an ramdomness quantifier is calculated over desired PDF. In our case we calculate (a) normalyzed Shannon entropy $H$, (b) normalyzed statistical complexity $C$ and (d) missing patterns $MP$.
 \end{enumerate}
 
 Note that if option (a) is chosen in step \ref{2} then the PDF is \textit{non causal}, because all the information about the time evolution of the system generating $\{x_i\}$ is completely lost.
@@ -102,10 +102,16 @@ In the first plane a higher value in any of the entropies, $H_{BP}$ and $H_{hist
 The point $(1,1)$ represents the ideal case with uniform histogram and uniform distribution of ordering patterns.
 In the second plane not the entire region $0<H_{BP}<1$, $0<C_{BP}<1$ is achievable.
 In fact for any PDF the pairs $(H,C)$ of possible values fall between two extreme curves in the plane $H$-$C$ \cite{Anteneodo1996}.
-Fig. \ref{fig:planezone} shows two regions labeled as \textit{deterministic} and \textit{stochastic}.
+Fig. \ref{fig:CbpHbp} shows two regions labeled as \textit{deterministic} and \textit{stochastic}.
 In fact transition from one region to the other are smooth and the division is a bit arbitrary.
 A more detailed discussion can be seen in \cite{Rosso2007C}.
 Ideal random systems having uniform Bandt \& Pompe PDF, are represented by the point $(1,0)$ \cite{Gonzalez2005} and a delta-like PDF corresponds with the point $(0,0)$.
+
+\begin{figure}
+	\includegraphics[width= .49\textwidth]{CbpHbp}
+	\caption{Entropy-Complexity plane.}
+	\label{fig:CbpHbp}
+\end{figure}
 
 We also used the number of missing patterns $MP$ as a quantifier\cite{Rosso2012}.
 As shown recently by Amig\'o {\it et al.} \cite{Amigo2006,Amigo2007,Amigo2008,Amigo2010}, in the case of deterministic one-dimensional maps, not all the possible ordinal patterns can be effectively materialized into orbits, which in a sense makes these patterns ``forbidden".
