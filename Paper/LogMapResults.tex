@@ -1,18 +1,5 @@
 \subsubsection{Logistic map (LOG)} \label{subsubsec:log}
 
-Logistic map is interesting because is representative of the very large family of quadratic maps.
-Its expression is:
-\begin{equation}\label{eq:logimap}
- x_{[n+1]}=4x_{[n]}(1-x_{[n]}) \,
-\end{equation}
-with $x_n\in\mathcal{R}$.
-
-Note that to effectively work in a given representation it is necessary to change the expression of the map in order to make all the operations in the chosen representation numbers. For example, in the case of LOG the expression in binary fixed point numbers is:
-\begin{equation}\label{eq:logimapB2}
-x_{n+1}=4 \epsilon floor\{\frac{x_n(1-x_n)}{\epsilon}\} \,
-\end{equation}
-with $\epsilon = 2^B$ where $B$ is the number of bits that represents the fractional part.
-
 According as B grows, statistical properties vary until they stabilize.
 Figs. \ref{fig:LOG_QuantiB} (a) to (f) show the statistical properties of LOG map in floating point and fixed point representation.
 All these figures show: $100$ red points for each fixed point precision ($B$) and in black their average (dashed black line connecting black dots), $100$ horizontal dashed blue lines that are the results of each run in floating point and a black solid line their average.
@@ -31,17 +18,6 @@ When $B$ increases, $B=7, 9$ and $12$, the used initial conditions are rounded t
 So the generated sequences start from some value but many of them fall to zero with a short transitory.
 This can be seen in Figs. c and e, $BPW$ shows high dispersion unlike $BP$ quantifiers.
 This is because $BPW$ procedure takes into account only the transient discarding fixed points, unlike $BP$ procedure that considers all the sequence. 
- 
-\textcolor{red}{ESTE PÁRRAFO VA A DESAPARECER CON LONG DOUBLE, O NO?, ADEMÁS DISTRAE DEL FOCO DEL TRABAJO. HAY QUE BUSCARLE UN LUGAR EN EL PAPER}
-Finally, for $B = 45, 49, 51$ and $52$ some $BP$ quantifiers have a low value, but $BPW$ quantifiers have a more predictible behavior, we can see that these atractors fall to a fixed point with a long transitory.
-In this behaviour is due to the employed plataform.
-The operation miltiplication needs the double of bits to be represented but the machine has only $64$.
-Acá lo que quiero decir es que en las figuras \ref{fig:LOG_QuantiB} a, b y d las corridas con punto fijo tienen alta dispersión y aparecen algunas con valores muy bajos.
-Esto es por que la aritmética de punto fijo la estamos queriendo generar artificialmente con una variable de tipo double que tiene una mantisa de 53 bits.
-Entonces en la multiplicación (que duplica la cantidad de bits necesarios) se pierden muchos fraccionarios.
-Lo mismo pasa si se usa el tipo float, que tiene 27 bits de mantisa pero mucho antes, a partir de B>24+-.
-Con long double debería desaparecer.
-Entonces hay que tener en cuenta esto cuando se simula punto fijo con la computadora, en los mapas que halla multiplicaciones.
 
 \begin{figure}
 	\includegraphics[width= .49\textwidth]{Hval_Log}
