@@ -43,7 +43,7 @@ for i_cuanti = 1:length(Cuantis)
     figure('position',PosicPlot,'visible','off'); %Abro una figura con tamaño y posición
     hold on; grid on; box on
     %title('rand-ellip; roja=pasa-altos; azul=pasa-bajos; negro=rand-matlab')
-    xlabel('P'); ylabel(NombreCuanti)
+    xlabel('B'); ylabel(NombreCuanti)
     ejes=newplot; %newplot returns handle of current axes y abre una figura
     set(ejes,'FontName','Arial','FontWeight','bold','FontSize',FuenteSize); %cambiamos las letras de los ejes de la figura
     set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
