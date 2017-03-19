@@ -1,14 +1,14 @@
 \subsubsection{Skipping on sequential switching between Tent and Logistic maps (EVEN and ODD)} \label{sssec:skipp}
 
-In the figures \ref{fig:EVEN_QuantiB}.a and \ref{fig:ODD_QuantiB}.a, quantifiers related to the normalized histogram of values slightly degrades with the skipping procedure due to finite data length.
-For example $H_{val}$ reduces from $0.9722$ without skipping to $0.9459$ for EVEN and $0.9706$ for ODD. 
-This difference between EVEN and ODD in floating point is because an high dispersion was obtained for $H_{val}$, $H_{BP}$ and $C_{BP}$ but not for $H_{BPW}$ or $C_{BPW}$.
+In figures \ref{fig:EVEN_QuantiB}.a and \ref{fig:ODD_QuantiB}.a, quantifiers related to the normalized histogram of values slightly degrades with the skipping procedure due to finite data length.
+For example $\left\langle H_{val}\right\rangle $ reduces from $0.9722$ without skipping to $0.9459$ for EVEN and $0.9706$ for ODD. 
+This difference between EVEN and ODD in floating point is because a high dispersion was obtained for $H_{val}$, $H_{BP}$ and $C_{BP}$ but not for $H_{BPW}$ or $C_{BPW}$.
 
-Figs. \ref{fig:EVEN_QuantiB}.b to \ref{fig:EVEN_QuantiB}.f. and Figs. \ref{fig:ODD_QuantiB}.b to \ref{fig:ODD_QuantiB}.f show the results of $BP$ and $BPW$ quantifiers for EVEN and ODD respectively.
+Figs. \ref{fig:EVEN_QuantiB}.b to \ref{fig:EVEN_QuantiB}.f. and Figs. \ref{fig:ODD_QuantiB}.b to \ref{fig:ODD_QuantiB}.f show the results of BP and BPW quantifiers for EVEN and ODD respectively.
 Higher accuracy is required to achieve lower complexity than without using skipping.
-From the point of view of order patterns a great improvement is obtained using any of the skipping strategies but ODD is slightly better than EVEN.
-MP are reduced to $MP\simeq 118$ for EVEN and  ODD, increasing the maximum allowed Bandt \& Pompe entropy that reaches the mean value $<H_{BP}> = 0.8381$ for EVEN, and $<H_{BP}> = 0.9094$.
-The complexity is reduced to $<C_{BP}>\simeq 0.224$ for EVEN and  $<C_{BP}>\simeq 0.282$ for ODD.
+From the point of view of MP a great improvement is obtained using any of the skipping strategies but ODD is slightly better than EVEN.
+Missing patterns are reduced to $MP = 118$ for EVEN and ODD, increasing the maximum allowed Bandt \& Pompe entropy that reaches the mean value $\left\langle H_{BP}\right\rangle  = 0.8381$ for EVEN, and $\left\langle H_{BP}\right\rangle  = 0.9094$.
+The complexity is reduced to $\left\langle C_{BP}\right\rangle = 0.224$ for EVEN and $\left\langle C_{BP}\right\rangle = 0.282$ for ODD.
 The amount of bits necessary to converge to this value is $B>40$ for both EVEN and ODD maps.
 
 \begin{figure}
