@@ -15,7 +15,7 @@ load CotasSuperiores;
 
 PosicPlot=[50 50 800 600];
 FuenteSize=26;
-SubplotFuenteSize=20;
+SubplotFuenteSize=30;
 MarcaSize=10;
 PuntoSize=30;
 LineaAncho1=4;
@@ -42,9 +42,12 @@ set(ejes,'FontName','Arial','FontWeight','bold','FontSize',FuenteSize); %cambiam
 set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
 axis([0 1 0 .5]);
 
-plot(CotasInferiores(:,1), CotasInferiores(:,2), '-.', 'LineWidth', LineaAncho2, 'Color', [.5 .5 1])
-plot(CotasSuperiores(:,1), CotasSuperiores(:,2), '-.', 'LineWidth', LineaAncho2, 'Color', [.5 .5 1])
-plot(xRect, yRect, 'k')
+plot(CotasInferiores(:,1), CotasInferiores(:,2), '-', 'LineWidth', LineaAncho2, 'Color', [.5 .5 .5])
+plot(CotasSuperiores(:,1), CotasSuperiores(:,2), '-', 'LineWidth', LineaAncho2, 'Color', [.5 .5 .5])
+plot(xRect, yRect, '-', 'LineWidth', LineaAncho2, 'Color', [.5 .5 .5])
+
+text(.27, .25, 'Deterministic', 'FontSize', SubplotFuenteSize)
+text(.6, .25, 'Stochastic', 'FontSize', SubplotFuenteSize)
 
 set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
 saveas(gcf,'CbpHbp','pdf')

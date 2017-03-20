@@ -76,11 +76,11 @@ end
     RepeatLogDatosFlotante = repmat(LogDatosFlotante,1,NPrecisiones);
     MeanLogDatosFlotante = mean(RepeatLogDatosFlotante); %Promendia datos en flotante
     
-    NombreCuanti = 'log_{10}(Period)'; %Carga el nombre del cuantificador y lo pasa a string
+    NombreCuanti = 'log_{10}(T)'; %Carga el nombre del cuantificador y lo pasa a string
     figure('position',PosicPlot,'visible','off'); %Abro una figura con tamaño y posición
     hold on; grid on; box on
     %title('rand-ellip; roja=pasa-altos; azul=pasa-bajos; negro=rand-matlab')
-    xlabel('P'); ylabel(NombreCuanti)
+    xlabel('B'); ylabel(NombreCuanti)
     ejes=newplot; %newplot returns handle of current axes y abre una figura
     set(ejes,'FontName','Arial','FontWeight','bold','FontSize',FuenteSize, 'YScale', 'linear'); %cambiamos las letras de los ejes de la figura
     set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
@@ -124,9 +124,9 @@ end
     set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
     axis([0 1 0 1]);
 
-    plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
     plot(Datos1,Datos2,'.r', 'MarkerSize', MarcaSize)
-    plot(meanDatosFlotante1,meanDatosFlotante2, 'ok', 'MarkerSize', MarcaSize)
+    plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
+    plot(meanDatosFlotante1,meanDatosFlotante2, 'pk', 'MarkerSize', PuntoSize, 'MarkerFaceColor', [.8 .8 .8])
     plot(DatosFlotante1,DatosFlotante2,'.b', 'MarkerSize', MarcaSize)
     
     set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
@@ -157,9 +157,9 @@ end
     set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
     axis([0 1 0 1]);
 
-    plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
     plot(Datos1,Datos2,'.r', 'MarkerSize', MarcaSize)
-    plot(meanDatosFlotante1,meanDatosFlotante2, 'ok', 'MarkerSize', MarcaSize)
+    plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
+    plot(meanDatosFlotante1,meanDatosFlotante2, 'pk', 'MarkerSize', PuntoSize, 'MarkerFaceColor', [.8 .8 .8])
     plot(DatosFlotante1,DatosFlotante2,'.b', 'MarkerSize', MarcaSize)
     
     set(gcf, 'PaperType', 'e', 'PaperOrientation', 'Landscape', 'PaperUnits', 'Normalized', 'PaperPosition', [0 0 1 1]); %Papertype 'e' es el más cuadradito que encontré, normalized normaliza las paperposition
@@ -190,9 +190,9 @@ end
     set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
     axis([0 1 0 .5]);
 
-    plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
     plot(Datos1,Datos2,'.r', 'MarkerSize', MarcaSize)
-    plot(meanDatosFlotante1,meanDatosFlotante2, 'ok', 'MarkerSize', MarcaSize)
+    plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
+    plot(meanDatosFlotante1,meanDatosFlotante2, 'pk', 'MarkerSize', PuntoSize, 'MarkerFaceColor', [.8 .8 .8])
     plot(DatosFlotante1,DatosFlotante2,'.b', 'MarkerSize', MarcaSize)
     plot(CotasInferiores(:,1), CotasInferiores(:,2), '-.', 'LineWidth', LineaAncho2, 'Color', [.5 .5 1])
    	plot(CotasSuperiores(:,1), CotasSuperiores(:,2), '-.', 'LineWidth', LineaAncho2, 'Color', [.5 .5 1])
@@ -225,9 +225,9 @@ end
     set(gcf,'DefaultLineLineWidth',LineaAncho2); %fijamos el tamano de linea por default grosor 2
     axis([0 1 0 .5]);
 
-    plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
     plot(Datos1,Datos2,'.r', 'MarkerSize', MarcaSize)
-    plot(meanDatosFlotante1,meanDatosFlotante2, 'ok', 'MarkerSize', MarcaSize)
+    plot(meanDatos1,meanDatos2, '.:k', 'LineWidth', LineaAncho1, 'MarkerSize', PuntoSize)
+    plot(meanDatosFlotante1,meanDatosFlotante2, 'pk', 'MarkerSize', PuntoSize, 'MarkerFaceColor', [.8 .8 .8])
     plot(DatosFlotante1,DatosFlotante2,'.b', 'MarkerSize', MarcaSize)
     plot(CotasInferiores(:,1), CotasInferiores(:,2), '-.', 'LineWidth', LineaAncho2, 'Color', [.5 .5 1])
    	plot(CotasSuperiores(:,1), CotasSuperiores(:,2), '-.', 'LineWidth', LineaAncho2, 'Color', [.5 .5 1])
