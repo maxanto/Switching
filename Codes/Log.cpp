@@ -17,7 +17,7 @@ int main()
     unsigned long int NInitialConditions = 100; // Es la cantidad de condiciones iniciales diferentes de los que se larga el atractor.
     unsigned long int NIter = 1e7; // Es el largo de cada atractor
 
-    unsigned long int Bins = 1024; // Cantidad de bines del histograma
+    unsigned long int Bins = 500; // Cantidad de bines del histograma
     double Margins[2] = {0, 1}; //Los márgenes de la PDF-Val
     unsigned long int DimEmb = 6; // Dimensión de embedding para MP, BP y BPW
 

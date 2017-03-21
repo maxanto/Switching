@@ -8,7 +8,7 @@ clc
 
 %% Parámetros Generales
 
-Mapa = 'Odd';
+Mapa = 'Log';
 
 %% Carga los datos
 
