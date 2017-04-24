@@ -1,125 +1,39 @@
 \section{Information theory quantifiers}\label{sec:quanti}
 
-All the statistical quantifiers studied here are functionals of the PDF associated to the time series.
-The first step to quantify the statistical properties of the values (amplitude statistics) of a time series $\{x_i, \forall \; i=1,\dots,N\}$ using information theory is to determine the concomitant PDF.
-This is an issue studied in detail in previous papers \cite{aka varios}.
-Let us summarize the procedure:
-\begin{enumerate} 
-\item \label{1} a finite alphabet with $M$ symbols $\mathcal{A}=\{a_1,\dots,a_M\}$ is chosen. 
-\item \label{2} each one of these symbols is assigned to each: (a) value of the time series (or non-overlapped set of consecutive values) or (b) portion of length $D$ of the trajectory.
-\item \label{3} the normalized histogram of the symbols is the desired PDF.
-\item \label{4} a randomness quantifier is calculated over the PDF. In our case we calculate (a) normalyzed Shannon entropy $H$, (b) normalyzed statistical complexity $C$ and (d) MP.
-\end{enumerate}
+AAA
 
-Note that if option (a) is chosen in step \ref{2} then the PDF is non causal, because all the information about the time evolution of the system generating $\{x_i\}$ is completely lost.
-On the contrary if option (b) is chosen in step \ref{2} then the PDF is causal, in the sense it includes information about the temporal evolution.
+Given a time series or other observational data, a natural question arises: how much information are these data revealing about the dynamics of the underlying system or processes?
+The information content of data sets is typically evaluated via characterizing a value distribution or a probability distribution function (PDF) $P$ describing the apportionment of some measurable or observable quantity \cite{Gray2011}. These quantifiers represent metrics on the space of PDFs for data sets, allowing to compare different sets and classifying them according to the properties of underlying processes - broadly, stochastic vs.  deterministic. In our case, we are interested in carbon temporal dynamics of GPP, and our data are \textit{time series} $x(t)$. Thus, we are mostly interested in metrics which take the temporal order of observations explicitly into account; i.e. the approach is fundamentally \textit{causal} rather than \textit{statistical} in nature. In a purely statistical approach, correlations between sucessive values from the time series are ignored or simply destroyed via construction of the PDF; while a causal approach focuses on the PDFs of data sequences. 
 
-\textcolor{red}{NOMBRAR LA BPW}
+The quantifiers selected are based on ordinal pattern statistics. For an application of alternative quantifiers based on Symbolic Dynamics to environmental data, we refer to \cite{Hauhs2008}. The metrics to be used can be broadly classified along two categories: those which quantify the \textit{information content} of data versus those related to their \textit{complexity} on one hand; and metrics related to \textit{global} properties of the appropriate PDFs versus ones which take \textit{local} properties into account. Note that we are referring to the space of probability density functions here, not physical space. For the sake of clarity and simplicity, we only introduce Information Theory quantifiers that are defined on discrete PDFs in this section, since we are only dealing with discrete data (time series). However, all the quantifiers also have definitions for the continuous case \cite{Shannon1948,Frieden2004} . 
 
-\textcolor{red}{NOMBRAR LOS PLANOS QUE TERMINEMOS ELIGIENDO}
+BBB
 
-Of course there are infinite possibilities to choose the alphabet $\mathcal{A}$ as well as the length $D$.
-Bandt \& Pompe made a proposal for a causal PDF that has been shown to be easy to implement and useful in a great variety of applications \textcolor{red}{REFERENCIAS A APLICACIONES}.
-The procedure is the following \cite{Bandt2002,Keller2003,Keller2005}: \textcolor{red}{ESTA PARTE ESTÁ EN EL TIEMPO Y DEBERÍA ESTAR EN LAS MUESTRAS}
+Physics, as well as, other scientific disciplines like biology or finance, can be considered observational sciences, 
+that is, they try to infer  properties of an unfamiliar system from  the analysis of measured time
+record of it behavior (time series).  
+Dynamical systems are systems that evolve in time.
+In practice, one may only be able to measure a scalar time series ${\mathcal X}(t)$ which may be a function of
+variables ${\mathcal V}=\{ v_1,  v_2,\cdots, v_k\}$ describing the underlying dynamics 
+(i.e. $d{\mathcal V}/dt=f({\mathcal V})$.
+Then, the natural question is, from ${\mathcal X}(t)$ how much  we can learn about the dynamics of the system.
+In a  more formal way,
+given a system, be it natural or man-made, and given an observable of such system whose evolution can be tracked 
+through time, a natural question arises: how much information is this observable encoding about the dynamics of 
+the underlying system? 
+The information content of a system is typically evaluated via a probability distribution function (PDF) $P$ 
+describing the apportionment of some measurable or observable quantity, generally a time series ${\mathcal X}(t)$. 
+Quantifying the information content of a given observable is therefore largely tantamount to characterizing its 
+probability distribution. 
+This is often done with the wide family of measures called Information Theory quantifiers \cite{Gray1990}.
+We can define Information Theory quantifiers as measures able to characterize relevant properties of the 
+PDF associated with these time series, and in this way we should judiciously extract information on the dynamical 
+system under study.
 
-\begin{itemize}
-\item Given a series $\{x_t, \forall \;  t=0, \Delta t, \cdots,N\Delta t \}$, a sequence of vectors of length $D$ is generated.
+\subsection{Shannon entropy and statistical complexity}
 
-\begin{equation}
-(s)\longmapsto\left(x_{t-(d-1)\Delta t},x_{t-(d-2)\Delta t},\dots,x_{t-\Delta t},x_{t}\right) 
-\label{eq:vectores}
-\end{equation}
-\\
-Each vector turns out to be the ``history'' of the value $x_t$. Clearly, the longer the length of the vectors $D$, the more information about the history would the vectors have but a higher value of $N$ is required to have an adequate statistics. 
-\\
-\item The permutations $\pi=(r_0, r_1, \cdots, r_{D-1})$ of $(0, 1, \cdots, D-1)$ are called ``order of patterns'' of time $t$, defined by:
 
-\begin{equation}
-\label{eq:permuta}
-x_{t-r_{D-1}\Delta t}\le x_{t-r_{D-2}\Delta t}\le\dots\le x_{t-r_{1}\Delta t}\le x_{t-r_0\Delta t}
-\end{equation}
-\\
-In order to obtain an unique result it is considered $r_i<r_{i-1}$ if $x_{t-r_{i}\Delta t}=x_{t-r_{i-1}\Delta t}$.
 
-In this way, all the $D!$ possible permutations $\pi$ of order $D$, and the PDF $P=\{p(\pi)\}$ is defined as:
+\subsection{Determination of a probability distribution}
 
-\begin{equation}
-\label{eq:frequ}
-p(\pi)=\frac{\sharp \{s|s\leq N-D+1; (s) \quad \texttt{has type}~\pi\}}{N-D+1}
-\end{equation}
 
-In the last expression the $\sharp$ symbol means ``number".
-\end{itemize}
-
-This procedure has the advantages of being {\it i}) simple, {\it ii}) fast to calculate, {\it iii}) robust in presence of noise, and {\it iv}) invariant to lineal monotonous transformations. \textcolor{red}{DICE QUE ES ROBUSTO FRENTE A LA PRESENCIA DE RUIDO PERO NO, REFERENCIAS?}
-
-It is applicable to weak stationarity processes (for $k=D$, the probability that $x_t < x_{t+k}$ doesn't depend on the particulary $t$ \cite{Bandt2002}).The causality property of the PDF allows the quantifiers (based on this PDFs) to discriminate between deterministic and stochastic systems \cite{Rosso2007B}.
-
-According to this point Bandt and Pompe suggested $3\leq D \leq 7$. $D=6$ has been adopted in this work.
-
-\textcolor{red}{HABLAR DE BPW}
-
-The entropy $H[P]$ is the normalized version of the Entropy proposed by Shannon \cite{Shannon1948}:%
-%
-\begin{equation}\label{eq:sha}
-H[P] = S[P] /S_{max},
-\end{equation}
-
-\noindent where $S[P]=-\sum _{j=1}^{M}~p_j~\ln( p_j )$ and $S_{max}$ is the normalizing constant:%
-%
-\begin{equation}
-\label{eq:Smax} S_{max}= S[P_e] = \ln M,
-\end{equation}
-
-\noindent and $P_e=\{ 1/M, \dots,1/M\}$ is the uniform distribution.
-
-The statistical complexity $C[P]$ is given by:
-\begin{equation}
-\label{eq:inten}
-C[{P}]=Q_{J}[{P,P_e}]\cdot H[{P}] \ ,
-\end{equation}
-, and
-$Q_{J}$ is named disequilibrium and it is the distance between $P$ and $P_e$ in the probability space.
-The metric used in this paper is based on the Jensen-Shannon divergence \cite{Lamberti2004}:%
-%
-\begin{equation}
-\label{eq:disequi}
-Q_{J}[{P,P_e}]= Q_0 \cdot \{S[\frac{P+P_e}{2}]-S[P]/2-S[P_e]/2 \} \ .
-\end{equation}
-%
-\noindent The normalization constant $Q_0$ is:
-\begin{equation}
-\label{eq:q0j}
-Q_0=-2 \left\{ \left( \frac{N+1}{N} \right) \ln(N+1) - 2 \ln(2N) + \ln N \right\}^{-1} .
-\end{equation}
-
-From the statistical point of view the disequilibrium $Q_J$ is an intensive magnitude, and it is $0$ if and only if $P=P_e$.
-It has been proved that the $C[P]$ quantifies the presence of nonlinear correlations typical of chaotic systems \cite{Martin2003,Lamberti2004}.
-The complexity $C[P]$ is independent from the entropy $H[P]$, as far as different $P$'s share the same entropy $H[P]$ but they have different complexity $C[P]$.
-
-\textcolor{red}{PONER UN PÁRRAFO QUE ENGANCHE LAS H's Y C's CON LOS HISTOGRAMAS PARA ARMAR Hval, Cval, Hbp, Cbp, Hbpw y Cbpw}
-
-Two representation planes are considered: $H_{BP}$ vs $H_{hist}$ \cite{DeMicco2008} and $H_{BP}$ vs $C_{BP}$ \cite{Rosso2007}.
-In the first plane a higher value in any of the entropies, $H_{BP}$ and $H_{hist}$, implies an increase in the uniformity of the involved PDF.
-The point $(1,1)$ represents the ideal case with uniform histogram and uniform distribution of ordering patterns.
-In the second plane not the entire region $0<H_{BP}<1$, $0<C_{BP}<1$ is achievable.
-In fact for any PDF the pairs $(H,C)$ of possible values fall between two extreme curves in the plane $H$-$C$ \cite{Anteneodo1996}.
-Fig. \ref{fig:CbpHbp} shows two regions labeled as deterministic and stochastic. In fact transition from one region to the other are smooth and the division is a bit arbitrary. 
-A more detailed discussion can be seen in \cite{Rosso2007}. 
-Ideal random systems having uniform Bandt \& Pompe PDF, are represented by the point $(1,0)$ \cite{Gonzalez2005} and a delta-like PDF corresponds with the point $(0,0)$.
-
-\begin{figure}
-\centering	
-	\includegraphics[width= .49\textwidth]{CbpHbp}
-	\caption{Entropy-Complexity plane.}
-	\label{fig:CbpHbp}
-\end{figure}
-
-We also used the number of MP as a quantifier\cite{Rosso2012}.
-As shown recently by Amig\'o {\it et al.} \cite{Amigo2006,Amigo2007,Amigo2008,Amigo2010}, in the case of deterministic one-dimensional maps, not all the possible ordinal patterns can be effectively materialized into orbits, which in a sense makes these patterns forbidden.
-Indeed, the existence of these forbidden ordinal patterns becomes a persistent fact that can be regarded as a new dynamical property.
-Thus, for a fixed pattern-length (embedding dimension $D$) the number of forbidden patterns of a time series (unobserved patterns) is independent of the series length $N$.
-Remark that this independence does not characterize other properties of the series such as proximity and correlation, which die out with time \cite{Amigo2007,Amigo2010}.
-
-A full discussion about the convenience of using these quantifiers is out of the scope of this work.
-Nevertheless reliable bibliographic sources do exist \cite{Wackerbauer1994,Lopez-Ruiz1995,Rosso2007A,DeMicco2008,Rosso2010,Martin2006,Rosso2012}.
