@@ -3,32 +3,29 @@
 AAA
 
 Given a time series or other observational data, a natural question arises: how much information are these data revealing about the dynamics of the underlying system or processes?
-The information content of data sets is typically evaluated via characterizing a value distribution or a probability distribution function (PDF) $P$ describing the apportionment of some measurable or observable quantity \cite{Gray2011}. These quantifiers represent metrics on the space of PDFs for data sets, allowing to compare different sets and classifying them according to the properties of underlying processes - broadly, stochastic vs.  deterministic. In our case, we are interested in carbon temporal dynamics of GPP, and our data are \textit{time series} $x(t)$. Thus, we are mostly interested in metrics which take the temporal order of observations explicitly into account; i.e. the approach is fundamentally \textit{causal} rather than \textit{statistical} in nature. In a purely statistical approach, correlations between sucessive values from the time series are ignored or simply destroyed via construction of the PDF; while a causal approach focuses on the PDFs of data sequences. 
+The information content of data sets is typically evaluated via characterizing a value distribution or a probability distribution function (PDF) $P$ describing the apportionment of some measurable or observable quantity \cite{Gray2011}.
+These quantifiers represent metrics on the space of PDFs for data sets, allowing to compare different sets and classifying them according to the properties of underlying processes - broadly, stochastic vs.  deterministic.
+In our case, we are interested in carbon temporal dynamics of GPP, and our data are \textit{time series} $x(t)$. Thus, we are mostly interested in metrics which take the temporal order of observations explicitly into account; i.e. the approach is fundamentally \textit{causal} rather than \textit{statistical} in nature.
+In a purely statistical approach, correlations between sucessive values from the time series are ignored or simply destroyed via construction of the PDF; while a causal approach focuses on the PDFs of data sequences. 
 
-The quantifiers selected are based on ordinal pattern statistics. For an application of alternative quantifiers based on Symbolic Dynamics to environmental data, we refer to \cite{Hauhs2008}. The metrics to be used can be broadly classified along two categories: those which quantify the \textit{information content} of data versus those related to their \textit{complexity} on one hand; and metrics related to \textit{global} properties of the appropriate PDFs versus ones which take \textit{local} properties into account. Note that we are referring to the space of probability density functions here, not physical space. For the sake of clarity and simplicity, we only introduce Information Theory quantifiers that are defined on discrete PDFs in this section, since we are only dealing with discrete data (time series). However, all the quantifiers also have definitions for the continuous case \cite{Shannon1948,Frieden2004} . 
+The quantifiers selected are based on ordinal pattern statistics.
+For an application of alternative quantifiers based on Symbolic Dynamics to environmental data, we refer to \cite{Hauhs2008}.
+The metrics to be used can be broadly classified along two categories: those which quantify the \textit{information content} of data versus those related to their \textit{complexity} on one hand; and metrics related to \textit{global} properties of the appropriate PDFs versus ones which take \textit{local} properties into account.
+Note that we are referring to the space of probability density functions here, not physical space.
+For the sake of clarity and simplicity, we only introduce Information Theory quantifiers that are defined on discrete PDFs in this section, since we are only dealing with discrete data (time series).
+However, all the quantifiers also have definitions for the continuous case \cite{Shannon1948,Frieden2004} . 
 
 BBB
 
-Physics, as well as, other scientific disciplines like biology or finance, can be considered observational sciences, 
-that is, they try to infer  properties of an unfamiliar system from  the analysis of measured time
-record of it behavior (time series).  
+Physics, as well as, other scientific disciplines like biology or finance, can be considered observational sciences, that is, they try to infer  properties of an unfamiliar system from  the analysis of measured time record of it behavior (time series).  
 Dynamical systems are systems that evolve in time.
-In practice, one may only be able to measure a scalar time series ${\mathcal X}(t)$ which may be a function of
-variables ${\mathcal V}=\{ v_1,  v_2,\cdots, v_k\}$ describing the underlying dynamics 
-(i.e. $d{\mathcal V}/dt=f({\mathcal V})$.
+In practice, one may only be able to measure a scalar time series ${\mathcal X}(t)$ which may be a function of variables ${\mathcal V}=\{ v_1,  v_2,\cdots, v_k\}$ describing the underlying dynamics (i.e. $d{\mathcal V}/dt=f({\mathcal V})$.
 Then, the natural question is, from ${\mathcal X}(t)$ how much  we can learn about the dynamics of the system.
-In a  more formal way,
-given a system, be it natural or man-made, and given an observable of such system whose evolution can be tracked 
-through time, a natural question arises: how much information is this observable encoding about the dynamics of 
-the underlying system? 
-The information content of a system is typically evaluated via a probability distribution function (PDF) $P$ 
-describing the apportionment of some measurable or observable quantity, generally a time series ${\mathcal X}(t)$. 
-Quantifying the information content of a given observable is therefore largely tantamount to characterizing its 
-probability distribution. 
+In a  more formal way, given a system, be it natural or man-made, and given an observable of such system whose evolution can be tracked through time, a natural question arises: how much information is this observable encoding about the dynamics of the underlying system? 
+The information content of a system is typically evaluated via a probability distribution function (PDF) $P$ describing the apportionment of some measurable or observable quantity, generally a time series ${\mathcal X}(t)$. 
+Quantifying the information content of a given observable is therefore largely tantamount to characterizing its probability distribution. 
 This is often done with the wide family of measures called Information Theory quantifiers \cite{Gray1990}.
-We can define Information Theory quantifiers as measures able to characterize relevant properties of the 
-PDF associated with these time series, and in this way we should judiciously extract information on the dynamical 
-system under study.
+We can define Information Theory quantifiers as measures able to characterize relevant properties of the PDF associated with these time series, and in this way we should judiciously extract information on the dynamical system under study.
 
 \subsection{Shannon entropy and statistical complexity}
 
