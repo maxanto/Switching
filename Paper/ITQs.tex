@@ -1,61 +1,67 @@
 \section{Information theory quantifiers}\label{sec:quanti}
 
-AAA
-
-Given a time series or other observational data, a natural question arises: how much information are these data revealing about the dynamics of the underlying system or processes?
-The information content of data sets is typically evaluated via characterizing a value distribution or a probability distribution function (PDF) $P$ describing the apportionment of some measurable or observable quantity \cite{Gray2011}.
+Dynamical systems are systems that evolve in time.
+In practice, one may only be able to measure a scalar time series ${\mathcal X}(t)$ which may be a function of variables ${\mathcal V}=\{ v_1,  v_2,\cdots, v_k\}$ describing the underlying dynamics (i.e. $d{\mathcal V}/dt=f({\mathcal V})$.
+Given a time series or other observational data, we try to infer  properties of an unfamiliar system from  the analysis of measured time record of it behavior (time series).  
+how much information are these data revealing about the dynamics of the underlying system or processes?
+The information content of a system is typically evaluated via a probability distribution function (PDF) $P$ describing the apportionment of some measurable or observable quantity, generally a time series ${\mathcal X}(t)$. 
+We can define Information Theory quantifiers as measures able to characterize relevant properties of the PDF associated with these time series, and in this way we should judiciously extract information on the dynamical system under study.
 These quantifiers represent metrics on the space of PDFs for data sets, allowing to compare different sets and classifying them according to the properties of underlying processes - broadly, stochastic vs.  deterministic.
-In our case, we are interested in carbon temporal dynamics of GPP, and our data are \textit{time series} $x(t)$. Thus, we are mostly interested in metrics which take the temporal order of observations explicitly into account; i.e. the approach is fundamentally \textit{causal} rather than \textit{statistical} in nature.
-In a purely statistical approach, correlations between sucessive values from the time series are ignored or simply destroyed via construction of the PDF; while a causal approach focuses on the PDFs of data sequences. 
 
-The quantifiers selected are based on ordinal pattern statistics.
+In our case, we are interested in chaotic dynamics.
+Thus we are interested in metrics which take the temporal both order of observations explicitly into account; i.e. the approach is fundamentally \textit{causal} and \textit{statistical} in nature.
+In a purely statistical approach, correlations between successive values from the time series are ignored or simply destroyed via construction of the PDF; while a causal approach focuses on the PDFs of data sequences.
+
+The quantifiers selected are based on symbolic counting and ordinal pattern statistics.
 For an application of alternative quantifiers based on Symbolic Dynamics to environmental data, we refer to \cite{Hauhs2008}.
-The metrics to be used can be broadly classified along two categories: those which quantify the \textit{information content} of data versus those related to their \textit{complexity} on one hand; and metrics related to \textit{global} properties of the appropriate PDFs versus ones which take \textit{local} properties into account.
+The metrics to be used can be broadly classified along two categories: those which quantify the \textit{information content} of data versus those related to their \textit{complexity}.
 Note that we are referring to the space of probability density functions here, not physical space.
 For the sake of clarity and simplicity, we only introduce Information Theory quantifiers that are defined on discrete PDFs in this section, since we are only dealing with discrete data (time series).
 However, all the quantifiers also have definitions for the continuous case \cite{Shannon1948,Frieden2004} . 
 
-BBB
-
-Physics, as well as, other scientific disciplines like biology or finance, can be considered observational sciences, that is, they try to infer  properties of an unfamiliar system from  the analysis of measured time record of it behavior (time series).  
-Dynamical systems are systems that evolve in time.
-In practice, one may only be able to measure a scalar time series ${\mathcal X}(t)$ which may be a function of variables ${\mathcal V}=\{ v_1,  v_2,\cdots, v_k\}$ describing the underlying dynamics (i.e. $d{\mathcal V}/dt=f({\mathcal V})$.
-Then, the natural question is, from ${\mathcal X}(t)$ how much  we can learn about the dynamics of the system.
-In a  more formal way, given a system, be it natural or man-made, and given an observable of such system whose evolution can be tracked through time, a natural question arises: how much information is this observable encoding about the dynamics of the underlying system? 
-The information content of a system is typically evaluated via a probability distribution function (PDF) $P$ describing the apportionment of some measurable or observable quantity, generally a time series ${\mathcal X}(t)$. 
-Quantifying the information content of a given observable is therefore largely tantamount to characterizing its probability distribution. 
-This is often done with the wide family of measures called Information Theory quantifiers \cite{Gray1990}.
-We can define Information Theory quantifiers as measures able to characterize relevant properties of the PDF associated with these time series, and in this way we should judiciously extract information on the dynamical system under study.
-
 \subsection{Shannon entropy and statistical complexity}
 
-AAA
+Entropy is a basic quantity that can be regarded to as a measure of the uncertainty associated (information) to the physical process described by $P$.
+When dealing with information content, the Shannon entropy is often considered as the foundational and most natural one \cite{Shannon1948,Weaver1949}.
+Regarded as a measure of uncertainty, is the most paradigmatic example of these information quantifiers.
 
-The permutation Shannon entropy is a measure for the information content of the time series \cite{Shannon1948} and quantifies uncertainty,  disorder, state-space volume, and lack of information \cite{Brissaud2005}. 
-Let $P=\{p_i; i=1,\ldots, N\}$ with $\sum_{i=1}^N p_i = 1$, be a  probability distribution, with $N$ 
-possible states of the system under study.
-The Shannon information measure (entropy) reads
+Let a $P=\{p_i; i=1,\ldots, N\}$ with $\sum_{i=1}^N p_i = 1$, be a  discrete probability distribution, with $N$ the number of possible states of the system under study.
+The Shannon's logarithmic information measure reads
 \begin{equation}
 \label{Shannon-disc}
 {\mathrm S}[P] ~=~ -\sum_{i=1}^{N} p_i \ln \left[ p_i \right] \ .
 \end{equation}
 
-The Shannon entropy is minimal when all but one of the $p_i$'s vanish, and maximal when all $p_i$'s are equal, i.e. for the uniform distribution $P_e = \{ p_i = \frac{1}{N}, \forall i=1, \ldots , N \}$. In this case, 
-${\mathrm S}[P_e] = {\mathrm S}_{\max} = \ln N$. However, these two situations are extreme cases, unlikely to occur in any natural phenomenon considered here. 
-In the following, we focus on the `normalized' Shannon entropy, $0 \leq {\mathcal H} \leq 1$, given as
+If ${\mathrm S}[P] = {\mathrm S}_{\min} = 0$, we are in position to predict with complete certainty which of the possible outcomes $i$, whose probabilities are given by $p_i$, will actually take place. 
+Our knowledge of the underlying process described by the probability distribution is maximal in this instance. 
+In contrast, our knowledge is minimal for a uniform distribution $P_e = \{ p_i = 1/N, \forall i=1, \ldots , N \}$ since every outcome exhibits the same probability of occurrence, and the uncertainty is maximal, i.e., ${\mathrm S}[P_e] = {\mathrm S}_{\max} = \ln N$.
+These two situations are extreme cases, therefore we focus on the `normalized' Shannon entropy, $0 \leq {\mathcal H} \leq 1$, given as
 \begin{equation}
 \label{shannon-disc-normalizada}
 {\mathcal H} [P]~=~{\mathrm S}[P]  / {\mathrm S}_{\max} \ .
 \end{equation}
 
-Contrary to information content, there is no universally accepted definition of complexity. Here, we focus on describing the \textit{complexity of time series} and do not refer to the complexity of the underlying \textit{systems}. In fact, “simple” models might generate complex data, while “complicated” systems might produce output data of low complexity \cite{Kantz1998}.  %A complex system does not necessarily generate a complex output. 
+Contrary to information content, there is no universally accepted definition of complexity. Here, we focus on describing the \textit{complexity of time series} and do not refer to the complexity of the underlying \textit{systems}.
+A complex system does not necessarily generate a complex output.
+In fact, “simple” models might generate complex data, while “complicated” systems might produce output data of low complexity \cite{Kantz1998}.
 
-An intuitive notion of a quantitative complexity attributes low values both to perfectly ordered data (i.e. with vanishing Shannon entropy) as well as to uncorrelated random data (with maximal Shannon entropy), as both cases can be well described in a compact manner. For example, the statistical complexity of a simple oscillation or trend (ordered), but also of uncorrelated white noise (unordered) would be classified as low. Hence, linear transient trends and measurement noise of some geophysical variable would exhibit small complexity values, but the two processes would differ considerably in their Shannon entropy (Fig. 1). Between the two cases of minimal and maximal entropy, data are more difficult to characterize and hence the complexity should be higher. We seek some functional ${\mathcal C} [P]$ quantifying structures present in the data which deviate from these two cases. These structures relate to organization, correlational structure, memory, regularity, symmetry, patterns, and other properties \cite{Feldman2008}.
+
+An intuitive notion of a quantitative complexity attributes low values both to perfectly ordered data (i.e. with vanishing Shannon entropy) as well as to uncorrelated random data (with maximal Shannon entropy.
+For example, the statistical complexity of a simple oscillation or trend (ordered), but also of uncorrelated white noise (unordered) would be classified as low.
+Between the two cases of minimal and maximal entropy, data are more difficult to characterize and hence the complexity should be higher.
+We seek some functional ${\mathcal C} [P]$ quantifying structures present in the data which deviate from these two cases.
+These structures relate to organization, correlational structure, memory, regularity, symmetry, patterns, and other properties \cite{Feldman2008}.
+
+
+AAA
+
+-----------------------------------
+
+
 
 One suitable way to guarantee the desired properties for a complexity measure is to build the product of a measure of information and a measure of
 disequilibrium, i.e. some kind of distance from the uniform (`equilibrium') distribution of the accessible states of 
-a system. In this respect, \cite{Lamberti2004} an effective {\it Statistical Complexity 
-	Measure\/} (SCM) ${\mathcal C}$ was introduced, that is able to detect and discern basic dynamical properties of datasets.
+a system. In this respect, \cite{Lamberti2004} an effective {\it Statistical Complexity Measure\/} (SCM) ${\mathcal C}$ was introduced, that is able to detect and discern basic dynamical properties of datasets.
 
 Based on the seminal notion advanced by Lopez-Ruiz {\it et al.\/} \cite{LMC1995}, this statistical complexity 
 measure\cite{Martin2003,Lamberti2004} is defined through the functional product form
@@ -81,54 +87,19 @@ The inverse of this value is obtained for the non-normalized Jensen-Shannon dive
 
 The Jensen-Shannon divergence quantifies the difference between probability distributions and 
 is especially useful to compare the symbolic composition of different sequences\cite{Grosse2002}.
-Note that the above introduced Information Theory quantifier depends on two different probability distributions: one associated with the system under analysis, $P$, and the other the uniform distribution $P_e$. For the latter, other reference distributions can be chosen to test whether an observed distribution is close to a target distribution. It has been shown that there are \textit{limit curves} for complexity: for a given value of ${\mathcal H}$ and any data set, the possible ${\mathcal C}$ 
+Note that the above introduced Information Theory quantifier depends on two different probability distributions: one associated with the system under analysis, $P$, and the other the uniform distribution $P_e$. For the latter, other reference distributions can be chosen to test whether an observed distribution is close to a target distribution.
+It has been shown that there are \textit{limit curves} for complexity: for a given value of ${\mathcal H}$ and any data set, the possible ${\mathcal C}$ 
 values vary between a minimum ${\mathcal C}_{min}({\mathcal H})$ and a maximum ${\mathcal C}_{max}({\mathcal H})$, 
 restricting the possible values of the complexity measure \cite{Martin2006}.
 
+----------------------------------------
+
 BBB
 
-Entropy is a basic quantity with multiple field-specific interpretations: for instance, it has been associated
-with disorder, state-space volume, and lack of information \cite{Brissaud2005}. 
-When dealing with information content, the Shannon entropy is often considered as the foundational and most
-natural one \cite{Shannon1948,Weaver1949}.
-
-Entropy, regarded as a measure of uncertainty, is the most paradigmatic example of these information quantifiers.
-Given a continuous probability distribution function (PDF) $\rho(x)$ with $x \in \Omega \subset \mathcal{R}$ and 
-$\int_{\Omega} \rho(x)~dx = 1$, its associated {\it Shannon Entropy\/} ${\mathrm S}$ 
-\cite{Shannon1948,Weaver1949} is defined by
-\begin{equation}
-\label{shannon}
-{\mathrm S}[\rho] ~=~ -\int_{\Omega} \rho(x) \ln \left[\rho(x)\right]  dx .
-\end{equation}
-
-Let now $P=\{p_i; i=1,\ldots, N\}$ with $\sum_{i=1}^N p_i = 1$, be a  discrete probability distribution, with $N$ 
-the number of possible states of the system under study.
-The Shannon's logarithmic information measure reads
-\begin{equation}
-\label{Shannon-disc}
-{\mathrm S}[P] ~=~ -\sum_{i=1}^{N} p_i \ln \left[ p_i \right] \ .
-\end{equation}
-This can be regarded to as a measure of the uncertainty associated (information) to the physical process described 
-by $P$.
-For instance, if ${\mathrm S}[P] = {\mathrm S}_{\min} = 0$, we are in position to predict with complete certainty 
-which of the possible outcomes $i$, whose probabilities are given by $p_i$, will actually take place. 
-Our knowledge of the underlying process described by the probability distribution is maximal in this instance. 
-In contrast, our knowledge is minimal for a uniform distribution $P_e = \{ p_i = 1/N, \forall i=1, \ldots , N \}$
-since every outcome exhibits the same probability of occurrence, and the uncertainty is maximal, i.e.,
-${\mathrm S}[P_e] = {\mathrm S}_{\max} = \ln N$.
-In the discrete case,  we define a ``normalized" Shannon entropy, $0 \leq {\mathcal H} \leq 1$, as
-\begin{equation}
-\label{shannon-disc-normalizada}
-{\mathcal H} [P]~=~{\mathrm S}[P]  / {\mathrm S}_{\max} \ .
-\end{equation}
+----------------------------------------
 
 
-Complexity denotes a state of affairs that one can easily appreciate when confronted with it; however,
-is rather difficult to define it quantitatively, probably due to the fact that there is no universal
-definition of complexity.
-In between the two special instances of perfect order and complete randomness, a wide range of possible
-degrees of physical structure exists that should be reflected in the features of the underlying
-probability distribution $P$.
+
 One would like to assume that the degree of correlational structures would be adequately captured
 by some functional ${\mathcal C} [P]$ in the same way that Shannon's entropy ${\mathrm S}[P]$ 
 \cite{Shannon1948} ``captures" randomness.
@@ -148,7 +119,6 @@ In particular the maximum complexity occurs in the region between the system's p
 the perfectly disordered one. 
 Complexity is allows us to detect essential details of the dynamics, and more importantly to characterize 
 the correlational structure of the orderings present in the time series.
-
 
 The perfect crystal and the isolated ideal gas are two typical examples of systems with minimum and 
 maximum entropy, respectively. 
