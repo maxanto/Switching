@@ -41,168 +41,46 @@ These two situations are extreme cases, therefore we focus on the `normalized' S
 {\mathcal H} [P]~=~{\mathrm S}[P]  / {\mathrm S}_{\max} \ .
 \end{equation}
 
-Contrary to information content, there is no universally accepted definition of complexity. Here, we focus on describing the \textit{complexity of time series} and do not refer to the complexity of the underlying \textit{systems}.
+Contrary to information content, there is no universally accepted definition of complexity.
+Here, we focus on describing the \textit{complexity of time series} and do not refer to the complexity of the underlying \textit{systems}.
 A complex system does not necessarily generate a complex output.
 In fact, “simple” models might generate complex data, while “complicated” systems might produce output data of low complexity \cite{Kantz1998}.
-
 
 An intuitive notion of a quantitative complexity attributes low values both to perfectly ordered data (i.e. with vanishing Shannon entropy) as well as to uncorrelated random data (with maximal Shannon entropy.
 For example, the statistical complexity of a simple oscillation or trend (ordered), but also of uncorrelated white noise (unordered) would be classified as low.
 Between the two cases of minimal and maximal entropy, data are more difficult to characterize and hence the complexity should be higher.
 We seek some functional ${\mathcal C} [P]$ quantifying structures present in the data which deviate from these two cases.
 These structures relate to organization, correlational structure, memory, regularity, symmetry, patterns, and other properties \cite{Feldman2008}.
-
-
-AAA
-
------------------------------------
-
-
-
-One suitable way to guarantee the desired properties for a complexity measure is to build the product of a measure of information and a measure of
-disequilibrium, i.e. some kind of distance from the uniform (`equilibrium') distribution of the accessible states of 
-a system. In this respect, \cite{Lamberti2004} an effective {\it Statistical Complexity Measure\/} (SCM) ${\mathcal C}$ was introduced, that is able to detect and discern basic dynamical properties of datasets.
-
-Based on the seminal notion advanced by Lopez-Ruiz {\it et al.\/} \cite{LMC1995}, this statistical complexity 
-measure\cite{Martin2003,Lamberti2004} is defined through the functional product form
-\begin{equation}
-{\mathcal C}[P] ~=~ {\mathcal Q}_{J}[P,P_e] \cdot {\mathcal H}[P]
-\label{complexity}
-\end{equation}
-of the normalized Shannon entropy ${\mathcal H}$, see Eq.~\eqref{shannon-disc-normalizada}, and the disequilibrium 
-${\mathcal Q}_{J}[ P, P_e]$ defined in terms of the Jensen-Shannon divergence ${\mathcal J}[ P, P_e]$.
-The latter is given by
-\begin{equation}
-\label{disequilibrium}
-{\mathcal Q}_{J} [ P, P_e] ~=~ Q_{0} {\mathcal J}[ P, P_e] ~=~ 
-Q_{0} \{ {\mathrm S}[(P + P_e)/2 ] - {\mathrm S}[ P ]/2 - {\mathrm S}[P_e]/2\},
-\end{equation}
-where $Q_0$ is a normalization constant chosen 
-such that $0 \leq {\mathcal Q}_{J} \leq 1$:
-\begin{equation}
-Q_0 ~=~ -2 \left\{  {\frac{N+1}{N}}  \ln (N+1) - \ln (2N)  +  \ln N \right\}^{-1} \ ,
-\label{q0-jensen-1}
-\end{equation}
-The inverse of this value is obtained for the non-normalized Jensen-Shannon divergence when one of the components of $P$, say $p_m$, is equal to one and the remaining $p_j$'s are zero.
-
-The Jensen-Shannon divergence quantifies the difference between probability distributions and 
-is especially useful to compare the symbolic composition of different sequences\cite{Grosse2002}.
-Note that the above introduced Information Theory quantifier depends on two different probability distributions: one associated with the system under analysis, $P$, and the other the uniform distribution $P_e$. For the latter, other reference distributions can be chosen to test whether an observed distribution is close to a target distribution.
-It has been shown that there are \textit{limit curves} for complexity: for a given value of ${\mathcal H}$ and any data set, the possible ${\mathcal C}$ 
-values vary between a minimum ${\mathcal C}_{min}({\mathcal H})$ and a maximum ${\mathcal C}_{max}({\mathcal H})$, 
-restricting the possible values of the complexity measure \cite{Martin2006}.
-
-----------------------------------------
-
-BBB
-
-----------------------------------------
-
-
-
-One would like to assume that the degree of correlational structures would be adequately captured
-by some functional ${\mathcal C} [P]$ in the same way that Shannon's entropy ${\mathrm S}[P]$ 
-\cite{Shannon1948} ``captures" randomness.
-
-Clearly, the ordinal structures present in a process is not quantified by randomness measures, 
-and consequently, measures of statistical or structural complexity are necessary for a better understanding 
-(characterization) of the system dynamics represented by their time series \cite{Crutchfield1998}. 
-The opposite extremes of perfect order and maximal randomness are very simple to describe, because they do 
-not have any structure. 
-The complexity should be zero in these cases. 
-At a given distance from these extremes, a wide range of possible ordinal structures exists. 
-Complexity can be characterized by a certain degree of organization, structure, memory, regularity, symmetry, 
-and patterns \cite{Feldman2008}. 
-The complexity measure does much more than satisfy the boundary conditions of vanishing in the high- and 
-low-entropy limits. 
-In particular the maximum complexity occurs in the region between the system's perfectly ordered state and 
-the perfectly disordered one. 
-Complexity is allows us to detect essential details of the dynamics, and more importantly to characterize 
-the correlational structure of the orderings present in the time series.
-
-The perfect crystal and the isolated ideal gas are two typical examples of systems with minimum and 
-maximum entropy, respectively. 
-However, they are also examples of simple models and therefore of systems with zero complexity, as the
-structure of the perfect crystal is completely described by minimal information (i.e., distances and 
-symmetries that define the elementary cell) and the probability distribution for the accessible states 
-is centered around a prevailing state of perfect symmetry. 
-On the other hand, all the accessible states of the ideal gas occur with the same probability and can be
-described by a ``simple" uniform distribution. 
-
-Statistical complexity is often characterized by the paradoxical situation of a complicated dynamics 
-generated from relatively simple systems. 
-Obviously, if the system itself is already involved enough and is constituted by many different parts, 
-it clearly may support a rather intricate dynamics, but perhaps without the emergence of typical 
-characteristic patterns \cite{Kantz1998}. 
-Therefore, a complex system does not necessarily generate a complex output. 
-Statistical complexity is therefore related to patterned structures hidden in the dynamics,
-emerging from a system which itself can be much simpler than the dynamics it generates \cite{Kantz1998}.
-
-According to L\'opez-Ruiz, Mancini and Calbet \cite{LMC1995}, and using an oxymoron, an object, a procedure, 
-or system is said to be complex when it does not exhibit patterns regarded as simple. 
-It follows that a suitable complexity measure should vanish both for completely ordered and for completely 
-random systems and cannot only rely on the concept of information (which is maximal and minimal for the 
-above mentioned systems).
+One would like to assume that the degree of correlational structures would be adequately captured by some functional ${\mathcal C} [P]$ in the same way that Shannon's entropy ${\mathrm S}[P]$ \cite{Shannon1948} ``captures" randomness.
+Clearly, the ordinal structures present in a process is not quantified by randomness measures, and consequently, measures of statistical or structural complexity are necessary for a better understanding (characterization) of the system dynamics represented by their time series \cite{Crutchfield1998}. 
 A suitable measure of complexity can be defined as the product of a measure of information and a measure of
 disequilibrium, i.e. some kind of distance from the equiprobable distribution of the accessible states of 
 a system. 
-In this respect, Rosso and coworkers \cite{Lamberti2004} introduced an effective {\it Statistical Complexity 
-	Measure\/} (SCM) ${\mathcal C}$, that is able to detect essential details of the dynamical processes 
-underlying the dataset.
-
-Based on the seminal notion advanced by L\'opez-Ruiz {\it et al.} \cite{LMC1995}, this statistical complexity 
-measure\cite{Martin2003,Lamberti2004} is defined through the functional product form
+In this respect, Rosso and coworkers \cite{Lamberti2004} introduced an effective {\it Statistical Complexity Measure\/} (SCM) ${\mathcal C}$, that is able to detect essential details of the dynamical processes underlying the dataset.
+Based on the seminal notion advanced by L\'opez-Ruiz {\it et al.} \cite{LMC1995}, this statistical complexity measure\cite{Martin2003,Lamberti2004} is defined through the functional product form
 \begin{equation}
 {\mathcal C}[P] ~=~ {\mathcal Q}_{J}[P,P_e] \cdot {\mathcal H}[P]
 \label{complexity}
 \end{equation}
-of the normalized Shannon entropy ${\mathcal H}$, see Eq.~\eqref{shannon-disc-normalizada}, and the disequilibrium 
-${\mathcal Q}_{J}$ defined in terms of the Jensen-Shannon divergence ${\mathcal J}[ P, P_e]$.
+of the normalized Shannon entropy ${\mathcal H}$, see Eq.~\eqref{shannon-disc-normalizada}, and the disequilibrium ${\mathcal Q}_{J}$ defined in terms of the Jensen-Shannon divergence ${\mathcal J}[ P, P_e]$.
 That is,
 \begin{equation}
 \label{disequilibrium}
 {\mathcal Q}_{J} [ P, P_e] ~=~ Q_{0} {\mathcal J}[ P, P_e] ~=~ 
 Q_{0} \{ {\mathrm S}[(P + P_e)/2 ] - {\mathrm S}[ P ]/2 - {\mathrm S}[P_e]/2\},
 \end{equation}
-the above-mentioned Jensen-Shannon divergence and $Q_0$, a normalization constant 
-such that $0 \leq {\mathcal Q}_{J} \leq 1$:
+the above-mentioned Jensen-Shannon divergence and $Q_0$, a normalization constant such that $0 \leq {\mathcal Q}_{J} \leq 1$:
 \begin{equation}
 Q_0 ~=~ -2 \left\{  {\frac{N+1}{N}}  \ln (N+1) - \ln (2N)  +  \ln N \right\}^{-1} \ ,
 \label{q0-jensen-1}
 \end{equation}
 are equal to the inverse of the maximum possible value of ${\mathcal J} [P,P_e]$.
-This value is obtained when one of the components of $P$, say $p_m$, is equal to one and the remaining $p_j$ 
-are zero.
+This value is obtained when one of the components of $P$, say $p_m$, is equal to one and the remaining $p_j$ are zero.
 
-The Jensen-Shannon divergence, which quantifies the difference between probability distributions, 
-is especially useful to compare the symbolic composition between different sequences\cite{JS-Div1991,Grosse2002,JS-Div2014}.
-Note that the above introduced SCM depends on two different probability distributions: one associated with the 
-system under analysis, $P$, and the other the uniform distribution, $P_e$.
-Furthermore, it was shown that for a given value of ${\mathcal H}$, the range of possible ${\mathcal C}$ 
-values varies between a minimum ${\mathcal C}_{min}$ and a maximum ${\mathcal C}_{max}$, 
-restricting the possible values of the SCM \cite{Martin2006}.
-Thus, it is clear that important additional information related to the correlational structure between the 
-components of the physical system is provided by evaluating the statistical complexity measure. 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%In this way, the information plane ${\mathcal H} \times {\mathcal C}$ constitute a nice tool to visualizate 
-%and characterize different dynamical systems.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-If our system, with associated discrete PDF, lies in a very ordered state, will be represented
-by an extremely narrow PDF, that is almost all the 
-$p_{i}$--values are almost zero except for a particular state $k \neq i$ with $p_{k} \cong 1$,then both
-the normalized Shannon entropy and statistical complexity are close to zero (${\mathcal H} \approx 0$ and 
-${\mathcal C} \approx 0$)
-
-On the other hand, when the system under study is represented by  a very disordered state, that is when all the 
-$p_{i}$--values oscillate around the same value, we have ${\mathcal H} \approx 1$ while 
-${\mathcal C} \approx 0$
-
-This point was extensively discussed by Rosso and co-workers \cite{Olivares2012A,Olivares2012B}.
-The summands can be regarded to as a kind of ``distance" between  two contiguous probabilities.
-Thus, a different ordering of the pertinent summands would lead to a different FIM-value, hereby its local nature.
-In the present work, we follow the Lehmer lexicographic order \cite{Lehmer} in the generation of Bandt and Pompe 
-PDF (see next section).
+The Jensen-Shannon divergence, which quantifies the difference between probability distributions, is especially useful to compare the symbolic composition between different sequences\cite{JS-Div1991,Grosse2002,JS-Div2014}.
+Note that the above introduced SCM depends on two different probability distributions: one associated with the system under analysis, $P$, and the other the uniform distribution, $P_e$.
+Furthermore, it was shown that for a given value of ${\mathcal H}$, the range of possible ${\mathcal C}$ values varies between a minimum ${\mathcal C}_{min}$ and a maximum ${\mathcal C}_{max}$, restricting the possible values of the SCM \cite{Martin2006}.
+Thus, it is clear that important additional information related to the correlational structure between the components of the physical system is provided by evaluating the statistical complexity measure. 
 
 YOOOOO
 
