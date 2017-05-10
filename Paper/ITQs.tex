@@ -138,64 +138,47 @@ In the equation above $x_{j+k-1}-\bar{X_j^D}$ denotes the arithmetic mean of the
 Originally, this technique was proposed to discriminate patterns immersed in low noise.
 We take advantage of the fact that the fixed points are not computed in the WPE.
 
-PONER UN PÁRRAFO QUE DEFINA LOS CUANTIFICADORES QUE TERMINAN QUEDANDO: HVAL, HBP, HBPW, CBP, CBPW
+We computed the normalized permutation Shannon entropy $H$ and the statistical complexity $C$ from these PDFs, and the obtained values are denoted as:
+\begin{itemize}
+	\item $H_{Val}$, is the normalized Shannon entropy applied to non-causal PDF $P_{Val}$
+	\item $H_{BP}$, is the normalized Shannon entropy applied to causal PDF $P_{BP}$
+	\item $H_{BPW}$, is the normalized Shannon entropy applied to causal PDF with amplitude contribution $P_{BPW}$
+	\item $C_{BP}$, is the normalized statistical complexity applied to non-causal PDF $P_{BP}$
+	\item $C_{BPW}$, is the normalized statistical complexity applied to non-causal PDF with amplitude contribution $P_{BPW} $
+\end{itemize}
+
+We also used the number of MP as a quantifier\cite{Rosso2012}.
+As shown recently by Amig\'o {\it et al.} \cite{Amigo2006,Amigo2007,Amigo2008,Amigo2010}, in the case of deterministic one-dimensional maps, not all the possible ordinal patterns can be effectively materialized into orbits, which in a sense makes these patterns forbidden.
+Indeed, the existence of these forbidden ordinal patterns becomes a persistent fact that can be regarded as a new dynamical property.
+Thus, for a fixed pattern-length (embedding dimension $D$) the number of forbidden patterns of a time series (unobserved patterns) is independent of the series length $N$.
+Remark that this independence does not characterize other properties of the series such as proximity and correlation, which die out with time \cite{Amigo2007,Amigo2010}.
 
 \subsection{Information Planes}
 
 A particularly useful visualization of the quantifiers from Information Theory is their juxtaposition in two-dimensional graphs.
-Four information planes are defined: two
-
-
-AAA
-
-
-Three such \textit{causal information planes} can be defined: 
-{\it a)\/} The {\it causality entropy--complexity plane\/}, ${\mathcal H} \times {\mathcal C}$, is based 
-only on global characteristics of the  associated series.
-In the case of ${\mathcal H} \times {\mathcal C}$ the value range is $[0, 1] \times [{\mathcal C}_{min}(\mathcal{H}), 
-{\mathcal C}_{max}(\mathcal{H})]$, while in the causality 
-plane ${\mathcal H} \times {\mathcal F}$ the range is presumably $[0, 1]\times [0, 1]$; no limit curves have been shown to exist so far.
+Four information planes are defined:
+\begin{enumerate}
+	\item Causal entropy vs. non-causal entropy, $H_{BP} - H_{Val}$
+	\item Causal entropy with amplitude contributions vs. non-causal entropy, $H_{BPW} - H_{Val}$
+	\item Causal complexity vs. causal entropy, $C_{BP} - H_{BP}$
+	\item Causal complexity with amplitude contributions vs. causal entropy with amplitude contributions, $C_{BPW} - H_{BPW}$
+\end{enumerate}
 
 These diagnostic tools were shown to be particularly efficient to distinguish between the deterministic chaotic and stochastic nature of a time series since the permutation quantifiers have distinct behaviours for different types of processes, see Figs. \ref{fig1} and \ref{fig2}, respectively. 
 
+In the first and second planes a higher value in any of the entropies, $H_{BP}$ and $H_{hist}$, implies an increase in the uniformity of the involved PDF.
+The point $(1,1)$ represents the ideal case with uniform histogram and uniform distribution of ordering patterns.
+By comparing both planes we can detect falls to fixed points.
+
+In the causality planes $H - C$ not the entire region $0<H_{BP}<1$, $0<C_{BP}<1$ is achievable.
+In fact for any PDF the pairs $(H,C)$ of possible values fall between two extreme curves in the plane $H$-$C$ \cite{Anteneodo1996}.
 Chaotic maps have intermediate entropy ${\mathcal H}$, while their complexity ${\mathcal C}$ reaches larger values, very close to those of the upper complexity limit \cite{Rosso2007,Olivares2012B}.
 For regular processes, entropy and complexity have small values, close to zero. 
 Uncorrelated stochastic processes are located in the planar location associated with ${\mathcal H}$ near one and ${\mathcal C}$ near zero.
-It has also been found that correlated stochastic noise processes with a power spectrum proportional to $1/f^k$, where $1 \leq k \leq 3$, are characterized by intermediate permutation entropy and intermediate statistical complexity values \cite{Rosso2007}.
+Ideal random systems having uniform Bandt \& Pompe PDF, are represented by the point $(1,0)$ \cite{Gonzalez2005} and a delta-like PDF corresponds with the point $(0,0)$.
+
 In both information planes (${\mathcal H} \times {\mathcal C}$, see Fig. \ref{fig1} and  ${\mathcal Hval} \times {\mathcal Hbp}$, see Fig. \ref{fig2}), stochastic data are clearly localized at different planar positions than deterministic chaotic ones. 
 
-BBB
-
-Two causal information planes are defined (the term causality remembers the fact that temporal correlations 
-between successive samples are taken into account through the Bandt and Pompe PDF recipe used to
-estimate both Information Theory quantifiers):
-{\it a)\/} The {\it causality entropy--complexity plane\/}, ${\mathcal H} \times {\mathcal C}$, is based 
-only on global characteristics of the associated time series PDF (both quantities are defined in terms of 
-Shannon entropies).
-In the case of ${\mathcal H} \times {\mathcal C}$ the variation range is $[0, 1] \times [{\mathcal C}_{min}, 
-{\mathcal C}_{max}]$ (with ${\mathcal C}_{min}$ and ${\mathcal C}_{max}$ the minimum and maximum statistical 
-complexity values, respectively, for a given ${\mathcal H}$ value \cite{Martin2006}), while in the causality 
-plane ${\mathcal H} \times {\mathcal F}$ the range is $[0, 1]\times [0, 1]$.
-
-These two diagnostic tools were shown to be particularly efficient to distinguish between the deterministic 
-chaotic and stochastic nature of a time series since the permutation quantifiers have distinctive behaviors 
-for different types of motion.
-According to the findings obtained by Rosso {\it et al.\/} \cite{Rosso2007,Olivares2012B,Rosso2015PP}, 
-chaotic maps have intermediate entropy ${\mathcal H}$, while complexity ${\mathcal C}$ reaches larger values, very close to those of the limit.
-Finally, totally uncorrelated stochastic processes are located in the planar location associated with
-${\mathcal H}$ near one and, ${\mathcal C}$.
-
-
-YOOOOO
-
-Two representation planes are considered: $H_{BP}$ vs $H_{hist}$ \cite{DeMicco2008} and $H_{BP}$ vs $C_{BP}$ \cite{Rosso2007}.
-In the first plane a higher value in any of the entropies, $H_{BP}$ and $H_{hist}$, implies an increase in the uniformity of the involved PDF.
-The point $(1,1)$ represents the ideal case with uniform histogram and uniform distribution of ordering patterns.
-In the second plane not the entire region $0<H_{BP}<1$, $0<C_{BP}<1$ is achievable.
-In fact for any PDF the pairs $(H,C)$ of possible values fall between two extreme curves in the plane $H$-$C$ \cite{Anteneodo1996}.
-Fig. \ref{fig:CbpHbp} shows two regions labeled as deterministic and stochastic. In fact transition from one region to the other are smooth and the division is a bit arbitrary. 
-A more detailed discussion can be seen in \cite{Rosso2007}. 
-Ideal random systems having uniform Bandt \& Pompe PDF, are represented by the point $(1,0)$ \cite{Gonzalez2005} and a delta-like PDF corresponds with the point $(0,0)$.
 
 \begin{figure}
 	\centering	
@@ -203,12 +186,6 @@ Ideal random systems having uniform Bandt \& Pompe PDF, are represented by the p
 	\caption{Entropy-Complexity plane.}
 	\label{fig:CbpHbp}
 \end{figure}
-
-We also used the number of MP as a quantifier\cite{Rosso2012}.
-As shown recently by Amig\'o {\it et al.} \cite{Amigo2006,Amigo2007,Amigo2008,Amigo2010}, in the case of deterministic one-dimensional maps, not all the possible ordinal patterns can be effectively materialized into orbits, which in a sense makes these patterns forbidden.
-Indeed, the existence of these forbidden ordinal patterns becomes a persistent fact that can be regarded as a new dynamical property.
-Thus, for a fixed pattern-length (embedding dimension $D$) the number of forbidden patterns of a time series (unobserved patterns) is independent of the series length $N$.
-Remark that this independence does not characterize other properties of the series such as proximity and correlation, which die out with time \cite{Amigo2007,Amigo2010}.
 
 A full discussion about the convenience of using these quantifiers is out of the scope of this work.
 Nevertheless reliable bibliographic sources do exist \cite{Wackerbauer1994,Lopez-Ruiz1995,Rosso2007A,DeMicco2008,Rosso2010,Martin2006,Rosso2012}.
