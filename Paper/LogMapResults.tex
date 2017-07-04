@@ -1,22 +1,23 @@
-\subsubsection{Logistic map (LOG)} \label{subsubsec:log}
+\subsubsection{LOG} \label{subsubsec:log}
 
 Figs. \ref{fig:LOG_QuantiB} (a) to (f) show the statistical properties of LOG map in floating-point and fixed-point representation.
-All these figures show: $100$ red points for each fixed-point precision ($B$) and in black their average (dashed black line connecting black dots), $100$ horizontal dashed blue lines that are the results of each run in floating-point and a black solid line their average.
+All these figures show: $100$ red points for each fixed-point precision ($1\geq B \geq 53$) and in black their average (dashed black line connecting black dots), $100$ horizontal dashed blue lines that are the results of each run in floating-point and a black solid line their average.
+Note that these lines are independent of x-axis.
 In this case, all the lines of the floating-point are overlapped.
 
 According as B grows, statistical properties vary until they stabilize.
 For $B\geq 30$ the value of $H_{val}$ remains almost identical to the values for the floating-point representation whereas $H_{BP}$ and $C_{BP}$ stabilizes at $B>21$.
 Their values are: $\left\langle H_{val}\right\rangle =0.9669$; $\left\langle H_{BP}\right\rangle =0.6269$; $\left\langle C_{BP}\right\rangle=0.4843$.
 Note that the stable value of missing patterns $MP=645$ makes the optimum $H_{BP} \leq ln(75)/ln(720) \simeq 0.65$.
-Then, $B=30$ is the most convenient choice because an increase in the number of fractional digits does not improve the statistical properties.
+Then, $B=30$ is the most convenient choice for hardware implementation because an increase in the number of fractional digits does not improve the statistical properties.
 
 Some conclusions can be drawn regarding BP and BPW quantifiers.
-For $B=1, 2, 3$ and $4$, the averaged BP quantifiers are almost $0$ while the averaged BPW quantifiers can not be calculated (see in Figs. \ref{fig:LOG_QuantiB} c and e the missing black dashed line).
-For those sequences where the initial condition where $0$ all iterations result to be a sequence of zeros (the fixed point of the map), this happens when using small precisions because of the roundoffs.
+For $B=1, 2, 3$ and $4$, the averaged BP quantifiers are almost $0$ while the averaged BPW quantifiers can not be calculated (see in Figs. \ref{fig:LOG_QuantiB} (c) and (e) the missing black dashed line).
+This is because for those sequences were the initial condition were $0$ all iterations result to be a sequence of zeros (the fixed point of the map), this is more likely to happen when using small precisions because of the roundoff.
 
 When $B$ increases, $B=7, 9$ and $12$, the initial conditions are rounded to zero less frequently.
-So the generated sequences start from some value but many of them fall to zero with a short transitory.
-This can be seen in Figs.\ref{fig:LOG_QuantiB} c and e, BPW quantifiers show a high dispersion unlike BP quantifiers.
+In this case the generated sequences starting from a non-null value very frequently fall to zero after a short transitory.
+This can be seen in Figs.\ref{fig:LOG_QuantiB} (c) and (e), BPW quantifiers show a high dispersion unlike BP quantifiers.
 This is because BPW procedure takes into account only the transient discarding fixed points, unlike BP procedure considers all the values of the sequence. 
 
 \begin{figure}
@@ -32,7 +33,7 @@ This is because BPW procedure takes into account only the transient discarding f
 
 The same results are shown in double entropy planes with the precision as parameter (Fig. \ref{fig:LOG_HH}).
 These figures show: $100$ red points for each fixed-point precision ($B$) and in black their average (dashed black line connecting black dots), $100$ blue dots that are the results of each run in floating-point and the black star is their average.
-In Fig. \ref{fig:LOG_HH} the $100$ blue points and their average are overlapped.
+Here, the $100$ blue points and their average are overlapped.
 
 As expected, the fixed-point architecture implementation converges to the floating-point value as $B$ increases.
 For both, Hbp-Hval and Hbpw-Hval, from $B=20$, $H_{val}$ improves but $H_{BP}$ remains constant.
@@ -47,7 +48,7 @@ It can be seen that the distribution of values reaches high values ($\left\langl
 
 In Fig. \ref{fig:LOG_HC} we show the entropy-complexity planes.
 Dotted gray lines are the upper and lower margins, it is expected that a chaotic system remains near the upper margin.
-This results characterize a chaotic behaviour, in $H_{BP}-C_{BP}$ plane we can see a low entropy and high complexity.
+These results characterize a chaotic behaviour, in $H_{BP}-C_{BP}$ plane we can see a low entropy and high complexity.
 
 \begin{figure}
 	\includegraphics[width= .49\textwidth]{CbpHbp_Log}
