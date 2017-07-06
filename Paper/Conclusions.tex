@@ -1,14 +1,19 @@
 \section{Conclusions}\label{sec:conclusions}
-In summary:
-\begin{itemize}
-  \item Not every number base can be represented by a device with a certain base. For example, a base ten number can not be exactly represented in a conventional computer, it will always have an error inherent of the system..No todas las bases numéricas son representables con una máquina de base distinta. Por ejemplo, no se puede representar la base 10 con base 2.
-  \item En una máquina de cálculo "a medida", como la que puede implementarse en ASICs o FPGAs existen limitaciones en el bus de datos y en la electrónica de cálculo. Si la electrónica de cálculo debe ser reducida se recomienda usar mapas que puedan ser calculados sólo con sumas y restas de la variable pseudoaleatoria.
-  \item Los mapas que sólo tienen operaciones de shifteo en la base de la máquina de cálculo inevitablemente caerán a cero en tantas iteraciones como el largo de la mantisa de representación. Por ejemplo el tent en base 2.
-  \item La comparación entre BP y BPW permite detectar el comportamiento del sistema. Puede detectarse si el atractor cae a un punto fijo y diferenciar si el transitorio es corto o largo, respecto de la cantidad de itaraciones del mapa.
-  \item Como se menciona en el paper de referencia, el período del mapa SWITCH aumenta respecto del simple. También se nota una mejora marginal en la mezcla de la secuencia. La distribución de valores es buena en todos los casos.
-  \item el skipping empeora el período pero mejora sustancialmente la mezcla de los valores. Esto puede verse en BP, BPW y MP.
-\end{itemize}
+In this paper we explore the statistical degradation of simple, switched and skipped chaotic maps due to the inherent error of a based-2 systems.
+We evaluate mixing and amplitude distributions from a statistical point of view.
 
-produces a non-monotonous evolution toward the floating point result. This result is relevant because it shows that increasing the precision is not
-always recommended.
+Our work complements the previous results given in \cite{Nagaraj2008}, where period was investigated.
+In that sense, our results were compatible with these.
+We can see that the switching between two maps increase the dependence of period as function of precision, this is because the correlation length is also increased.
+Neverthless, the standard procedure of skipping reduce the period length in almost a half.
+
+All statistics of the maps represented in fixed-point produces a non-monotonous evolution toward the floating-point results.
+This result is relevant because it shows that increasing the precision is not always recommended.
+
 It is specially interesting to note that some systems (TENT) with very nice statistical properties in the world of the real numbers, become ``pathological" when binary numerical representations are used.
+As a rule, if we only needs shift operations to calculate a map (it depends on the base of the arithmetic logic unit and the map itself), all initial conditions converges to a fixed point with a transient no longer than the length of their mantissa.
+
+By comparing between BP and BPW quantifiers, we will able to detect falls to a fixed point and estimate the relative length of transient. It can be seen in all implementations of TENT and in one initial condition of SWITCH and EVEN for floating-point implementation.
+
+Related to statistical behavior, our results shows that SWITCH has a marginal improvement in the mixing with respect to LOG (and TENT, of course).
+However the great improvement comes when skipping is applied, we can see that BP and BPW entropies grow and BPW and BPW complexities decrease, for the same numerical representation.
