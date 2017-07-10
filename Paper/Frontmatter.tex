@@ -1,28 +1,28 @@
 \begin{frontmatter}
 
 	\title{Complexity of switching chaotic maps}
-	M. Antonelli$^{1}$, L. De Micco$^{1,2}$, O. A. Rosso$^{3,4}$ and H. A. Larrondo$^{1,2}$\\
+	M. Antonelli$^{1,2}$, L. De Micco$^{1,2,3}$, O. A. Rosso$^{3,4,5,6}$ and H. A. Larrondo$^{1,2,3}$\\
 	$^{1}$ Facultad de Ingenier\'ia, Universidad Nacional de Mar del Plata, Mar del Plata, Argentina.\\
-	$^{2}$ CONICET.\\
-	$^{3}$ LaCCAN/CPMAT Instituto de Computa\c{c}ao, Universidade Federal de Alagoas, Macei\'o,Alagoas, Brazil.\\
-	$^{4}$ Laboratorio de Sistemas Complejos, Facultad de
-	Ingenier\'ia, Universidad de Buenos Aires, Ciudad Aut\'onoma de
-	Buenos Aires, Argentina.
+	$^{2}$ ICyTE. Instituto de Investigaciones Científicas y Tecnológicas en Electrónica.\\
+	$^{3}$ CONICET. Consejo Nacional de Investigaciones Científicas y Técnicas\\
+	$^{4}$ Departamento de 
+	Inform\'atica en Salud, Hospital Italiano de Buenos Aires,   C1199ABB Ciudad Autónoma de Buenos Aires, Argentina.\\
+	$^{5}$ Instituto de F\'{\i}sica, Universidade Federal de Alagoas (UFAL), Macei\'o, Brazil.
+	$^{6}$ Facultad de Ingeniería y Ciencias Aplicadas, Universidad de Los Andes, Santiago, Chile.
+	
 
 \begin{abstract}
-In the last years, digital systems such as Digital Signal Processors (DSP), Field Programmable Gate Arrays (FPGA) and Application-Specific Integrated Circuits (ASIC), became the standard in all experimental sciences.
 
-In these systems digital implementations have a custom made numerical representations, therefore finite arithmetic needs to be investigated.
-Binary floating- and fixed-point are the numerical representations available.
-Fixed-point representation is prefered over floating-point when speed, low power and/or small circuit area is necessary.
+In this paper we investigate the degradation of chaotic as consequence of their implementation in a digital media such as Digital Signal Processors (DSP), Field Programmable Gate Arrays (FPGA) or Application-Specific Integrated Circuits (ASIC).
 
-Chaotic systems implemented in finite precision will always become periodic with period T, each of them produces specific period and statistical characteristics that need to be evaluated.
-It has been recently shown that it is convenient to describe the statistical characteristic using both, a non causal and a causal probability distribution function ($PDF$).
-The corresponding entropies, must be evaluated to quantify these $PDF$'s. 
+In these systems, binary floating- and fixed-point are the numerical representations available.
+Fixed-point representation is preferred over floating-point when speed, low power and/or small circuit area is necessary.
+The specific period that every fixed-point precision produces was investigated in previous reports, using as example the tent map and the logistic map.
+After this, authors applies switching and skipping techniques to enlarge the periods.
 
-In previous works an interesting study about period was carried out using as an example two well known chaotic maps: the tent map and the logistic map.
-After that, switching techniques between these two maps were tested.
-In this paper we complement that analysis by characterizing the behaviour of these maps from an statistical point of view using causal and non causal quantifiers.
+Statistical characteristics are also important.
+It has been recently shown that it is convenient to describe the statistical characteristic using both, a causal and a non-causal quantifiers.
+In this paper we complement the period analysis by characterizing the behaviour of these maps from an statistical point of view using causal and non-causal entropies and complexities.
 
 \end{abstract}
 \maketitle
