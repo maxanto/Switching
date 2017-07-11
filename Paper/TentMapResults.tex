@@ -8,7 +8,7 @@ This procedure improves the statistical properties of the time series, but what 
 Here we study the Tent map ``as it is" without any artifact to evaluate its real behavior, instead of theoretical statistical properties. 
 
 Figs. \ref{fig:TENT_QuantiB} (a) to (e) show the quantifiers for floating- and fixed-point numerical representations.
-Quantifiers $H_{val}$, $H_{BP}$ and $C_{BP}$ are equal to zero for all precisions, this reflects that the series quickly converge toward a fixed point for almost all sequences.
+Quantifiers $H_{hist}$, $H_{BP}$ and $C_{BP}$ are equal to zero for all precisions, this reflects that the series quickly converge toward a fixed point for almost all sequences.
 In the case of $H_{BPW}$ and $C_{BPW}$ quantifiers are different non-null because BPW procedure discards the elements once they reach the fixed point.
 The high dispersions in $H_{BPW}$, $C_{BPW}$ and MP are related to the short length of series transient.
 These transients that converge to a fixed point have a maximum length of $B$ iterations for fixed-point arithmetic and $80$ for floating-point (long double precision).
@@ -20,8 +20,8 @@ These transients that converge to a fixed point have a maximum length of $B$ ite
 	\includegraphics[width=.49\textwidth]{Cbp_Tent}
 	\includegraphics[width=.49\textwidth]{Cbpw_Tent}
 	\includegraphics[width=.49\textwidth]{MP_Tent}
-	\caption{Statistical properties of the TENT map: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
+	\caption{Statistical properties of the TENT map: (a) $H_{hist}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
 	\label{fig:TENT_QuantiB}
 \end{figure}
 
-Summarizing, in spite of using a high number of bits (with any 2-based numerical representation) to represent the digitalized TENT map it always loses the chaotic behavior.
+Summarizing, in spite of using a high number of bits (with any 2-based numerical representation) to represent the digitalized TENT map it always loses the chaotic behaviour

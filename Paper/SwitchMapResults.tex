@@ -1,7 +1,7 @@
 \subsubsection{SWITCH} \label{sssec:switch}
 
 Results with sequential switching are shown in Figs. \ref{fig:SWITCH_QuantiB} (a) to (f).
-The entropy value calculated for the floating-point implementation is $\left\langle H_{val}\right\rangle =0.9722$, this value is slightly higher than the one obtained for the LOG map. 
+The entropy value calculated for the floating-point implementation is $\left\langle H_{hist}\right\rangle =0.9722$, this value is slightly higher than the one obtained for the LOG map. 
 For fixed-point arithmetic this value is reached in $B=24$, but it stabilizes from $B=28$.
 Regarding the ordering patterns the number of MP decreases to $586$, this value is lower than the one obtained for LOG map.
 It means the entropy $H_{BP}$ may increase up to $ln(134)/ln(720)\simeq 0.74$.
@@ -20,23 +20,23 @@ Nevertheless comparing both procedures ($BP$ and $BPW$) we were able to detect a
 	\includegraphics[width=.49\textwidth]{Cbp_Switch}
 	\includegraphics[width=.49\textwidth]{Cbpw_Switch}
 	\includegraphics[width=.49\textwidth]{MP_Switch}
-	\caption{Statistical properties of the SWITCH map: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
+	\caption{Statistical properties of the SWITCH map: (a) $H_{hist} \times B$ (b) $H_{BP} \times B$ (c) $C_{BP} \times B$ (d) $MP \times B$.}
 	\label{fig:SWITCH_QuantiB}
 \end{figure}
 
-Double entropy plane $H_{val}$ vs $H_{BP}$ is showed in Fig. \ref{fig:SWITCH_HH}.
+Double entropy plane $H_{BP} \times H_{hist}$ vs  is showed in Fig. \ref{fig:SWITCH_HH}.
 The reached point in this plane for SWITCH map is similar to that reached for LOG map, and it is denoted by a star in the figure.
 The mixing is slight better in this case.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=.49\textwidth]{HbpHval_Switch}
-	\caption{Evolution of statistical properties in double entropy plane of SWITCH map $H_{val}$ vs $H_{BP}$.}
+	\caption{Evolution of statistical properties in double entropy plane of SWITCH map $H_{hist} \times H_{BP}$.}
 	\label{fig:SWITCH_HH}
 \end{figure}
 
-Entropy-complexity plane $C_{BP}$ vs $H_{BP}$ is showed in Fig. \ref{fig:SWITCH_HC}.
-If we compare with the same plane in the case of LOG (Fig. \ref{fig:LOG_HC}. (a)), $C_{BP}$ is lower for SWITCH, this fact shows a more random behavior.
+Entropy-complexity plane $C_{BP} \times H_{BP}$ is showed in Fig. \ref{fig:SWITCH_HC}.
+If we compare with the same plane in the case of LOG (Fig. \ref{fig:LOG_HC}. (a)), $C_{BP}$ is lower for SWITCH, this fact shows a more random behaviour
 
 \begin{figure}
 	\centering
