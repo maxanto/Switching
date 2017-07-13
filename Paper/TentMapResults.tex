@@ -5,11 +5,11 @@ The sequences within the attractor domain of this fixed point will have a short 
 This issue is easily explained in \cite{Li2004}, the problem appears because all iterations have a left-shift operation that carries the $0$'s from the right side of the number to the most significant positions.
 Some authors \cite{buscar} have proposed to add random perturbations to avoid this drawback of the Tent map.
 This procedure improves the statistical properties of the time series, but what really happens is that the statistical properties of the random perturbations are mixed with those of the Tent map.
-Here we study the Tent map ``as it is" without any artifact to evaluate its real behavior, instead of theoretical statistical properties. 
+Here we study the Tent map ``as it is" without any artifice to evaluate its real behaviour, instead of theoretical statistical properties. 
 
 Figs. \ref{fig:TENT_QuantiB} (a) to (e) show the quantifiers for floating- and fixed-point numerical representations.
-Quantifiers $H_{hist}$, $H_{BP}$ and $C_{BP}$ are equal to zero for all precisions, this reflects that the series quickly converge toward a fixed point for almost all sequences.
-In the case of $H_{BPW}$ and $C_{BPW}$ quantifiers are different non-null because BPW procedure discards the elements once they reach the fixed point.
+Quantifiers $H_{hist}$, $H_{BP}$ and $C_{BP}$ are equal to zero for all precisions, this reflects that the series quickly converge toward a fixed point for all sequences.
+In the case of $H_{BPW}$ and $C_{BPW}$ quantifiers are different to non-null because BPW procedure discards the elements once they reach the fixed point.
 The high dispersions in $H_{BPW}$, $C_{BPW}$ and MP are related to the short length of series transient.
 These transients that converge to a fixed point have a maximum length of $B$ iterations for fixed-point arithmetic and $80$ for floating-point (long double precision).
 
@@ -24,4 +24,4 @@ These transients that converge to a fixed point have a maximum length of $B$ ite
 	\label{fig:TENT_QuantiB}
 \end{figure}
 
-Summarizing, in spite of using a high number of bits (with any 2-based numerical representation) to represent the digitalized TENT map it always loses the chaotic behaviour
+Summarizing, in spite of using a high number of bits (with any 2-based numerical representation) to represent the digitalized TENT map it always loses the chaotic behaviour.

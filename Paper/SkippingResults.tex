@@ -1,8 +1,8 @@
 \subsubsection{EVEN and ODD} \label{sssec:skipp}
 
 Figures \ref{fig:EVEN_QuantiB} (a) and \ref{fig:ODD_QuantiB} (a), quantifiers related to the normalized histogram of values slightly degrades with the skipping procedure due to finite data length.
-For example $\left\langle H_{val}\right\rangle $ reduces from $0.9722$ without skipping to $0.9459$ for EVEN and $0.9706$ for ODD. 
-This difference between EVEN and ODD in floating point is because a high dispersion was obtained for $H_{val}$, $H_{BP}$ and $C_{BP}$ but not for $H_{BPW}$ or $C_{BPW}$.
+For example $\left\langle H_{hist}\right\rangle $ reduces from $0.9722$ without skipping to $0.9459$ for EVEN and $0.9706$ for ODD. 
+This difference between EVEN and ODD in floating point is because a high dispersion was obtained for $H_{hist}$, $H_{BP}$ and $C_{BP}$ but not for $H_{BPW}$ or $C_{BPW}$.
 
 Figs. \ref{fig:EVEN_QuantiB} (b) to \ref{fig:EVEN_QuantiB} (f) and Figs. \ref{fig:ODD_QuantiB} (b) to \ref{fig:ODD_QuantiB} (f) show the results of BP and BPW quantifiers for EVEN and ODD respectively.
 Higher accuracy is required to achieve lower complexity than without using skipping.
@@ -18,7 +18,7 @@ The necessary number of bits to converge to this value is $B>40$ for both EVEN a
 	\includegraphics[width=.49\textwidth]{Cbp_Even}
 	\includegraphics[width=.49\textwidth]{Cbpw_Even}
 	\includegraphics[width=.49\textwidth]{MP_Even}
-	\caption{Statistical properties of the EVEN map: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
+	\caption{Statistical properties of the EVEN map: (a) $H_{hist}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
 	\label{fig:EVEN_QuantiB}
 \end{figure}
 
@@ -29,7 +29,7 @@ The necessary number of bits to converge to this value is $B>40$ for both EVEN a
 	\includegraphics[width=.49\textwidth]{Cbp_Odd}
 	\includegraphics[width=.49\textwidth]{Cbpw_Odd}
 	\includegraphics[width=.49\textwidth]{MP_Odd}
-	\caption{Statistical properties of the ODD map: (a) $H_{val}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
+	\caption{Statistical properties of the ODD map: (a) $H_{hist}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
 	\label{fig:ODD_QuantiB}
 	\end{figure}
 
@@ -38,14 +38,14 @@ The necessary number of bits to converge to this value is $B>40$ for both EVEN a
 \begin{figure}
 	\includegraphics[width=.49\textwidth]{HbpHval_Even}
 	\includegraphics[width=.49\textwidth]{HbpwHval_Even}
-	\caption{Evolution of statistical properties in double entropy plane of EVEN map: (a) $H_{val}$ vs $H_{BP}$ (b) $H_{val}$ vs $H_{BPW}$.}
+	\caption{Evolution of statistical properties in double entropy plane of EVEN map: (a) $H_{hist} \times H_{BP}$ (b) $H_{hist} \times H_{BPW}$.}
 	\label{fig:EVEN_HH}
 \end{figure}
 
 \begin{figure}
 	\includegraphics[width=.49\textwidth]{HbpHval_Odd}
 	\includegraphics[width=.49\textwidth]{HbpwHval_Odd}
-	\caption{Evolution of statistical properties in double entropy plane of ODD map: (a) $H_{val}$ vs $H_{BP}$ (b) $H_{val}$ vs $H_{BPW}$.}
+	\caption{Evolution of statistical properties in double entropy plane of ODD map: (a) $H_{hist} \times H_{BP}$ (b) $H_{hist} \times H_{BPW}$.}
 	\label{fig:ODD_HH}
 \end{figure}
 
@@ -54,13 +54,13 @@ The necessary number of bits to converge to this value is $B>40$ for both EVEN a
 \begin{figure}
 	\includegraphics[width=.49\textwidth]{CbpHbp_Even}
 	\includegraphics[width=.49\textwidth]{CbpwHbpw_Even}
-	\caption{Evolution of statistical properties in entropy-complexity plane of EVEN map: (a) $C_{BP}$ vs $H_{BP}$ (b) $C_{BPW}$ vs $H_{BPW}$.}
+	\caption{Evolution of statistical properties in entropy-complexity plane of EVEN map: (a) $H_{BP} \times C_{BP}$ (b) $H_{BPW} \times C_{BPW}$.}
 	\label{fig:EVEN_HC}
 \end{figure}
 
 \begin{figure}
 	\includegraphics[width=.49\textwidth]{CbpHbp_Odd}
 	\includegraphics[width=.49\textwidth]{CbpwHbpw_Odd}
-	\caption{Evolution of statistical properties in entropy-complexity plane of ODD map: (a) $C_{BP}$ vs $H_{BP}$ (b) $C_{BPW}$ vs $H_{BPW}$.}
+	\caption{Evolution of statistical properties in entropy-complexity plane of ODD map: (a) $H_{BP} \times C_{BP}$ (b) $H_{BPW} \times C_{BPW}$.}
 	\label{fig:ODD_HC}
 \end{figure}
