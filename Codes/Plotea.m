@@ -16,17 +16,17 @@ load(Mapa);
 
 %% Define variables para dar formato a las figuras
 PosicPlot=[50 50 800 600];
-FuenteSize=26;
+FuenteSize=35;
 SubplotFuenteSize=20;
-MarcaSize=10;
-PuntoSize=30;
-LineaAncho1=4;
-LineaAncho2=2;
+MarcaSize=13;
+PuntoSize=40;
+LineaAncho1=5;
+LineaAncho2=3;
 
 %% Plotea 'Hval', 'Qval', 'Cval', 'Hbp', 'Qbp', 'Cbp', 'Hbpw', 'Qbpw', 'Cbpw' y 'MP' vs P
 
 Cuantis = {'Hval', 'Qval', 'Cval', 'Hbp', 'Qbp', 'Cbp', 'Hbpw', 'Qbpw', 'Cbpw', 'MP'};
-NombresCuantis = {'H_{val}', 'Q_{val}', 'C_{val}', 'H_{BP}', 'Q_{BP}', 'C_{BP}', 'H_{BPW}', 'Q_{BPW}', 'C_{BPW}', 'MP'};
+NombresCuantis = {'H_{hist}', 'Q_{hist}', 'C_{hist}', 'H_{BP}', 'Q_{BP}', 'C_{BP}', 'H_{BPW}', 'Q_{BPW}', 'C_{BPW}', 'MP'};
 MaxCuanti = [1, 1, .5, 1, 1, .5, 1, 1, .5, factorial(D)];
 
 for i_cuanti = 1:length(Cuantis)
@@ -112,7 +112,7 @@ end
     meanDatosFlotante1 = mean(DatosFlotante1);
     meanDatosFlotante2 = mean(DatosFlotante2);
     
-    NombreCuanti1 = 'H_{Val}';
+    NombreCuanti1 = 'H_{hist}';
     NombreCuanti2 = 'H_{BP}';
     
     figure('position',PosicPlot,'visible','off'); %Abro una figura con tamaño y posición
@@ -145,7 +145,7 @@ end
     meanDatosFlotante1 = mean(DatosFlotante1);
     meanDatosFlotante2 = mean(DatosFlotante2);
     
-    NombreCuanti1 = 'H_{Val}'; %Carga el nombre del cuantificador y lo pasa a string
+    NombreCuanti1 = 'H_{hist}'; %Carga el nombre del cuantificador y lo pasa a string
     NombreCuanti2 = 'H_{BPW}';
     
     figure('position',PosicPlot,'visible','off'); %Abro una figura con tamaño y posición
