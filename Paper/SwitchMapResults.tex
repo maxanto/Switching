@@ -14,13 +14,38 @@ Figs. \ref{fig:SWITCH_QuantiB} (a), (b) and (d) show an horizontal blue dashed l
 Nevertheless comparing both procedures ($BP$ and $BPW$) we were able to detect a falling to fixed point after a long transitory, the BPW procedure discards the values corresponding with a fixed point and calculates only the transitory.
 
 \begin{figure}
-	\includegraphics[width=.49\textwidth]{Hval_Switch}
-	\includegraphics[width=.49\textwidth]{Hbp_Switch}
-	\includegraphics[width=.49\textwidth]{Hbpw_Switch}
-	\includegraphics[width=.49\textwidth]{Cbp_Switch}
-	\includegraphics[width=.49\textwidth]{Cbpw_Switch}
-	\includegraphics[width=.49\textwidth]{MP_Switch}
-	\caption{Statistical properties of the SWITCH map: (a) $H_{hist}$ vs. $B$ (b) $H_{BP}$ vs. $B$ (c) $C_{BP}$ vs. $B$ (d) $MP$ vs. $B$.}
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hval_Switch}
+		\caption{$H_{hist}$ vs. $B$}
+		\label{fig:Hval_Switch}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hbp_Switch}
+		\caption{$H_{BP}$ vs. $B$}
+		\label{fig:Hbp_Switch}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hbpw_Switch}
+		\caption{$H_{BPW}$ vs. $B$}
+		\label{fig:Hbpw_Switch}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Cbp_Switch}
+		\caption{$C_{BP}$ vs. $B$}
+		\label{fig:Cbp_Switch}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Cbpw_Switch}
+		\caption{$C_{BPW}$ vs. $B$}
+		\label{fig:Cbpw_Switch}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{MP_Switch}
+		\caption{MP vs. $B$}
+		\label{fig:MP_Switch}
+	\end{subfigure}
+	\caption{Statistical properties of SWITCH map}
 	\label{fig:SWITCH_QuantiB}
 \end{figure}
 
@@ -28,7 +53,7 @@ Double entropy plane $H_{hist} \times H_{BP}$ is showed in Fig. \ref{fig:SWITCH_
 The reached point in this plane for SWITCH map is similar to that reached for LOG map, and it is denoted by a star in the figure.
 The mixing is slight better in this case.
 
-\begin{figure}
+\begin{figure}[htpb]
 	\centering
 	\includegraphics[width=.49\textwidth]{HbpHval_Switch}
 	\caption{Evolution of statistical properties in double entropy plane of SWITCH map $H_{hist} \times H_{BP}$.}
@@ -38,7 +63,7 @@ The mixing is slight better in this case.
 Entropy-complexity plane $H_{BP} \times C_{BP}$ is showed in Fig. \ref{fig:SWITCH_HC}.
 If we compare with the same plane in the case of LOG (Fig. \ref{fig:LOG_HC}. (a)), $C_{BP}$ is lower for SWITCH, this fact shows a more random behaviour.
 
-\begin{figure}
+\begin{figure}[htpb]
 	\centering
 	\includegraphics[width=.49\textwidth]{CbpHbp_Switch}
 	\caption{Evolution of statistical properties in entropy-complexity plane of SWITCH map $C_{BP}$.}
