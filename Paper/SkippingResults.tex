@@ -1,68 +1,119 @@
 \subsubsection{EVEN and ODD} \label{sssec:skipp}
 
-Figures \ref{fig:EVEN_QuantiB} (a) and \ref{fig:ODD_QuantiB} (a), quantifiers related to the normalized histogram of values slightly degrades with the skipping procedure due to finite data length.
+Figures \ref{fig:Hval_Even} and \ref{fig:Hval_Odd}, quantifiers related to the normalized histogram of values slightly degrades with the skipping procedure due to finite data length.
 For example $\left\langle H_{hist}\right\rangle $ reduces from $0.9722$ without skipping to $0.9459$ for EVEN and $0.9706$ for ODD. 
 This difference between EVEN and ODD in floating point is because a high dispersion was obtained for $H_{hist}$, $H_{BP}$ and $C_{BP}$ but not for $H_{BPW}$ or $C_{BPW}$.
 
-Figs. \ref{fig:EVEN_QuantiB} (b) to \ref{fig:EVEN_QuantiB} (f) and Figs. \ref{fig:ODD_QuantiB} (b) to \ref{fig:ODD_QuantiB} (f) show the results of BP and BPW quantifiers for EVEN and ODD respectively.
+Figures \ref{fig:Hbp_Even} to \ref{fig:MP_Even} and Figs. \ref{fig:Hbp_Odd} to \ref{fig:MP_Odd} show the results of BP and BPW quantifiers for EVEN and ODD respectively.
 Higher accuracy is required to achieve lower complexity than without using skipping.
 From the MP point of view a great improvement is obtained using any of the skipping strategies but ODD is slightly better than EVEN.
 Missing patterns are reduced to $MP = 118$ for EVEN and ODD, increasing the maximum allowed Bandt \& Pompe entropy that reaches the mean value $\left\langle H_{BP}\right\rangle  = 0.8381$ for EVEN, and $\left\langle H_{BP}\right\rangle  = 0.9094$.
 The complexity is reduced to $\left\langle C_{BP}\right\rangle = 0.224$ for EVEN and $\left\langle C_{BP}\right\rangle = 0.282$ for ODD.
 The necessary number of bits to converge to this value is $B>40$ for both EVEN and ODD maps.
 
-\begin{figure}
-	\includegraphics[width=.49\textwidth]{Hval_Even}
-	\includegraphics[width=.49\textwidth]{Hbp_Even}
-	\includegraphics[width=.49\textwidth]{Hbpw_Even}
-	\includegraphics[width=.49\textwidth]{Cbp_Even}
-	\includegraphics[width=.49\textwidth]{Cbpw_Even}
-	\includegraphics[width=.49\textwidth]{MP_Even}
-	\caption{Statistical properties of the EVEN map: (a) $H_{hist}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
+\begin{figure}[htpb]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hval_Even}
+		\caption{$H_{hist}$ vs. $B$}
+		\label{fig:Hval_Even}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hbp_Even}
+		\caption{$H_{BP}$ vs. $B$}
+		\label{fig:Hbp_Even}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hbpw_Even}
+		\caption{$H_{BPW}$ vs. $B$}
+		\label{fig:Hbpw_Even}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Cbp_Even}
+		\caption{$C_{BP}$ vs. $B$}
+		\label{fig:Cbp_Even}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Cbpw_Even}
+		\caption{$C_{BPW}$ vs. $B$}
+		\label{fig:Cbpw_Even}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{MP_Even}
+		\caption{MP vs. $B$}
+		\label{fig:MP_Even}
+	\end{subfigure}
+	\caption{Statistical properties of EVEN map}
 	\label{fig:EVEN_QuantiB}
 \end{figure}
 
-\begin{figure}
-	\includegraphics[width=.49\textwidth]{Hval_Odd}
-	\includegraphics[width=.49\textwidth]{Hbp_Odd}
-	\includegraphics[width=.49\textwidth]{Hbpw_Odd}
-	\includegraphics[width=.49\textwidth]{Cbp_Odd}
-	\includegraphics[width=.49\textwidth]{Cbpw_Odd}
-	\includegraphics[width=.49\textwidth]{MP_Odd}
-	\caption{Statistical properties of the ODD map: (a) $H_{hist}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
+\begin{figure}[htpb]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hval_Odd}
+		\caption{$H_{hist}$ vs. $B$}
+		\label{fig:Hval_Odd}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hbp_Odd}
+		\caption{$H_{BP}$ vs. $B$}
+		\label{fig:Hbp_Odd}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hbpw_Odd}
+		\caption{$H_{BPW}$ vs. $B$}
+		\label{fig:Hbpw_Odd}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Cbp_Odd}
+		\caption{$C_{BP}$ vs. $B$}
+		\label{fig:Cbp_Odd}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Cbpw_Odd}
+		\caption{$C_{BPW}$ vs. $B$}
+		\label{fig:Cbpw_Odd}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{MP_Odd}
+		\caption{MP vs. $B$}
+		\label{fig:MP_Odd}
+	\end{subfigure}
+	\caption{Statistical properties of ODD map}
 	\label{fig:ODD_QuantiB}
-	\end{figure}
+\end{figure}
 
-The enhancement showed in Figs. \ref{fig:EVEN_QuantiB} and \ref{fig:ODD_QuantiB} is reflected in the position of asymptotic point in the planes \ref{fig:EVEN_HH}, and \ref{fig:ODD_HH}.
+The enhancement showed in Fig. \ref{fig:EVEN_QuantiB} and \ref{fig:ODD_QuantiB} is reflected in the position of asymptotic point in the planes \ref{fig:EVEN_HH}, and \ref{fig:ODD_HH}.
 In both cases this position is closest to the ideal point $(H_{hist}, H_{BP})=(1, 1)$, because the resulting vectors are better mixed.
 
-\begin{figure}
+\begin{figure}[htpb]
+	\centering
 	\includegraphics[width=.49\textwidth]{HbpHval_Even}
-	\includegraphics[width=.49\textwidth]{HbpwHval_Even}
-	\caption{Evolution of statistical properties in double entropy plane of EVEN map: (a) $H_{hist} \times H_{BP}$ (b) $H_{hist} \times H_{BPW}$.}
+	\caption{Evolution of statistical properties in double entropy plane for EVEN map $H_{hist} \times H_{BP}$.}
 	\label{fig:EVEN_HH}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[htpb]
+	\centering
 	\includegraphics[width=.49\textwidth]{HbpHval_Odd}
-	\includegraphics[width=.49\textwidth]{HbpwHval_Odd}
-	\caption{Evolution of statistical properties in double entropy plane of ODD map: (a) $H_{hist} \times H_{BP}$ (b) $H_{hist} \times H_{BPW}$.}
+	\caption{Evolution of statistical properties in double entropy plane for ODD map $H_{hist} \times H_{BP}$.}
 	\label{fig:ODD_HH}
 \end{figure}
 
 Compatible results are shown in Figs. \ref{fig:EVEN_HC} and \ref{fig:ODD_HC}, the position of asymptotic point is closest to the ideal point $(H_{hist}, H_{BP})=(1, 0)$.
 This result reflects that mixing is better because the complexity of resulting system is lower.
-
-\begin{figure}
+This plane detects that the vector generated by ODD skipping is better mixed than EVEN.
+ 
+\begin{figure}[htpb]
+	\centering
 	\includegraphics[width=.49\textwidth]{CbpHbp_Even}
-	\includegraphics[width=.49\textwidth]{CbpwHbpw_Even}
-	\caption{Evolution of statistical properties in entropy-complexity plane of EVEN map: (a) $H_{BP} \times C_{BP}$ (b) $H_{BPW} \times C_{BPW}$.}
+	\caption{Evolution of statistical properties in entropy-complexity plane for EVEN map $H_{BP} \times C_{BP}$.}
 	\label{fig:EVEN_HC}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[htpb]
+	\centering
 	\includegraphics[width=.49\textwidth]{CbpHbp_Odd}
-	\includegraphics[width=.49\textwidth]{CbpwHbpw_Odd}
-	\caption{Evolution of statistical properties in entropy-complexity plane of ODD map: (a) $H_{BP} \times C_{BP}$ (b) $H_{BPW} \times C_{BPW}$.}
+	\caption{Evolution of statistical properties in entropy-complexity plane for ODD map $H_{BP} \times C_{BP}$.}
 	\label{fig:ODD_HC}
 \end{figure}

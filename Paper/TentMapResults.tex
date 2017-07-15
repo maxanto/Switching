@@ -7,20 +7,45 @@ Some authors \cite{buscar} have proposed to add random perturbations to avoid th
 This procedure improves the statistical properties of the time series, but what really happens is that the statistical properties of the random perturbations are mixed with those of the Tent map.
 Here we study the Tent map ``as it is" without any artifice to evaluate its real behaviour, instead of theoretical statistical properties. 
 
-Figs. \ref{fig:TENT_QuantiB} (a) to (e) show the quantifiers for floating- and fixed-point numerical representations.
+Figs. \ref{fig:Hval_Tent} to \ref{fig:MP_Tent} show the quantifiers for floating- and fixed-point numerical representations.
 Quantifiers $H_{hist}$, $H_{BP}$ and $C_{BP}$ are equal to zero for all precisions, this reflects that the series quickly converge toward a fixed point for all sequences.
 In the case of $H_{BPW}$ and $C_{BPW}$ quantifiers are different to non-null because BPW procedure discards the elements once they reach the fixed point.
 The high dispersions in $H_{BPW}$, $C_{BPW}$ and MP are related to the short length of series transient.
 These transients that converge to a fixed point have a maximum length of $B$ iterations for fixed-point arithmetic and $80$ for floating-point (long double precision).
 
-\begin{figure}
-	\includegraphics[width=.49\textwidth]{Hval_Tent}
-	\includegraphics[width=.49\textwidth]{Hbp_Tent}
-	\includegraphics[width=.49\textwidth]{Hbpw_Tent}
-	\includegraphics[width=.49\textwidth]{Cbp_Tent}
-	\includegraphics[width=.49\textwidth]{Cbpw_Tent}
-	\includegraphics[width=.49\textwidth]{MP_Tent}
-	\caption{Statistical properties of the TENT map: (a) $H_{hist}$ vs $B$ (b) $H_{BP}$ vs $B$ (c) $C_{BP}$ vs $B$ (d) $MP$ vs $B$.}
+\begin{figure}[htpb]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hval_Tent}
+		\caption{$H_{hist}$ vs. $B$}
+		\label{fig:Hval_Tent}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hbp_Tent}
+		\caption{$H_{BP}$ vs. $B$}
+		\label{fig:Hbp_Tent}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Hbpw_Tent}
+		\caption{$H_{BPW}$ vs. $B$}
+		\label{fig:Hbpw_Tent}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Cbp_Tent}
+		\caption{$C_{BP}$ vs. $B$}
+		\label{fig:Cbp_Tent}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{Cbpw_Tent}
+		\caption{$C_{BPW}$ vs. $B$}
+		\label{fig:Cbpw_Tent}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\includegraphics[width=\textwidth]{MP_Tent}
+		\caption{MP vs. $B$}
+		\label{fig:MP_Tent}
+	\end{subfigure}
+	\caption{Statistical properties of TENT map}
 	\label{fig:TENT_QuantiB}
 \end{figure}
 
