@@ -1,6 +1,6 @@
 \subsubsection{SWITCH} \label{sssec:switch}
 
-Results with sequential switching are shown in Figs. \ref{fig:SWITCH_QuantiB} (a) to (f).
+Results with sequential switching are shown in Figs. \ref{fig:Hval_Switch} to \ref{fig:MP_Switch}.
 The entropy value calculated for the floating-point implementation is $\left\langle H_{hist}\right\rangle =0.9722$, this value is slightly higher than the one obtained for the LOG map. 
 For fixed-point arithmetic this value is reached in $B=24$, but it stabilizes from $B=28$.
 Regarding the ordering patterns the number of MP decreases to $586$, this value is lower than the one obtained for LOG map.
@@ -10,7 +10,7 @@ Complexities are lower than for LOG, $\left\langle C_{BP}\right\rangle =0.4580$ 
 Compared with LOG, statistical properties are better with less amount of bits, for $B \geq 24$ this map reaches optimal characteristics in the sense of random source.
 
 Furthermore, we encountered one initial condition in floating-point long double precision with an anomalous behaviour
-Figs. \ref{fig:SWITCH_QuantiB} (a), (b) and (d) show an horizontal blue dashed line that is far from the average value, unlike this is not detected by quantifiers based on $BPW$ procedure in Figs. \ref{fig:SWITCH_QuantiB} (c) and (e).
+Figs. \ref{fig:Hval_Switch}, \ref{fig:Hbp_Switch} and \ref{fig:Cbp_Switch} show an horizontal blue dashed line that is far from the average value, unlike this is not detected by quantifiers based on $BPW$ procedure in Figs. \ref{fig:Hbpw_Switch} and \ref{fig:Cbpw_Switch}.
 Nevertheless comparing both procedures ($BP$ and $BPW$) we were able to detect a falling to fixed point after a long transitory, the BPW procedure discards the values corresponding with a fixed point and calculates only the transitory.
 
 \begin{figure}[htpb]
@@ -61,7 +61,7 @@ The mixing is slight better in this case.
 \end{figure}
 
 Entropy-complexity plane $H_{BP} \times C_{BP}$ is showed in Fig. \ref{fig:SWITCH_HC}.
-If we compare with the same plane in the case of LOG (Fig. \ref{fig:LOG_HC}. (a)), $C_{BP}$ is lower for SWITCH, this fact shows a more random behaviour.
+If we compare with the same plane in the case of LOG (Fig. \ref{fig:CbpHbp_Log}), $C_{BP}$ is lower for SWITCH, this fact shows a more random behaviour.
 
 \begin{figure}[htpb]
 	\centering
