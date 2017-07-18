@@ -16,12 +16,12 @@ The quantifiers selected are based on symbolic counting and ordinal pattern stat
 The metrics to be used can be broadly classified along two categories: those which quantify the \textit{information content} of data versus those related to their \textit{complexity}.
 Note that we are referring to the space of probability density functions here, not physical space.
 For the sake of clarity and simplicity, we only introduce Information Theory quantifiers that are defined on discrete PDFs in this section, since we are only dealing with discrete data (time series).
-However, all the quantifiers also have definitions for the continuous case \cite{Shannon1948,Frieden2004} . 
+However, all the quantifiers also have definitions for the continuous case \cite{Shannon1948} . 
 
 \subsection{Shannon entropy and statistical complexity}
 
 Entropy is a basic quantity that can be regarded to as a measure of the uncertainty associated (information) to the physical process described by $P$.
-When dealing with information content, the Shannon entropy is often considered as the foundational and most natural one \cite{Shannon1948,Weaver1949}.
+When dealing with information content, the Shannon entropy is often considered as the foundational and most natural one \cite{Shannon1948}.
 Regarded as a measure of uncertainty, is the most paradigmatic example of these information quantifiers.
 
 Let a $P=\{p_i; \forall i=1,\ldots, N\}$ with $\sum_{i=1}^N p_i = 1$, be a discrete probability distribution, with $N$ the number of possible states of the system under study.
@@ -51,12 +51,12 @@ Between the two cases of minimal and maximal entropy, data are more difficult to
 We seek some functional $C[P]$ quantifying structures present in the data which deviate from these two cases.
 These structures relate to organization, correlational structure, memory, regularity, symmetry, patterns, and other properties \cite{Feldman2008}.
 One would like to assume that the degree of correlational structures would be adequately captured by some functional $C[P]$ in the same way that Shannon's entropy $S[P]$ \cite{Shannon1948} ``captures" randomness.
-Clearly, the ordinal structures present in a process is not quantified by randomness measures, and consequently, measures of statistical or structural complexity are necessary for a better understanding (characterization) of the system dynamics represented by their time series \cite{Crutchfield1998}. 
+Clearly, the ordinal structures present in a process is not quantified by randomness measures, and consequently, measures of statistical or structural complexity are necessary for a better understanding (characterization) of the system dynamics represented by their time series \cite{Feldman1998}. 
 A suitable measure of complexity can be defined as the product of a measure of information and a measure of
 disequilibrium, i.e. some kind of distance from the equiprobable distribution of the accessible states of 
 a system. 
 In this respect, Rosso and coworkers \cite{Lamberti2004} introduced an effective {\it Statistical Complexity Measure\/} (SCM) $C$, that is able to detect essential details of the dynamical processes underlying the dataset.
-Based on the seminal notion advanced by L\'opez-Ruiz {\it et al.} \cite{LMC1995}, this statistical complexity measure\cite{Martin2003,Lamberti2004} is defined through the functional product form
+Based on the seminal notion advanced by L\'opez-Ruiz {\it et al.} \cite{Lopez-Ruiz1995}, this statistical complexity measure\cite{Martin2003,Lamberti2004} is defined through the functional product form
 \begin{equation}
 C[P] = Q_{J}[P,P_e] \cdot H[P]
 \label{complexity}
@@ -64,9 +64,8 @@ C[P] = Q_{J}[P,P_e] \cdot H[P]
 of the normalized Shannon entropy $H$, see Eq.~\eqref{shannon-disc-normalizada}, and the disequilibrium $Q_{J}$ defined in terms of the Jensen-Shannon divergence $J[P, P_e]$.
 That is,
 \begin{equation}
-\label{disequilibrium}
-Q_{J} [ P, P_e] ~=~ Q_{0} J[ P, P_e] ~=~ 
-Q_{0} \{ S[(P + P_e)/2 ] - S[ P ]/2 - S[P_e]/2\},
+\label{disequilibrium}	
+Q_{J} [ P, P_e] = Q_{0} J[ P, P_e] = Q_{0} \{ S[(P + P_e)/2 ] - S[ P ]/2 - S[P_e]/2\},
 \end{equation}
 the above-mentioned Jensen-Shannon divergence and $Q_0$, a normalization constant such that $0 \leq Q_{J} \leq 1$:
 \begin{equation}
@@ -76,7 +75,7 @@ Q_0 ~=~ -2 \left\{ {\frac{N+1}{N}} \ln (N+1) - \ln (2N) + \ln N \right\}^{-1} \ 
 are equal to the inverse of the maximum possible value of $J [P,P_e]$.
 This value is obtained when one of the components of $P$, say $p_m$, is equal to one and the remaining $p_j$ are zero.
 
-The Jensen-Shannon divergence, which quantifies the difference between probability distributions, is especially useful to compare the symbolic composition between different sequences\cite{JS-Div1991,Grosse2002,JS-Div2014}.
+The Jensen-Shannon divergence, which quantifies the difference between probability distributions, is especially useful to compare the symbolic composition between different sequences \cite{Grosse2002}.
 Note that the above introduced SCM depends on two different probability distributions: one associated with the system under analysis, $P$, and the other with the uniform distribution, $P_e$.
 Furthermore, it was shown that for a given value of $H$, the range of possible $C$ values varies between a minimum $C_{min}$ and a maximum $C_{max}$, restricting the possible values of the SCM \cite{Martin2006}.
 Thus, it is clear that important additional information related to the correlational structure between the components of the physical system is provided by evaluating the statistical complexity measure. 
@@ -178,7 +177,7 @@ Through this last example, we show that the convergence to a fixed point can be 
 
 In Figure \ref{fig:HC} we show the causality plane $H_{BP} \times C_{BP}$.
 We can see that not the entire region $0<H_{BP}<1$, $0<C_{BP}<1$ is achievable, in fact, for any PDF the pairs $(H,C)$ of possible values fall between two extreme curves in the plane $H_{BP} \times C_{BP}$ \cite{Anteneodo1996}.
-Chaotic maps have intermediate entropy $H_{BP}$, while their complexity $C_{BP}$ reaches larger values, very close to those of the upper complexity limit \cite{Rosso2007,Olivares2012B}.
+Chaotic maps have intermediate entropy $H_{BP}$, while their complexity $C_{BP}$ reaches larger values, very close to those of the upper complexity limit \cite{Rosso2007,Olivares2012}.
 For regular processes, entropy and complexity have small values, close to zero. 
 Uncorrelated stochastic processes are located in the planar location associated with $H_{BP}$ near one and $C_{BP}$ near zero.
 Ideal random systems having uniform Bandt \& Pompe PDF, are represented by the point $(1,0)$ \cite{Gonzalez2005} and a delta-like PDF corresponds to the point $(0,0)$.
@@ -202,7 +201,7 @@ In both information planes $H_{BP} \times C_{BP}$ in in Fig. \ref{fig:HH} and $H
 	\label{fig:HC}
 \end{figure}
 
-We also used the number of missing patterns MP as a quantifier\cite{Rosso2012}.
+We also used the number of missing patterns MP as a quantifier \cite{Rosso2012}.
 As shown recently by Amig\'o {\it et al.} \cite{Amigo2006,Amigo2007,Amigo2008,Amigo2010}, in the case of deterministic one-dimensional maps, not all the possible ordinal patterns can be effectively materialized into orbits, which in a sense makes these patterns missing.
 Indeed, the existence of these missing ordinal patterns becomes a persistent fact that can be regarded as a new dynamical property.
 Thus, for a fixed pattern-length (embedding dimension $D$) the number of missing patterns of a time series (unobserved patterns) is independent of the series length $N$.
