@@ -13,10 +13,10 @@ Its expression is:
 x_{n+1}=4\,x_{n}(1-x_{n}) 
 \end{equation}
 
-\noindent with $x_n\in\mathcal{R}$.
+\noindent with $x_n \in \mathbb{R}$.
 
-Note that to effectively work in a given representation it is necessary to change the expression of the map in order to make all the operations in the chosen representation numbers. For example, in the case of LOG the expression in binary fixed-point numbers is:%
-%
+Note that to effectively work in a given representation it is necessary to change the expression of the map in order to make all the operations in the chosen representation numbers. For example, in the case of LOG the expression in binary fixed-point numbers is:
+
 \begin{equation}\label{eq:logimapB2}
 x_{n+1}=4 \epsilon \,\text{floor}\left\{\frac{x_n(1-x_n)}{\epsilon}\right\}
 \end{equation}
@@ -34,7 +34,7 @@ x_{n+1}~=~ \left\{ \begin{array}{ll}
 2~(1-{x_n}) &, \textrm{if ~$1/2<x_n\leq 1$} 
 \end{array} \right. 
 \end{equation}
-with $x_n\in\mathcal{R}$.
+with $x_n \in \mathbb{R}$.
 
 In base-2 fractional numbers rounding, equation \ref{eq:tentmap} becomes:
 \begin{equation}\label{eq:tentdecbin}
@@ -66,7 +66,7 @@ x_{n+2}=4\,x_{n+1}\,(1-x_{n+1})
 \end{cases}\label{eq:SWITCH}
 \end{equation}
 
-\noindent with $x_n\in\mathcal{R}$ and $n$ an even number.
+\noindent with $x_n \in \mathbb{R}$ and $n$ an even number.
 
 Skipping is a usual randomizing technique that increases the mixing quality of a single map and correspondingly increases the value of $H_{BP}$ and decreases $C_{BP} $ of the time series.
 Skipping does not change the values of $H_{hist}$ and $C_{hist}$ because their are evaluated using the non causal PDF (normalized histogram of values)\cite{DeMicco2008}.
