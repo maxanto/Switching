@@ -2,16 +2,12 @@
 
 In the last years digital systems became the standard in all experimental sciences.
 By using new programmable electronic devices such as Digital Signal Processors (DSP) and Reconfigurable electronics such as Field Programmable Gate Arrays (FPGA) or Application-Specific Integrated Circuits (ASIC), experimenters allow to design and modify their own signal generators, measuring systems, simulation models, etc.
-The effect of finite precision in these new devices needs to be investigated.
 
-\textcolor{red}{
-In computers and digital devices only pseudo chaotic attractors can be gen-
-erated. But discretization may even destroy the pseudo chaotic behavior and
-consequently is a non trivial process.
-}
+When a chaotic system is implemented in computers or any digital device, the effect of finite precision became periodic the chaotic attractor, then only pseudo chaotic attractors can be generated.
+Discretization also may even destroy the pseudo chaotic behaviour and consequently is a non trivial process.
 
-
-Floating-point is not always available when speed, low power and/or small circuit area are required, a fixed-point solution is better in these cases.
+In these new devices, floating- and fixed-point are the available arithmetic.
+Floating-point the more accurately solution but is not always recommended when speed, low power and/or small circuit area are required, a fixed-point solution is better in these cases.
 Fixed-point representation is critical if chaotic systems must be implemented, because due to roundoff errors digital implementations will always become periodic with period $T$ and unstable orbits with a low periods may become stable destroying completely the chaotic behaviour.
 
 Grebogi and coworkers \cite{Grebogi1988} studied this subject and they saw that the period $T$ scales with roundoff $\epsilon$ as $T\sim\epsilon^{-d/2}$ where $d$ is the correlation dimension of the chaotic attractor.
