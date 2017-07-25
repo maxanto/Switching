@@ -24,7 +24,7 @@ Entropy is a basic quantity that can be regarded to as a measure of the uncertai
 When dealing with information content, the Shannon entropy is often considered as the foundational and most natural one \cite{Shannon1948}.
 Regarded as a measure of uncertainty, is the most paradigmatic example of these information quantifiers.
 
-Let a $P=\{p_i; \forall i=1,\ldots, N\}$ with $\sum_{i=1}^N p_i = 1$, be a discrete probability distribution, with $N$ the number of possible states of the system under study.
+Let a $P=\{p_i; i=1,\ldots, N\}$ with $\sum_{i=1}^N p_i = 1$, be a discrete probability distribution, with $N$ the number of possible states of the system under study.
 The Shannon's logarithmic information measure reads
 \begin{equation}
 \label{Shannon-disc}
@@ -33,7 +33,7 @@ S[P] ~=~ -\sum_{i=1}^{N} p_i \ln \left[ p_i \right] \ .
 
 If $S[P] = S_{\min} = 0$, we are in position to predict with complete certainty which of the possible outcomes $i$, whose probabilities are given by $p_i$, will actually take place. 
 Our knowledge of the underlying process described by the probability distribution is maximal in this instance. 
-In contrast, our knowledge is minimal for a uniform distribution $P_e = \{ p_i = 1/N, \forall i=1, \ldots , N \}$ since every outcome exhibits the same probability of occurrence, and the uncertainty is maximal, i.e., $S[P_e] = S_{\max} = \ln N$.
+In contrast, our knowledge is minimal for a uniform distribution $P_e = \{ p_i = 1/N; i=1, \ldots , N \}$ since every outcome exhibits the same probability of occurrence, and the uncertainty is maximal, i.e., $S[P_e] = S_{\max} = \ln N$.
 These two situations are extreme cases, therefore we focus on the `normalized' Shannon entropy, $0 \leq H \leq 1$, given as
 \begin{equation}
 \label{shannon-disc-normalizada}
@@ -99,7 +99,7 @@ Note that the appropriate symbol sequence arises naturally from the time series,
 are needed.
 The procedure is the following:
 \begin{itemize}
-	\item Given a series $\{x_t, \forall \; t=0, \Delta t, \cdots,N\Delta t \}$, a sequence of vectors of length $D$ is generated.
+	\item Given a series $\{x_t; t=0, \Delta t, \cdots,N\Delta t \}$, a sequence of vectors of length $D$ is generated.
 		\begin{equation}
 		(s)\longmapsto\left(x_{t-(d-1)\Delta t},x_{t-(d-2)\Delta t},\dots,x_{t-\Delta t},x_{t}\right) 
 		\label{eq:vectores}
@@ -126,7 +126,7 @@ Regarding the selection of the parameters, Bandt and Pompe suggested working wit
 
 Recently, the permutation entropy was extended to incorporate also amplitude information.
 Weighting the probabilities of individual patterns according to their variance alleviates potential issues regarding to ‘high noise, low signal’ patterns, because low-variance patterns that are strongly affected by noise are down-weighted in the resulting ‘weighted ordinal pattern distributions’.
-Hence, a potential disadvantage of ordinal pattern statistics, namely the loss of amplitude information, can be addressed by introducing weights in order to obtain a ``weighted permutation entropy (WPE)".
+Hence, a potential disadvantage of ordinal pattern statistics, namely the loss of amplitude information, can be addressed by introducing weights in order to obtain a ``weighted permutation entropy (WPE)" \cite{Fadlallah2013}.
 Non-normalized weights are computed for each temporal window for the time series $X$, such that
 \begin{equation}
 \label{WPE_weigth}
@@ -141,8 +141,8 @@ We calculated the normalized permutation Shannon entropy $H$ and the statistical
 	\item $H_{hist}$, is the normalized Shannon entropy applied to non-causal PDF $P_{hist}$
 	\item $H_{BP}$, is the normalized Shannon entropy applied to causal PDF $P_{BP}$
 	\item $H_{BPW}$, is the normalized Shannon entropy applied to causal PDF with amplitude contribution $P_{BPW}$
-	\item $C_{BP}$, is the normalized statistical complexity applied to non-causal PDF $P_{BP}$
-	\item $C_{BPW}$, is the normalized statistical complexity applied to non-causal PDF with amplitude contribution $P_{BPW} $
+	\item $C_{BP}$, is the normalized statistical complexity applied to causal PDF $P_{BP}$
+	\item $C_{BPW}$, is the normalized statistical complexity applied to causal PDF with amplitude contribution $P_{BPW} $
 \end{itemize}
 
 \subsection{Information Planes}
@@ -173,7 +173,7 @@ Clearly, new ordering patterns appear and both $H_{BP}$ and $H_{BPW}$ show highe
 Finally, we evaluated the quantifiers for a sequence of a logistic map that converges to a fixed point, in all the cases the length of data vector remains and the length of transitory is variable.
 Results obtained without amplitude contributions are depicted in blue dots, they converge to $(H_{hist}, H_{BP})=(0, 0)$ as the length of transitory is shortest, however $H_{BPW}$ (in red points) remains constant for all the cases.
 The last point in $(H_{hist}, H_{BP})=(0, 0)$ corresponds to a vector of zeros, in this case the histogram of ordering patterns with amplitude contributions is also a zero vector and $H_{BPW}$ can not be calculated.
-Through this last example, we show that the convergence to a fixed point can be detected by the join information of $H_{BPW}$ and $H_{BPW}$.
+Through this last example, we show that the convergence to a fixed point can be detected by the join information of $H_{BP}$ and $H_{BPW}$.
 
 In Figure \ref{fig:HC} we show the causality plane $H_{BP} \times C_{BP}$.
 We can see that not the entire region $0<H_{BP}<1$, $0<C_{BP}<1$ is achievable, in fact, for any PDF the pairs $(H,C)$ of possible values fall between two extreme curves in the plane $H_{BP} \times C_{BP}$ \cite{Anteneodo1996}.
@@ -184,12 +184,12 @@ Ideal random systems having uniform Bandt \& Pompe PDF, are represented by the p
 In Fig. 2 we show $H_{BP} \times C_{BP}$ with and without amplitude contributions.
 The same sample points are showed to illustrate the planar positions for different data vectors.
 
-In both information planes $H_{BP} \times C_{BP}$ in in Fig. \ref{fig:HH} and $H_{BP} \times H_{hist}$ in Fig. \ref{fig:HC}), stochastic, chaotic and deterministic data are clearly localized at different planar positions.
+In both information planes $H_{BP} \times H_{hist}$ in Fig. \ref{fig:HH} and $H_{BP} \times C_{BP}$ in Fig. \ref{fig:HC}), stochastic, chaotic and deterministic data are clearly localized at different planar positions.
 
 \begin{figure}[htpb]
 	\centering	
 	\includegraphics[width= .99\textwidth]{Fig1HHSignals}
-	\caption{Causal-Noncausal Entropy plane.}
+	\caption{Causal-Non causal Entropy plane.}
 \label{fig:HH}
 \end{figure}
 	
@@ -202,11 +202,11 @@ In both information planes $H_{BP} \times C_{BP}$ in in Fig. \ref{fig:HH} and $H
 \end{figure}
 
 We also used the number of missing patterns MP as a quantifier \cite{Rosso2012}.
-As shown recently by Amig\'o {\it et al.} \cite{Amigo2006,Amigo2007,Amigo2008,Amigo2010}, in the case of deterministic one-dimensional maps, not all the possible ordinal patterns can be effectively materialized into orbits, which in a sense makes these patterns missing.
+As shown recently by Amig\'o {\it et al.} \cite{Amigo2006,Amigo2007,Amigo2008,Amigo2010}, in the case of deterministic maps, not all the possible ordinal patterns can be effectively materialized into orbits, which in a sense makes these patterns missing.
 Indeed, the existence of these missing ordinal patterns becomes a persistent fact that can be regarded as a new dynamical property.
 Thus, for a fixed pattern-length (embedding dimension $D$) the number of missing patterns of a time series (unobserved patterns) is independent of the series length $N$.
 Remark that this independence does not characterize other properties of the series such as proximity and correlation, which die out with time \cite{Amigo2007,Amigo2010}.
 A full discussion about the convenience of using these quantifiers is out of the scope of this work.
-Nevertheless reliable bibliographic sources do exist \cite{Wackerbauer1994,Lopez-Ruiz1995,Rosso2007A,DeMicco2008,Rosso2010,Martin2006,Rosso2012}.
+Nevertheless reliable bibliographic sources do exist \cite{DeMicco2008,Rosso2010,Rosso2012,Lopez-Ruiz1995,Martin2006,Wackerbauer1994,Rosso2007A}.
 
 
