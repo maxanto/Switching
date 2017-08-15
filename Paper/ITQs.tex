@@ -61,7 +61,7 @@ Based on the seminal notion advanced by L\'opez-Ruiz {\it et al.} \cite{Lopez-Ru
 C[P] = Q_{J}[P,P_e] \cdot H[P]
 \label{complexity}
 \end{equation}
-of the normalized Shannon entropy $H$, see Eq.~\eqref{shannon-disc-normalizada}, and the disequilibrium $Q_{J}$ defined in terms of the Jensen-Shannon divergence $J[P, P_e]$.
+of the normalized Shannon entropy $H$, see eq. \eqref{shannon-disc-normalizada}, and the disequilibrium $Q_{J}$ defined in terms of the Jensen-Shannon divergence $J[P, P_e]$.
 That is,
 \begin{equation}
 \label{disequilibrium}	
@@ -119,7 +119,7 @@ The procedure is the following:
 		In the last expression the $\sharp$ symbol denotes cardinality.
 \end{itemize}
 Thus, an ordinal pattern probability distribution $P = \{ p(\pi_i), i = 1, \dots, D! \}$ is obtained from the time series.
-In this way the vector defined by Eq. (\ref{eq:frequ}) is converted into a unique symbol $\pi$.
+In this way the vector defined by eq. \eqref{eq:frequ} is converted into a unique symbol $\pi$.
 We set $r_i < r_{i-1}$ if $x_{s-r_{i}} = x_{s-r_{i-1}}$ for uniqueness.
 The only condition for the applicability of the BP method is a very weak stationary assumption: for $k \leq D$, the probability for $x_t < x_{t+k}$ should not depend on $t$.
 Regarding the selection of the parameters, Bandt and Pompe suggested working with $3 \leq D \leq 6$ for typical time series lengths, and specifically considered a time lag $\tau = 1$ in their cornerstone paper.
