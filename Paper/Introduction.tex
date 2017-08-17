@@ -7,8 +7,7 @@ When a chaotic system is implemented in computers or any digital device, the eff
 Discretization also may even destroy the pseudo chaotic behaviour and consequently is a non trivial process.
 
 In these new devices, floating- and fixed-point are the available arithmetic.
-Floating-point is more accurately solution but is not always recommended when speed, low power and/or small circuit area are required, a fixed-point solution is better in these cases.
-Fixed-point representation is critical if chaotic systems must be implemented, because due to roundoff errors digital implementations will always become periodic with period $T$ and unstable orbits with a low periods may become stable destroying completely the chaotic behaviour.
+Floating-point is the more accurately solution but is not always recommended when speed, low power and/or small circuit area are required, a fixed-point solution is better in these cases.
 
 Grebogi and coworkers \cite{Grebogi1988} studied this subject and they saw that the period $T$ scales with roundoff $\epsilon$ as $T\sim\epsilon^{-d/2}$ where $d$ is the correlation dimension of the chaotic attractor.
 To have a large period $T$ is an important property of chaotic maps, in \cite{Nagaraj2008} Nagaraj \textit{et. al} studied the effect of switching over the average period lengths of chaotic maps in finite precision.
@@ -18,17 +17,23 @@ Switching issue was also addressed in \cite{Gluskin2008}, author considers some 
 Switching systems naturally arise in power electronics and many other areas in digital electronics.
 They have also interest in transport problems in deterministic ratchets \cite{Zarlenga2009} and it is known that synchronization of the switching procedure affects the output of the controlled system.
 
-Stochasticity and mixing are also relevant, to characterize these properties several quantifiers were studied \cite{DeMicco2009}.
-Among them the use of an entropy-complexity representation ($H \times C$ plane) and causal-non causal entropy ($H_{BP} \times H_{hist}$ plane) deserves special consideration \cite{DeMicco2009,Rosso2007,DeMicco2008,DeMicco2012,Rosso2010,Antonelli2017}.
-A fundamental issue is the criterium to select the probability distribution function (PDF) assigned to the time series.
-Causal and non causal options are possible.
-Here we consider the non-causal traditional PDF obtained by normalizing the histogram of the time series.
+Stochasticity and mixing are also relevant to characterize a chaotic vehaviour.
+To investigate these properties several quantifiers were studied \cite{DeMicco2009}.
+Entropy and complexity from information theory are applied to give a measure for causal and non causal entropy and causal complexity.
+
+A fundamental issue is the criterium to select the probability distribution function (PDF) assigned to the time series, causal and non causal options are possible.
+Here we consider the non causal traditional PDF obtained by normalizing the histogram of the time series.
 Its statistical quantifier is the normalized entropy $H_{hist}$ that is a measure of equiprobability among all allowed values.
 We also consider a causal PDF that is obtained by assigning ordering patterns to segments of trajectory of length $D$.
 This PDF was first proposed by Bandt \& Pompe in a seminal paper \cite{Bandt2002}.
-The corresponding entropy $H_{BP}$ was also proposed as a quantifier by Bandt \& Pompe.
+The corresponding entropy $H_{BP}$ was also proposed as a quantifier by Bandt \& Pompe, in \cite{Rosso2007} authors apply the causal complexity $C_{BP}$ to detect chaos.
+Among them the use of an entropy-complexity representation ($H_{hist} \times C_{BP}$ plane) and causal-non causal entropy ($H_{BP} \times H_{hist}$ plane) deserves special consideration \cite{DeMicco2009,Rosso2007,DeMicco2008,DeMicco2012,Rosso2010,Antonelli2017}.
+
 Recently, amplitude information was introduced in \cite{Fadlallah2013} to add some immunity to weak noise in a causal PDF.
 The new scheme better tracks abrupt changes in the signal and assigns less complexity to segments that exhibit regularity or are subject to noise effects.
+Then, we define the causal entropy with amplitude contributions $H_{BPW}$ and the causal complexity with amplitude contributions $C_{BPW}$.
+Also we introduce the modified planes $H_{hist} \times C_{BP}$ and $H_{BP} \times H_{hist}$.
+
 Amig\'o and coworkers proposed the number of forbidden patterns as a quantifier of chaos \cite{Amigo2007a}.
 Essentialy they reported the presence of forbidden patterns as an indicator of chaos.
 Recently it was shown that the name forbidden patterns is not convenient and it was replaced by missing patterns (MP) \cite{Rosso2012}, in this work authors show that there are chaotic systems that present MP from a certain minimum length of patterns.
@@ -46,6 +51,6 @@ The main contributions of this paper are:
 \end{enumerate}
 
 Organization of the paper is as follows:
-Section \ref{sec:quanti} describes the statistical quantifiers used in the paper and the relationship between their value and characteristics of the causal and non causal PDF considered;
+Section \ref{sec:quanti} describes the statistical quantifiers used in the paper and the relationship between their value and the characteristics of causal and non causal PDF considered;
 Section \ref{sec:resultados} shows and discusses the results obtained for all the numerical representations.
 Finally Section \ref{sec:conclusions} deals with final remarks and future work.
