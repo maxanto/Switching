@@ -1,10 +1,10 @@
 \section{Introduction} \label{sec:intro}
 
 In the last years digital systems became the standard in all experimental sciences.
-By using new programmable electronic devices such as Digital Signal Processors (DSP) and Reconfigurable electronics such as Field Programmable Gate Arrays (FPGA) or Application-Specific Integrated Circuits (ASIC), experimenters allow to design and modify their own signal generators, measuring systems, simulation models, etc.
+By using new programmable electronic devices such as DSP's and Reconfigurable electronics such as FPGA's or ASIC's, experimenters are allowed to design and modify their own signal generators, measuring systems, simulation models, etc.
 
-When a chaotic system is implemented in computers or any digital device, the effect of finite precision became periodic the chaotic attractor, then only pseudo chaotic attractors can be generated.
-Discretization also may even destroy the pseudo chaotic behaviour and consequently is a non trivial process.
+When a chaotic system is implemented in computers or any digital device, the chaotic attractor become periodic by the effect of finite precision, then only pseudo chaotic attractors can be generated.
+Discretization may even destroy the pseudo chaotic behavior and consequently is a non trivial process.
 
 In these new devices, floating- and fixed-point are the available arithmetic.
 Floating-point is the more accurately solution but is not always recommended when speed, low power and/or small circuit area are required, a fixed-point solution is better in these cases.
@@ -13,31 +13,31 @@ Grebogi and coworkers \cite{Grebogi1988} studied this subject and they saw that 
 To have a large period $T$ is an important property of chaotic maps, in \cite{Nagaraj2008} Nagaraj \textit{et. al} studied the effect of switching over the average period lengths of chaotic maps in finite precision.
 They saw that the period $T$ of the compound map obtained by switching between two chaotic maps is higher than the period of each map.
 Liu \textit{et. al} \cite{Liu2006} studied different switching rules applied to linear systems to generate chaos.
-Switching issue was also addressed in \cite{Gluskin2008}, author considers some mathematical, physical and engineering aspects related to singular, mainly switching systems.
+Switching issue was also addressed in \cite{Gluskin2008}, the author considered some mathematical, physical and engineering aspects related to singular, mainly switching systems.
 Switching systems naturally arise in power electronics and many other areas in digital electronics.
 They have also interest in transport problems in deterministic ratchets \cite{Zarlenga2009} and it is known that synchronization of the switching procedure affects the output of the controlled system.
 
-Stochasticity and mixing are also relevant to characterize a chaotic vehaviour.
+Stochasticity and mixing are also relevant to characterize a chaotic behavior.
 To investigate these properties several quantifiers were studied \cite{DeMicco2009}.
-Entropy and complexity from information theory are applied to give a measure for causal and non causal entropy and causal complexity.
+Entropy and complexity from information theory were applied to give a measure for causal and non causal entropy and causal complexity.
 
 A fundamental issue is the criterium to select the probability distribution function (PDF) assigned to the time series, causal and non causal options are possible.
-Here we consider the non causal traditional PDF obtained by normalizing the histogram of the time series.
+Here we considered the non causal traditional PDF obtained by normalizing the histogram of the time series.
 Its statistical quantifier is the normalized entropy $H_{hist}$ that is a measure of equiprobability among all allowed values.
-We also consider a causal PDF that is obtained by assigning ordering patterns to segments of trajectory of length $D$.
+We also considered a causal PDF that is obtained by assigning ordering patterns to segments of trajectory of length $D$.
 This PDF was first proposed by Bandt \& Pompe in a seminal paper \cite{Bandt2002}.
-The corresponding entropy $H_{BP}$ was also proposed as a quantifier by Bandt \& Pompe, in \cite{Rosso2007} authors apply the causal complexity $C_{BP}$ to detect chaos.
+The corresponding entropy $H_{BP}$ was also proposed as a quantifier by Bandt \& Pompe, in \cite{Rosso2007} authors applied the causal complexity $C_{BP}$ to detect chaos.
 Among them the use of an entropy-complexity representation ($H_{hist} \times C_{BP}$ plane) and causal-non causal entropy ($H_{BP} \times H_{hist}$ plane) deserves special consideration \cite{DeMicco2009,Rosso2007,DeMicco2008,DeMicco2012,Rosso2010,Antonelli2017}.
 
 Recently, amplitude information was introduced in \cite{Fadlallah2013} to add some immunity to weak noise in a causal PDF.
 The new scheme better tracks abrupt changes in the signal and assigns less complexity to segments that exhibit regularity or are subject to noise effects.
 Then, we define the causal entropy with amplitude contributions $H_{BPW}$ and the causal complexity with amplitude contributions $C_{BPW}$.
-Also we introduce the modified planes $H_{hist} \times C_{BP}$ and $H_{BP} \times H_{hist}$.
+Also, we introduce the modified planes $H_{hist} \times C_{BP}$ and $H_{BP} \times H_{hist}$.
 
 Amig\'o and coworkers proposed the number of forbidden patterns as a quantifier of chaos \cite{Amigo2007a}.
-Essentialy they reported the presence of forbidden patterns as an indicator of chaos.
+Essentially they report the presence of forbidden patterns as an indicator of chaos.
 Recently it was shown that the name forbidden patterns is not convenient and it was replaced by missing patterns (MP) \cite{Rosso2012}, in this work authors show that there are chaotic systems that present MP from a certain minimum length of patterns.
-Our main interest on MP is because gives an upper bound for causal quantifiers.
+Our main interest on MP is because it gives an upper bound for causal quantifiers.
 
 Following \cite{Nagaraj2008}, in this paper we study the statistical characteristics of five maps, two well known maps: (1) the tent (TENT) and (2) logistic (LOG) maps, and three additional maps generated from them: (3) SWITCH, generated by switching between TENT and LOG; (4) EVEN, generated by skipping all the elements in odd positions of SWITCH time series and (5) ODD, generated by discarding all the elements in even positions of SWITCH time series.
 Binary floating- and fixed-point numbers are used, these specific numerical systems may be implemented in modern programmable logic devices.
@@ -51,6 +51,6 @@ The main contributions of this paper are:
 \end{enumerate}
 
 Organization of the paper is as follows:
-Section \ref{sec:quanti} describes the statistical quantifiers used in the paper and the relationship between their value and the characteristics of causal and non causal PDF considered;
+Section \ref{sec:quanti} describes the statistical quantifiers used in the paper and the relationship between their value and the characteristics of the causal and non causal PDF's considered;
 Section \ref{sec:resultados} shows and discusses the results obtained for all the numerical representations.
 Finally Section \ref{sec:conclusions} deals with final remarks and future work.

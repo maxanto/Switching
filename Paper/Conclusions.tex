@@ -1,8 +1,8 @@
 \section{Conclusions}\label{sec:conclusions}
-In this paper we explore the statistical degradation of simple, switched and skipped chaotic maps due to the inherent error of a based-2 systems.
-We evaluate mixing and amplitude distributions from a statistical point of view.
+In this paper we explored the statistical degradation of simple, switched and skipped chaotic maps due to the inherent error of a based-2 systems.
+We evaluated mixing and amplitude distributions from a statistical point of view.
 
-Our work complements the previous results given in \cite{Nagaraj2008}, where period was investigated.
+Our work complements previous results given in \cite{Nagaraj2008}, where period lengths were investigated.
 In that sense, our results were compatible with these.
 We can see that the switching between two maps increases the dependence of period as function of precision, this is because the correlation length is also increased.
 Nevertheless, the standard procedure of skipping reduce the period length in almost a half.
@@ -10,12 +10,13 @@ Nevertheless, the standard procedure of skipping reduce the period length in alm
 All statistics of the maps represented in fixed-point produces a non-monotonous evolution toward the floating-point results.
 This result is relevant because it shows that increasing the precision is not always recommended.
 
-It is specially interesting to note that some systems (TENT) with very nice statistical properties in the world of the real numbers, become ``pathological" when binary numerical representations are used.
-As a rule, if we only need shift operations to calculate a map (it depends on the base of the arithmetic logic unit and the map itself), all initial conditions converge to a fixed point with a transient no longer than the length of their mantissa.
+It is specially interesting to note that some systems (TENT) with very nice statistical properties in the real numbers world, become ``pathological" when binary numerical representations are used.
+As a rule, if a map is generated only by shift operations (it depends on the base of the arithmetic logic unit and the map itself), all initial conditions will converge to a fixed point with a transient no longer than the length of the mantissa being used.
 
-By comparing between BP and BPW quantifiers, we were able to detect falls to fixed points and estimate the relative length of transient. It can be seen in all implementations of TENT and in one initial condition of SWITCH and EVEN for floating-point implementation.
+By comparing between BP and BPW quantifiers, we were able to detect falls to fixed points and to estimate the relative length of transient.
+It can be seen in all implementations of TENT, in one initial condition of SWITCH and EVEN for floating-point implementation.
 
-Related to statistical behaviour, our results show that SWITCH has a marginal improvement in the mixing with respect to LOG (and TENT, of course).
+Related to statistical behavior, our results show that SWITCH has a marginal improvement in the mixing with respect to LOG (and TENT, of course).
 However the greatest improvement comes when skipping is applied, we can see that BP and BPW entropies grow and BP and BPW complexities decrease, for the same numerical representation.
-This result is relevant because evidences that a long period is not synonymous of good statistics, switched maps EVEN and ODD have half period lengths but their mixing is better and amplitude distributions remain almost equal.
+This result is relevant because evidences that a long period is not synonymous of good statistics, switched maps EVEN and ODD have half period lengths but their mixing is better and their amplitude distributions remain almost equal.
 As counterpart, more precision is needed to reach the better asymptotes that offers the switching method.

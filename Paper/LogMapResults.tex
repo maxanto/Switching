@@ -6,7 +6,7 @@ Note that these lines are independent of x-axis.
 In this case, all the lines of the floating-point are overlapped.
 
 According as B grows, statistical properties vary until they stabilize.
-For $B\geq 30$ the value of $H_{hist}$ remains almost identical to the values for the floating-point representation whereas $H_{BP}$ and $C_{BP}$ stabilizes at $B>21$.
+For $B\geq 30$ the value of $H_{hist}$ remains almost identical to the value for the floating-point representation whereas $H_{BP}$ and $C_{BP}$ stabilizes at $B>21$.
 Their values are: $\left\langle H_{hist}\right\rangle =0.9669$; $\left\langle H_{BP}\right\rangle =0.6269$; $\left\langle C_{BP}\right\rangle=0.4843$.
 Note that the stable value of missing patterns $MP=645$ makes the optimum $H_{BP} \leq \ln(75)/\ln(720) \simeq 0.65$.
 Then, $B=30$ is the most convenient choice for hardware implementation because an increase in the number of fractional digits does not improve the statistical properties.
@@ -15,11 +15,11 @@ Some conclusions can be drawn regarding BP and BPW quantifiers.
 For $B=1, 2, 3$ and $4$, the averaged BP quantifiers are almost $0$ while the averaged BPW quantifiers can not be calculated (see in Figs. \ref{fig:Hbpw_Log} and \ref{fig:Cbpw_Log} the missing black dashed line).
 This is because for those sequences were the initial condition were $0$ all iterations result to be a sequence of zeros (the fixed point of the map), this is more likely to happen when using small precisions because of roundoff.
 
-When $B$ increases the initial conditions are rounded to zero less frequently, this can be seen from $B>6$.
-In this case the generated sequences starting from a non-null value very frequently fall to zero after a short transitory.
+When $B$ increases the initial conditions are rounded to zero less frequently, this can be seen for $B>6$.
+In this, case the generated sequences starting from a non-null value fall to zero after a short transitory very often.
 An interesting issue in Figs. \ref{fig:Hbpw_Log} and \ref{fig:Cbpw_Log}, is that BPW quantifiers show a high dispersion unlike BP quantifiers.
-This is because BPW procedure takes into account only the transient discarding fixed points, unlike BP procedure considers all the values of the sequence.
-We can see in Figs. \ref{fig:Hbpw_Log} and \ref{fig:Cbpw_Log} for $1<B<10$ horizontal lines of red points than not appears in Figs. \ref{fig:Hbp_Log} and \ref{fig:Cbp_Log}, this evidence that some initial conditions falls to same period, even for adjacent precisions.
+This is because BPW procedure takes into account the transient and discards fixed points, unlike BP procedure considers all the values of the sequence.
+We can see in Figs. \ref{fig:Hbpw_Log} and \ref{fig:Cbpw_Log} for $1<B<10$ horizontal lines of red points that do not appear in Figs. \ref{fig:Hbp_Log} and \ref{fig:Cbp_Log}, this evidences that different initial conditions fall to the same orbits, even for adjacent precisions.
 
 \begin{figure}[htpb]
 	\centering
@@ -58,11 +58,11 @@ We can see in Figs. \ref{fig:Hbpw_Log} and \ref{fig:Cbpw_Log} for $1<B<10$ horiz
 \end{figure}
 
 The same results are shown in double entropy planes with the precision as parameter (Fig. \ref{fig:HbpHval_Log} without amplitude contributions and Fig. \ref{fig:HbpwHval_Log} with amplitude contributions).
-These figures show: $100$ red points for each fixed-point precision ($B$) and in black their average (dashed black line connecting black dots), $100$ blue dots that are the results of each run in floating-point and the black star is their average.
+These figures show: $100$ red points for each fixed-point precision ($B$) and their average in black (dashed black line connecting black dots), $100$ blue dots that are the results of each run in floating-point and the black star is their average.
 Here, the $100$ blue points and their average are overlapped.
 
 As expected, the fixed-point architecture implementation converges to the floating-point value as $B$ increases.
-For both, $H_{hist} \times H_{BP}$ and $H_{hist} \times H_{BPW}$, from $B=20$, $H_{hist}$ improves but $H_{BP}$ and $H_{BPW}$ remains constant.
+For both planes, $H_{hist} \times H_{BP}$ and $H_{hist} \times H_{BPW}$, from $B=20$, $H_{hist}$ increases but $H_{BP}$ and $H_{BPW}$ remain constant.
 It can be seen that the distribution of values reaches high values ($\left\langle H_{hist}\right\rangle =0.9669$) but their mixing is poor ($\left\langle H_{BP}\right\rangle =0.6269$).
 
 \begin{figure}[htpb]
@@ -83,7 +83,7 @@ It can be seen that the distribution of values reaches high values ($\left\langl
 
 In Fig. \ref{fig:CbpHbp_Log} and \ref{fig:CbpwHbpw_Log} we show the entropy-complexity planes.
 Dotted grey lines are the upper and lower margins, it is expected that a chaotic system remains near the upper margin.
-These results characterize a chaotic behaviour, in $H_{BP} \times C_{BP}$ plane we can see a low entropy and high complexity.
+These results characterize a chaotic behavior, in $H_{BP} \times C_{BP}$ plane we can see a low entropy and high complexity.
 
 \begin{figure}[htpb]
 	\centering

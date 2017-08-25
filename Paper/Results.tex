@@ -1,7 +1,7 @@
 \section{Results}\label{sec:resultados}
 
 Five pseudo chaotic maps were studied, two simple maps and three combination of them.
-For each one using numbers represented by floating-point (80 bits of mantissa) and  fixed-point numbers with $1\leq B \leq 53$, where $B$ is the number of bits that represents the fractional part.
+For each one we have used numbers represented by floating-point (80 bits of mantissa) and  fixed-point numbers with $1\leq B \leq 53$, where $B$ is the number of bits that represents the fractional part.
 Time series were generated using $100$ randomly chosen initial conditions within their attraction domain (interval $[0,1]$), for each one of these $54$ number precisions.
 
 The studied maps are logistic (LOG), tent (TENT), sequential switching between TENT and LOG (SWITCH) and skipping discarding the values in the odd positions (EVEN) or the values in the even positions (ODD) respectively.
@@ -27,7 +27,7 @@ The Tent map has been extensively studied in the literature because theoreticall
 For example it is easy to proof that it has a uniform histogram and consequently an ideal $H_{hist}=1$.
 The Perron-Frobenius operator and its corresponding eigenvalues and eigenfunctions may be analytically obtained for this map \cite{Lasota1994}.
 
-This map is represented with the equation:
+Tent map is represented with the equation:
 \begin{equation}\label{eq:tentmap}
 x_{n+1}~=~ \left\{ \begin{array}{ll}
 2~{x_n} &, \textrm{if ~$0\leq x_n\leq 1/2$}\\
