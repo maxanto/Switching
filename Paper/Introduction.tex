@@ -3,26 +3,33 @@
 In the last years digital systems became the standard in all experimental sciences.
 By using new programmable electronic devices such as DSP's and Reconfigurable electronics such as FPGA's or ASIC's, experimenters are allowed to design and modify their own signal generators, measuring systems, simulation models, etc.
 
+Nowdays, the chaotic systems are widely used in digital electronics in fields such as electromagnetic compatibility, encrypted secure communications, controlled noise generators, etc \cite{Machado2004,Smaoui2009,DeMicco2017,Antonelli2012,DeMicco2007A,DeMicco2007B}.
+These systems are specially interesting due to their extreme sensibility to initial conditions, nevertheless this characteristic is the source of the main difficulties at the time to implement them.  
+
 When a chaotic system is implemented in computers or any digital device, the chaotic attractor become periodic by the effect of finite precision, then only pseudo chaotic attractors can be generated \cite{Alcover2017,Dias2011}.
-Discretization may even destroy the pseudo chaotic behavior and consequently is a non trivial process \cite{Azzaz2013,Hoover2017,DeMicco2017}.
+Discretization may even destroy the pseudo chaotic behavior and consequently is a non trivial process \cite{DeMicco2017,Azzaz2013}.
 
 In these new devices, floating- and fixed-point are the available arithmetic.
 Floating-point is the more accurately solution but is not always recommended when speed, low power and/or small circuit area are required, a fixed-point solution is better in these cases.
 
-The effect of numerical discretization over a chaotic map was recently addressed in \cite{Alcover2017} and \cite{DeMicco2017}.
+The effect of numerical discretization over a chaotic map was recently addressed in \cite{Alcover2017}, \cite{DeMicco2017} and \cite{Nepomuceno2017}.
 In \cite{Alcover2017}, author characterizes the Moire interfaces in the Mandelbrot system.
 These interfaces are consequence of precision data type and do not appear in the ideal system using real numbers.
 In \cite{DeMicco2017}, authors explore the statistical degradation of the phases' space for a family of 2D quadratic maps.
 These maps present a multiatractor dynamic that makes them very attractive as random number generator in fields like criptography, encoding, etc.
-
+Nepomuceno \textit{et al.} \cite{Nepomuceno2017} report the existence of more than one pseudo-orbit of continuous chaotic systems when it is discretizated using different schemes.
+An interesting solution was proposed in \cite{Liao2013}, in this work author proposes an algorithm to reduce the roundoff errors. He focus on a software algorithm, on the contrary our approach is to a hardware implementation.
 
 Grebogi and coworkers \cite{Grebogi1988} studied this subject and they saw that the period $T$ scales with roundoff $\epsilon$ as $T\sim\epsilon^{-d/2}$ where $d$ is the correlation dimension of the chaotic attractor.
+This issue was also addressed in \cite{Persohn2012}, in this paper authors explore the evolution on the period $T$ as consequence of roundoff induced by 2-based numerical representation.
 To have a large period $T$ is an important property of chaotic maps, in \cite{Nagaraj2008} Nagaraj \textit{et. al} studied the effect of switching over the average period lengths of chaotic maps in finite precision.
 They saw that the period $T$ of the compound map obtained by switching between two chaotic maps is higher than the period of each map.
 Liu \textit{et. al} \cite{Liu2006} studied different switching rules applied to linear systems to generate chaos.
 Switching issue was also addressed in \cite{Gluskin2008}, the author considered some mathematical, physical and engineering aspects related to singular, mainly switching systems.
 Switching systems naturally arise in power electronics and many other areas in digital electronics.
 They have also interest in transport problems in deterministic ratchets \cite{Zarlenga2009} and it is known that synchronization of the switching procedure affects the output of the controlled system.
+Chiou and Chen \cite{Chiou2009} published an analysis of the stabilization and switching laws to design switched discrete-time systems.
+Recently, Borah \textit{et al.} \cite{Borah2017} presented a family of new chaotic systems and a switching based synchronization strategy.
 
 Stochasticity and mixing are also relevant to characterize a chaotic behavior.
 To investigate these properties several quantifiers were studied \cite{DeMicco2009}.
@@ -34,7 +41,7 @@ Its statistical quantifier is the normalized entropy $H_{hist}$ that is a measur
 We also considered a causal PDF that is obtained by assigning ordering patterns to segments of trajectory of length $D$.
 This PDF was first proposed by Bandt \& Pompe in a seminal paper \cite{Bandt2002}.
 The corresponding entropy $H_{BP}$ was also proposed as a quantifier by Bandt \& Pompe, in \cite{Rosso2007} authors applied the causal complexity $C_{BP}$ to detect chaos.
-Among them the use of an entropy-complexity representation ($H_{hist} \times C_{BP}$ plane) and causal-non causal entropy ($H_{BP} \times H_{hist}$ plane) deserves special consideration \cite{DeMicco2009,Rosso2007,Fouda2017,DeMicco2008,DeMicco2012,Rosso2010,Antonelli2017}.
+Among them the use of an entropy-complexity representation ($H_{hist} \times C_{BP}$ plane) and causal-non causal entropy ($H_{BP} \times H_{hist}$ plane) deserves special consideration \cite{DeMicco2009,Rosso2007,DeMicco2008,DeMicco2012,Rosso2007a,Rosso2010,Antonelli2017}.
 
 Recently, amplitude information was introduced in \cite{Fadlallah2013} to add some immunity to weak noise in a causal PDF.
 The new scheme better tracks abrupt changes in the signal and assigns less complexity to segments that exhibit regularity or are subject to noise effects.
