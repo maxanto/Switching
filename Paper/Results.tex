@@ -12,16 +12,20 @@ Its expression is:
 \begin{equation}\label{eq:logimap}
 x_{n+1}=4\,x_{n}(1-x_{n}) 
 \end{equation}
-
-\noindent with $x_n \in \mathbb{R}$.
+%
+with $x_n \in \mathbb{R}$.
 
 Note that to effectively work in a given representation it is necessary to change the expression of the map in order to make all the operations in the chosen representation numbers. For example, in the case of LOG the expression in binary fixed-point numbers is:
 
 \begin{equation}\label{eq:logimapB2}
 x_{n+1}=4 \epsilon \,\text{floor}\left\{\frac{x_n(1-x_n)}{\epsilon}\right\}
 \end{equation}
+%
+with $\epsilon = 2^{-B}$ where $B$ is the number of bits that represents the fractional part.
 
-\noindent with $\epsilon = 2^{-B}$ where $B$ is the number of bits that represents the fractional part.
+Floating point representation does not constitute a field, wherein the basic maths properties, such as distributive, associative, are preserved.
+However, in fixed point arithmetics the exponent do not shift the point position and some properties as distributive remains.
+Also, we adopt the floor rounding mode because it arises naturally in a FPGA implementation.
 
 The Tent map has been extensively studied in the literature because theoretically it has nice statistical properties that can be analytically obtained.
 For example it is easy to proof that it has a uniform histogram and consequently an ideal $H_{hist}=1$.
@@ -44,6 +48,9 @@ x_{n+1}~=~ \left\{ \begin{array}{ll}
 \end{array} \right. 
 \end{equation}
 with $\epsilon=2^{-B}$.
+
+In this case, we introduce the $2$ number in the parentheses because it is computationally more efficient in a hardware implementation.
+It is possible because it is power of $2$ and the multiplication is equivalent to an shift-to-left.
 
 Switching, even skipping and odd skipping procedures are shown in Fig. \ref{fig:seq}.
 

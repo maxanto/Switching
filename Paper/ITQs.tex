@@ -27,7 +27,7 @@ Let define a discrete probability distribution $P=\{p_i; i=1,\ldots, N\}$ with $
 Then, Shannon's logarithmic information measure:
 \begin{equation}
 \label{Shannon-disc}
-S[P] ~=~ -\sum_{i=1}^{N} p_i \ln \left[ p_i \right] \ .
+S[P] ~=~ -\sum_{i=1}^{N} p_i \ln \left[ p_i \right] \
 \end{equation}
 
 When $S[P] = S_{\min} = 0$, the prediction of which outcome $i$ will occur is a complete certainty.
@@ -36,7 +36,7 @@ On the contrary, we have minimal knowledge in a case of a uniform distribution $
 These two situations are extreme cases, therefore we focus on the `normalized' Shannon entropy, $0 \leq H \leq 1$, given as
 \begin{equation}
 \label{shannon-disc-normalizada}
-H[P] = S[P] / S_{\max} \ .
+H[P] = S[P] / S_{\max} \
 \end{equation}
 
 On the other hand, there is not a unique definition of the concept of complexity.
@@ -51,7 +51,7 @@ As depicted in \cite{Feldman2008} the functional is relate to organization, corr
 
 Rosso and coworkers \cite{Lamberti2004} introduced a suitable \textit{Statistical Complexity Measure} (SCM) $C$, that is  based on the seminal notion advanced by L\'opez-Ruiz {\it et al.} \cite{Lopez-Ruiz1995}. SCM is defined as the product of a measure of information and a measure of disequilibrium  and it is able to detect the distance from the equiprobable distribution of the accessible states.
 
-This statistical complexity measure\cite{Martin2003,Lamberti2004} is defined as follows: 
+This statistical complexity measure \cite{Martin2003,Lamberti2004} is defined as follows: 
 \begin{equation}
 C[P] = Q_{J}[P,P_e] \cdot H[P]
 \label{complexity}
@@ -60,11 +60,11 @@ $H$ is the normalized Shannon entropy, see eq. \ref{shannon-disc-normalizada}, a
 That is,
 \begin{equation}
 \label{disequilibrium}	
-Q_{J} [ P, P_e] = Q_{0} J[ P, P_e] = Q_{0} \{ S[(P + P_e)/2 ] - S[ P ]/2 - S[P_e]/2\},
+Q_{J} [ P, P_e] = Q_{0} J[ P, P_e] = Q_{0} \{ S[(P + P_e)/2 ] - S[ P ]/2 - S[P_e]/2\}
 \end{equation}
 $Q_0$ is a normalization constant such that $0 \leq Q_{J} \leq 1$:
 \begin{equation}
-Q_0 ~=~ -2 \left\{ {\frac{N+1}{N}} \ln (N+1) - \ln (2N) + \ln N \right\}^{-1} \ ,
+Q_0 ~=~ -2 \left\{ {\frac{N+1}{N}} \ln (N+1) - \ln (2N) + \ln N \right\}^{-1} \
 \label{q0-jensen-1}
 \end{equation}
 This value is obtained in a totally deterministic situation, where only one components of $P$ has a no null value equal to one.
@@ -125,7 +125,7 @@ In order to avoid the loss of amplitude information, that would be a disadvantag
 Non-normalized weights are computed for each temporal window for the time series $X$, such that
 \begin{equation}
 \label{WPE_weigth}
-w_j~=~\frac{1}{D}\sum_{k=1}^{D} \left(x_{j+k-1}-\bar{X_j^D}\right)^2.
+w_j~=~\frac{1}{D}\sum_{k=1}^{D} \left(x_{j+k-1}-\bar{X_j^D}\right)^2
 \end{equation}
 In the equation above $x_{j+k-1}-\bar{X_j^D}$ denotes the arithmetic mean of the current embedding vector of length $D$ and its variance $w_j$ is then used to weight the relative frequencies of each ordinal pattern $p_j$.
 Originally, this technique was proposed to discriminate patterns immersed in low noise.
@@ -160,7 +160,7 @@ We show some relevant points as example.
 \begin{figure}[htpb]
 	\centering	
 	\includegraphics[width= .99\textwidth]{Fig1HHSignals}
-	\caption{Causal-Non causal Entropy plane.}
+	\caption{Causal-Non causal Entropy plane. Horizontal axis is the entropy of values and vertical axes are the entropy of ordering patterns without (blue) and with (red) amplitude contributions (see text).}
 	\label{fig:HH}
 \end{figure}
 
@@ -183,7 +183,7 @@ We can see that not the entire region $0<H_{BP}<1$, $0<C_{BP}<1$ is achievable, 
 \begin{figure}[htpb]
 	\centering		
 	\includegraphics[width= .99\textwidth]{Fig1HCSignals}
-	\caption{Causal Entropy-Complexity plane.}
+	\caption{Causal Entropy-Complexity plane. Horizontal axes are the entropy of ordering patterns without (blue) and with (red) amplitude contributions and vertical axes are the statistical complexity of ordering patterns without (blue) and with (red) amplitude contributions (see text).}
 	\label{fig:HC}
 \end{figure}
 
