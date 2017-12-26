@@ -83,7 +83,7 @@ Usual methodologies assign to each value of the series $X(t)$ (or non-overlapped
 In this case, information on the dynamics of the system is lost, such as order relations and the time scales.
 
 If we want to incorporate {\it Causal information\/} we have to add information about the past dynamics of the system, this is done by the assignment of symbols of alphabet $A$ to a portion of the trajectory.
-The Bandt and Pompe (BP)\cite{Bandt2002} method is a simple and robust methodology that compares neighboring values in a time series and, thus solves this issue.
+The Bandt and Pompe (BP) \cite{Bandt2002} method is a simple and robust methodology that compares neighboring values in a time series and, thus solves this issue.
 
 The causality property of the PDF allows quantifiers (based on this PDFs) to discriminate between deterministic and stochastic systems \cite{Rosso2007B}.
 The steps are, first it is needed to create  symbolic data by ranking the values of the series; and second to define by reordering the embedded data in ascending order.
@@ -92,14 +92,14 @@ The goal of quantifying the diversity of the ordering symbols is achieved.
 There is no need to perform model-based assumptions, because the appropriate symbol sequence arises naturally from the time series.
 
 The procedure is the following:
-\begin{itemize}
-	\item Given a series $\{x_t; t=0, \Delta t, \cdots,N\Delta t \}$, a sequence of vectors of length $D$ is generated.
+\begin{itemize}[leftmargin=*,labelsep=5.8mm]
+\item 	Given a series $\{x_t; t=0, \Delta t, \cdots,N\Delta t \}$, a sequence of vectors of length $D$ is generated.
 		\begin{equation}
 		(s)\longmapsto\left(x_{t-(d-1)\Delta t},x_{t-(d-2)\Delta t},\dots,x_{t-\Delta t},x_{t}\right) 
 		\label{eq:vectores}
 		\end{equation}
 		Each vector turns out to be the ``history'' of the value $x_t$. Clearly, the longer the length of the vectors $D$, the more information about the history would the vectors have but a higher value of $N$ is required to have an adequate statistics. 
-	\item The permutations $\pi=(r_0, r_1, \cdots, r_{D-1})$ of $(0, 1, \cdots, D-1)$ are called ``order of patterns'' of time $t$, defined by:
+\item 	The permutations $\pi=(r_0, r_1, \cdots, r_{D-1})$ of $(0, 1, \cdots, D-1)$ are called ``order of patterns'' of time $t$, defined by:
 		\begin{equation}
 		\label{eq:permuta}
 		x_{t-r_{D-1}\Delta t}\le x_{t-r_{D-2}\Delta t}\le\dots\le x_{t-r_{1}\Delta t}\le x_{t-r_0\Delta t}
@@ -132,7 +132,7 @@ Originally, this technique was proposed to discriminate patterns immersed in low
 We take advantage of the fact that the fixed points are not computed in the WPE.
 
 We calculated the normalized permutation Shannon entropy $H$ and the statistical complexity $C$ from these PDFs, and the obtained values are denoted as:
-\begin{itemize}
+\begin{itemize}[leftmargin=*,labelsep=5.8mm]
 	\item $H_{hist}$, is the normalized Shannon entropy applied to non-causal PDF $P_{hist}$
 	\item $H_{BP}$, is the normalized Shannon entropy applied to causal PDF $P_{BP}$
 	\item $H_{BPW}$, is the normalized Shannon entropy applied to causal PDF with amplitude contribution $P_{BPW}$
@@ -144,11 +144,11 @@ We calculated the normalized permutation Shannon entropy $H$ and the statistical
 
 A particularly useful visualization of the quantifiers from Information Theory is their juxtaposition in two-dimensional graphs.
 Four information planes are defined:
-\begin{enumerate}
-	\item Causal entropy vs. non-causal entropy, $H_{BP} \times H_{hist}$
-	\item Causal entropy with amplitude contributions vs. non-causal entropy, $H_{BPW} \times H_{hist}$
-	\item Causal causal complexity vs. causal entropy, $C_{BP} \times H_{BP}$
-	\item Causal causal complexity with amplitude contributions vs. causal entropy with amplitude contributions, $C_{BPW} \times H_{BPW}$
+\begin{enumerate}[leftmargin=*,labelsep=4.9mm]
+\item	Causal entropy vs. non-causal entropy, $H_{BP} \times H_{hist}$
+\item	Causal entropy with amplitude contributions vs. non-causal entropy, $H_{BPW} \times H_{hist}$
+\item	Causal causal complexity vs. causal entropy, $C_{BP} \times H_{BP}$
+\item	Causal causal complexity with amplitude contributions vs. causal entropy with amplitude contributions, $C_{BPW} \times H_{BPW}$
 \end{enumerate}
 
 These diagnostic tools were shown to be particularly efficient to distinguish between the deterministic chaotic and stochastic nature of a time series since the permutation quantifiers have distinct behaviors for different types of processes.
@@ -157,9 +157,9 @@ In fig. \ref{fig:HH} we show the planes $H_{BP} \times H_{hist}$ and $H_{BPW} \t
 In this plane a higher value in any of the entropies, $H_{BP}$, $H_{BPW}$ or $H_{hist}$, implies an more uniformity of the involved PDF.
 The point $(1,1)$ represents the ideal case with uniform histogram and uniform distribution of ordering patterns.
 We show some relevant points as example.
-\begin{figure}[htpb]
+\begin{figure}[H]
 	\centering	
-	\includegraphics[width= .99\textwidth]{Fig1HHSignals}
+	\includegraphics[width= \textwidth]{Fig1HHSignals}
 	\caption{Causal-Non causal Entropy plane. Horizontal axis is the entropy of values and vertical axes are the entropy of ordering patterns without (blue) and with (red) amplitude contributions (see text).}
 	\label{fig:HH}
 \end{figure}
@@ -180,14 +180,14 @@ Through this last example, we show that the convergence to a fixed point can be 
 
 In Figure \ref{fig:HC} we show the causality plane $H_{BP} \times C_{BP}$.
 We can see that not the entire region $0<H_{BP}<1$, $0<C_{BP}<1$ is achievable, in fact, for any PDF the pairs $(H,C)$ of possible values fall between two extreme curves in the plane $H_{BP} \times C_{BP}$ \cite{Anteneodo1996}.
-\begin{figure}[htpb]
+\begin{figure}[H]
 	\centering		
-	\includegraphics[width= .99\textwidth]{Fig1HCSignals}
+	\includegraphics[width= \textwidth]{Fig1HCSignals}
 	\caption{Causal Entropy-Complexity plane. Horizontal axes are the entropy of ordering patterns without (blue) and with (red) amplitude contributions and vertical axes are the statistical complexity of ordering patterns without (blue) and with (red) amplitude contributions (see text).}
 	\label{fig:HC}
 \end{figure}
 
-Chaotic maps present high values of complexity $C_{BP}$ (close to the upper complexity limit),and intermediate entropy $H_{BP}$, \cite{Rosso2007,Olivares2012}.
+Chaotic maps present high values of complexity $C_{BP}$ (close to the upper complexity limit),and intermediate entropy $H_{BP}$ \cite{Rosso2007,Olivares2012}.
 In the case of regular processes the values of entropy and complexity are close to zero. 
 Stochastic processes that are uncorrelated present $H_{BP}$ near one and $C_{BP}$ near zero.
 

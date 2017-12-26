@@ -1,30 +1,29 @@
-\begin{frontmatter}
+\Title{Complexity of switching chaotic maps in finite precision}
 
-	\title{Complexity of switching chaotic maps in finite precision}
-	M. Antonelli$^{1,2}$, L. De Micco$^{1,2,3}$, O. A. Rosso$^{3,4,5,6}$ and H. A. Larrondo$^{1,2,3}$\\
-	$^{1}$ Facultad de Ingenier\'ia, Universidad Nacional de Mar del Plata, Mar del Plata, Argentina.\\
-	$^{2}$ ICyTE. Instituto de Investigaciones Científicas y Tecnológicas en Electrónica.\\
-	$^{3}$ CONICET. Consejo Nacional de Investigaciones Científicas y Técnicas\\
-	$^{4}$ Departamento de Inform\'atica en Salud, Hospital Italiano de Buenos Aires, C1199ABB Ciudad Autónoma de Buenos Aires, Argentina.\\
-	$^{5}$ Instituto de F\'{\i}sica, Universidade Federal de Alagoas (UFAL), Macei\'o, Brazil.\\
-	$^{6}$ Facultad de Ingeniería y Ciencias Aplicadas, Universidad de Los Andes, Santiago, Chile.
-	
+\newcommand{\orcidauthorA}{0000-0002-0420-4823} % Add \orcidA{} behind the author's name
 
-\begin{abstract}
+\Author{M. Antonelli $^{1,2,}$*\orcidA{}, L. De Micco $^{1,2,3}$, H. A. Larrondo $^{1,2,3}$ and O. A. Rosso $^{3,4,5,6}$}
 
-In this paper we investigate the degradation of the statistic properties of chaotic maps as consequence of their implementation in a digital media such as Digital Signal Processors (DSP), Field Programmable Gate Arrays (FPGA) or Application-Specific Integrated Circuits (ASIC).
+\AuthorNames{M. Antonelli, L. De Micco, H. A. Larrondo and O. A. Rosso}
 
-In these systems, binary floating- and fixed-point are the numerical representations available.
-Fixed-point representation is preferred over floating-point when speed, low power and/or small circuit area are necessary.
-Then, in this paper we compare the degradation of fixed-point binary precision version of chaotic maps with the floating point IEEE754 to evaluate the feasibility of their FPGA implementation.
+\address{%
+	$^{1}$ \quad Facultad de Ingeniería, Universidad Nacional de Mar del Plata (UNMdP), Mar del Plata, Argentina.\\
+	$^{2}$ \quad ICyTE. Instituto de Investigaciones Científicas y Tecnológicas en Electrónica.\\
+	$^{3}$ \quad CONICET. Consejo Nacional de Investigaciones Científicas y Técnicas.\\
+	$^{4}$ \quad Departamento de Informática en Salud, Hospital Italiano de Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina.\\
+	$^{5}$ \quad Instituto de Física, Universidade Federal de Alagoas (UFAL), Maceió, Brazil.\\
+	$^{6}$ \quad Facultad de Ingeniería y Ciencias Aplicadas, Universidad de Los Andes, Santiago, Chile.}
 
-The specific period that every fixed-point precision produces was investigated in previous reports, using as example the tent map and the logistic map.
-Statistical characteristics are also relevant.
-It has been recently shown that it is convenient to describe the statistical characteristic using both, causal and non-causal quantifiers.
-In this paper we complement the period analysis by characterizing the behavior of these maps from an statistical point of view using causal and non-causal entropies and complexities.
-Here we do not look for the system to be similar to the implemented in real numbers, but that certain conditions related to the statistics of systems are met.
+\corres{Correspondence: maxanto@fi.mdp.edu.ar}
 
-\end{abstract}
-\maketitle
-\end{frontmatter}
-{\bf VERSION: \today}
+\abstract{In this paper we investigate the degradation of the statistic properties of chaotic maps as consequence of their implementation in a digital media such as Digital Signal Processors (DSP), Field Programmable Gate Arrays (FPGA) or Application-Specific Integrated Circuits (ASIC).
+	In these systems, binary floating- and fixed-point are the numerical representations available.
+	Fixed-point representation is preferred over floating-point when speed, low power and/or small circuit area are necessary.
+	Then, in this paper we compare the degradation of fixed-point binary precision version of chaotic maps with the floating point IEEE754 to evaluate the feasibility of their FPGA implementation.
+	The specific period that every fixed-point precision produces was investigated in previous reports, using as example the tent map and the logistic map.
+	Statistical characteristics are also relevant.
+	It has been recently shown that it is convenient to describe the statistical characteristic using both, causal and non-causal quantifiers.
+	In this paper we complement the period analysis by characterizing the behavior of these maps from an statistical point of view using causal and non-causal entropies and complexities.
+	Here we do not look for the system to be similar to the implemented in real numbers, but that certain conditions related to the statistics of systems are met.}
+
+\keyword{chaos; finite precision; hardware implementaion; switching maps}
