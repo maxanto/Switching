@@ -4,12 +4,12 @@ When this map is implemented in a computer using any numerical representation sy
 The sequences within the attractor domain of this fixed point will have a short transitory of length between $0$ and $B$ followed by an infinite number of $0$'s \cite{Jessa2002,Callegari}.
 This issue is easily explained in \cite{Li2004}, the problem appears because all iterations have a left-shift operation that carries the $0$'s from the right side of the number to the most significant positions.
 
-Figs. \ref{fig:Hval_Tent} to \ref{fig:MP_Tent} show the quantifiers for floating- and fixed-point numerical representations.
+Figures \ref{fig:Hval_Tent} to \ref{fig:MP_Tent} show the quantifiers for floating- and fixed-point numerical representations.
 $H_{hist}$, $H_{BP}$ and $C_{BP}$ quantifiers are equal to zero for all precisions, this reflects that the series quickly converge toward a fixed point for every initial conditions.
 In the case of $H_{BPW}$ and $C_{BPW}$ quantifiers are different to zero because BPW procedure discards the elements once the fixed point is reached.
 The high dispersions in $H_{BPW}$, $C_{BPW}$ and MP are related to the short length of serie's transient.
-These transients that converge to a fixed point have a maximum length of $B$ elements (iterations) for fixed-point arithmetic and $80$ for floating-point (long double precision).
-
+These transients that converge to a fixed point have a maximum length of $B$ elements (iterations) for fixed-point arithmetic and $53$ for floating-point (IEEE754 double precision).
+%
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.49\textwidth}
@@ -46,4 +46,4 @@ These transients that converge to a fixed point have a maximum length of $B$ ele
 	\label{fig:TENT_QuantiB}
 \end{figure}
 
-Summarizing, in spite of using a high number of bits (with any 2-based numerical representation) to represent the digitalized TENT map it always converges quickly to the fixed point in $(x_n, x_{n+1})=(0, 0)$.
+Summarizing, in spite of using a high number of bits (with any 2-based numerical representation) to represent the digitalized TENT map it always quickly converges to the fixed point in $(x_n, x_{n+1})=(0, 0)$.

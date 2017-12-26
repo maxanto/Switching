@@ -1,12 +1,12 @@
 \section{Results}\label{sec:resultados}
 
 Five pseudo chaotic maps were studied, two simple maps and three combination of them.
-For each one we have used numbers represented by floating-point (80 bits of mantissa) and  fixed-point numbers with $1\leq B \leq 53$, where $B$ is the number of bits that represents the fractional part.
+For each one we have used numbers represented by floating-point (double presicion 754-IEEE standard) and  fixed-point numbers with $1\leq B \leq 53$, where $B$ is the number of bits that represents the fractional part.
 Time series were generated using $100$ randomly chosen initial conditions within their attraction domain (interval $[0,1]$), for each one of these $54$ number precisions.
 
 The studied maps are logistic (LOG), tent (TENT), sequential switching between TENT and LOG (SWITCH) and skipping discarding the values in the odd positions (EVEN) or the values in the even positions (ODD) respectively.
 
-Logistic map is interesting because is representative of the very large family of quadratic maps.
+Logistic map is interesting because it is representative of the very large family of quadratic maps.
 Its expression is:
 %
 \begin{equation}\label{eq:logimap}
@@ -16,7 +16,7 @@ x_{n+1}=4\,x_{n}(1-x_{n})
 with $x_n \in \mathbb{R}$.
 
 Note that to effectively work in a given representation it is necessary to change the expression of the map in order to make all the operations in the chosen representation numbers. For example, in the case of LOG the expression in binary fixed-point numbers is:
-
+%
 \begin{equation}\label{eq:logimapB2}
 x_{n+1}=4 \epsilon \,\text{floor}\left\{\frac{x_n(1-x_n)}{\epsilon}\right\}
 \end{equation}
@@ -24,36 +24,40 @@ x_{n+1}=4 \epsilon \,\text{floor}\left\{\frac{x_n(1-x_n)}{\epsilon}\right\}
 with $\epsilon = 2^{-B}$ where $B$ is the number of bits that represents the fractional part.
 
 Floating point representation does not constitute a field, wherein the basic maths properties, such as distributive, associative, are preserved.
-However, in fixed point arithmetics the exponent do not shift the point position and some properties as distributive remains.
+However, in fixed point arithmetics the exponent does not shift the point position and some properties as distributive remains.
 Also, we adopt the floor rounding mode because it arises naturally in a FPGA implementation.
 
-The Tent map has been extensively studied in the literature because theoretically it has nice statistical properties that can be analytically obtained.
+The TENT map has been extensively studied in the literature because theoretically it has nice statistical properties that can be analytically obtained.
 For example it is easy to proof that it has a uniform histogram and consequently an ideal $H_{hist}=1$.
 The Perron-Frobenius operator and its corresponding eigenvalues and eigenfunctions may be analytically obtained for this map \cite{Lasota1994}.
 
 Tent map is represented with the equation:
+%
 \begin{equation}\label{eq:tentmap}
 x_{n+1}~=~ \left\{ \begin{array}{ll}
 2~{x_n} &, \textrm{if ~$0\leq x_n\leq 1/2$}\\
 2~(1-{x_n}) &, \textrm{if ~$1/2<x_n\leq 1$} 
 \end{array} \right. 
 \end{equation}
+%
 with $x_n \in \mathbb{R}$.
 
 In base-2 fractional numbers rounding, equation (\ref{eq:tentmap}) becomes:
+%
 \begin{equation}\label{eq:tentdecbin}
 x_{n+1}~=~ \left\{ \begin{array}{ll}
 2~{x_n} &, \textrm{if $0\leq x_n\leq 1/2$}\\
 \epsilon \; \text{floor}\{\frac{2~-~2~x_n}{\epsilon}\} &, \textrm{if $1/2<x_n\leq 1$} 
 \end{array} \right. 
 \end{equation}
+%
 with $\epsilon=2^{-B}$.
 
 In this case, we introduce the $2$ number in the parentheses because it is computationally more efficient in a hardware implementation.
-It is possible because it is power of $2$ and the multiplication is equivalent to an shift-to-left.
+It is valid because it is power of $2$ and the multiplication is equivalent to a shift-to-left.
 
-Switching, even skipping and odd skipping procedures are shown in Fig. \ref{fig:seq}.
-
+Switching, even and odd skipping procedures are shown in Fig. \ref{fig:seq}.
+%
 \begin{figure}[htpb]
 \centering	
 	\includegraphics[height=0.4\textheight]{SwitchParImpar}
@@ -61,7 +65,7 @@ Switching, even skipping and odd skipping procedures are shown in Fig. \ref{fig:
 \end{figure}
 
 SWITCH map is expressed as:
-
+%
 \begin{equation}
 \begin{cases}
 x_{n+1}=
@@ -72,14 +76,14 @@ x_{n+1}=
 x_{n+2}=4\,x_{n+1}\,(1-x_{n+1})
 \end{cases}\label{eq:SWITCH}
 \end{equation}
-
-\noindent with $x_n \in \mathbb{R}$ and $n$ an even number.
+%
+with $x_n \in \mathbb{R}$ and $n$ an even number.
 
 Skipping is a usual randomizing technique that increases the mixing quality of a single map and correspondingly increases the value of $H_{BP}$ and decreases $C_{BP} $ of the time series.
 Skipping does not change the values of $H_{hist}$ for ergodic maps because it are evaluated using the non causal PDF (normalized histogram of values) \cite{DeMicco2008}.
 
-In the case under consideration we study even and odd skipping of the sequential switching of Tent and Logistic maps:
-\begin{enumerate}
+In the case under consideration we study even and odd skipping of the sequential switching of TENT and LOG maps:
+\begin{enumerate}[leftmargin=*,labelsep=4.9mm]
 	\item Even skipping of the sequential switching of Tent and Logistic maps (EVEN).\\
 	If $\{x_n; n=1,\dots,\infty\}$ is the time series generated by eq. \eqref{eq:SWITCH}, discard all the values in odd positions and retain the values in even positions.
 	\item Odd skipping of the sequential switching of Tent and Logistic maps.
@@ -101,7 +105,7 @@ Here we report our results for both simple maps, LOG and TENT
 \input{TentMapResults} 
 
 \subsection{Quantifiers of combined Maps}\label{subsec:SecSwitch}
-Here we report our results for the three combinations of the simple maps, SWITCH, EVEN and ODD.
+Here we report our results for the three combinations of the combined maps, SWITCH, EVEN and ODD.
 
 \input{SwitchMapResults}
 
