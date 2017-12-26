@@ -1,18 +1,25 @@
-\documentclass[a4paper]{elsart}
-\usepackage{amsmath}
-\usepackage{amssymb}
+\documentclass[entropy,article,submit,moreauthors,pdftex,10pt,a4paper]{mdpi}
 \usepackage[english]{babel}
-\usepackage[utf8]{inputenc} %Paquete para escribir acentos y otros símbolos directamente
-\usepackage{color}
-\usepackage{enumerate}
-\usepackage{graphicx}
 \usepackage{subcaption}
-%\usepackage{subfig} %para poner subfiguras
 \graphicspath{{Figs/}} %En qué carpeta están las imágenes
 
-\begin{document}
+%-----------From Entropy template----------- 
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother 
+\articlenumber{x}
+\doinum{10.3390/------}
+\pubvolume{xx}
+\pubyear{2017}
+\copyrightyear{2017}
+\externaleditor{Academic Editor: name}
+\history{Received: date; Accepted: date; Published: date}
+%-------------------------------------------
 
 \input{Frontmatter}
+
+\begin{document}
 
 \input{Introduction}
 
@@ -22,10 +29,10 @@
 
 \input{Conclusions}
 
-\section*{Acknowledgment}
-This work was partially supported by the Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET), Argentina (PIP 112-201101-00840), UNMDP and the International Centre for Theoretical Physics (ICTP) Associateship Scheme.
+\acknowledgments{This work was partially supported by the Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET), Argentina (PIP 112-201101-00840), UNMDP and the International Centre for Theoretical Physics (ICTP) Associateship Scheme.}
 
-\bibliographystyle{unsrt}
+\reftitle{References}
+\externalbibliography{yes}
 \bibliography{Switching}
 
 \end{document}
