@@ -1,11 +1,11 @@
 \section{Introduction} \label{sec:intro}
 
 In the last years digital systems became the standard in all experimental sciences.
-By using new programmable electronic devices such as Digital Signal Processors (DSP), Application Specific Integrated Circuits (ASIC) or Field Programmable Gate Array FPGA's, experimenters are allowed to design and modify their own signal generators, measuring systems, simulation models, etc.
+By using new programmable electronic devices such as DSP's, ASIC's or FPGA's, experimenters are allowed to design and modify their own signal generators, measuring systems, simulation models, etc.
 
 Nowdays, the chaotic systems are widely used in digital electronics in fields such as electromagnetic compatibility, encrypted secure communications, controlled noise generators, etc \cite{Machado2004,Smaoui2009,DeMicco2017,Antonelli2012,DeMicco2007A,DeMicco2007B}.
 These systems are specially interesting due to their extreme sensibility to initial conditions, nevertheless this characteristic is the source of the main difficulties at the time to implement them.  
-In these fields of the electronic, the focus is not on how similar is the system implemented with a system in real numbers, but on some properties of the implemented system meet certain requirements.
+In these fields the motivation of using chaotic systems is to genetrate sequences that meet certain requirements, rather than reproducing an exact replica of the real systems.
 
 When a chaotic system is implemented in computers or any digital device, the chaotic attractor become periodic by the effect of finite precision, then only pseudo chaotic attractors can be generated \cite{Alcover2017,Dias2011}.
 Discretization may even destroy the pseudo chaotic behavior and consequently is a non trivial process \cite{DeMicco2017,Azzaz2013}.
@@ -38,9 +38,9 @@ A fundamental issue is the criterium to select the probability distribution func
 Here we consider the non causal traditional PDF obtained by normalizing the histogram of the time series.
 Its statistical quantifier is the normalized entropy $H_{hist}$ that is a measure of equiprobability among all allowed values.
 We also considered a causal PDF that is obtained by assigning ordering patterns to segments of trajectory of length $D$.
-This PDF was first proposed by Bandt \& Pompe in a seminal paper \cite{Bandt2002}.
-The corresponding entropy $H_{BP}$ was also proposed as a quantifier by Bandt \& Pompe, in \cite{Rosso2007} authors applied the causal complexity $C_{BP}$ to detect chaos.
-Among them the use of an entropy-complexity representation ($H_{hist} \times C_{BP}$ plane) and causal-non causal entropy ($H_{BP} \times H_{hist}$ plane) deserves special consideration \cite{DeMicco2009,Rosso2007,DeMicco2008,DeMicco2012,Rosso2007a,Rosso2010,Antonelli2017}.
+This PDF was first proposed by Bandt \& Pompe in a seminal paper \cite{Bandt2002}, the corresponding entropy $H_{BP}$ was also proposed as a quantifier by Bandt \& Pompe.
+In \cite{Rosso2007a} authors applied the causal complexity $C_{BP}$ to detect chaos.
+Among them the use of an entropy-complexity representation ($H_{hist} \times C_{BP}$ plane) and causal-non causal entropy ($H_{BP} \times H_{hist}$ plane) deserves special consideration \cite{DeMicco2009,DeMicco2008,DeMicco2012,Rosso2007a,Rosso2010,Antonelli2017}.
 
 Recently, amplitude information was introduced in \cite{Fadlallah2013} to add some immunity to weak noise in a causal PDF.
 The new scheme better tracks abrupt changes in the signal and assigns less complexity to segments that exhibit regularity or are subject to noise effects.
