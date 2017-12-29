@@ -1,9 +1,8 @@
 \section{Results}\label{sec:resultados}
 
 Five pseudo chaotic maps were studied, two simple maps and three combination of them.
-For each one we have used numbers represented by floating-point (double presicion 754-IEEE standard) and  fixed-point numbers with $1\leq B \leq 53$, where $B$ is the number of bits that represents the fractional part.
+For each one we have used numbers represented by floating-point (double precision 754-IEEE standard) and  fixed-point numbers with $1\leq B \leq 53$, where $B$ is the number of bits that represents the fractional part.
 Time series were generated using $100$ randomly chosen initial conditions within their attraction domain (interval $[0,1]$), for each one of these $54$ number precisions.
-
 The studied maps are logistic (LOG), tent (TENT), sequential switching between TENT and LOG (SWITCH) and skipping discarding the values in the odd positions (EVEN) or the values in the even positions (ODD) respectively.
 
 Logistic map is interesting because it is representative of the very large family of quadratic maps.
@@ -91,9 +90,7 @@ In the case under consideration we study even and odd skipping of the sequential
 \end{enumerate}
 
 Even skipping may be expressed as the composition function TENT$\circ$LOG while odd skipping may be expressed as LOG$\circ$TENT.
-The evolution of period as function of precision was reported in \cite{Nagaraj2008}.
-
-Let us detail our results for each of these maps.
+The evolution of period as function of precision was reported in \cite{Nagaraj2008} for these resulting maps.
 
 \input{PeriodResults}
 
