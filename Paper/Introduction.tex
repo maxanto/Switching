@@ -10,14 +10,15 @@ In these fields the motivation of using chaotic systems is to genetrate sequence
 When a chaotic system is implemented in computers or any digital device, the chaotic attractor become periodic by the effect of finite precision, then only pseudo chaotic attractors can be generated \cite{Alcover2017,Dias2011}.
 Discretization may even destroy the pseudo chaotic behavior and consequently is a non trivial process \cite{DeMicco2017,Azzaz2013}.
 
-In these new devices, floating- and fixed-point are the available arithmetic.
+In these new devices, floating- and fixed-point are the \textcolor{red}{most common} arithmetics.
 Floating-point is the more accurately solution but is not always recommended when speed, low power and/or small circuit area are required.
 A fixed-point solution is better in these cases, nevertheless the feasibility of their implementation needs to be investigated.
 
-The effect of numerical discretization over a chaotic map was recently addressed in \cite{Alcover2017}, \cite{DeMicco2017} and \cite{Nepomuceno2017}.
+The effect of numerical discretization over a chaotic map was recently addressed in \cite{DeMicco2017}, \cite{Nepomuceno2017}, \cite{Tlelo-Cuautle2016} and \cite{DelaFraga2017}.
 In our previous work \cite{DeMicco2017} we have explored the statistical degradation of the phases' space for a family of 2D quadratic maps.
 These maps present a multiatractor dynamic that makes them very attractive as random number generator in fields like criptography, encoding, etc.
 Nepomuceno \textit{et al.} \cite{Nepomuceno2017} reported the existence of more than one pseudo-orbit of continuous chaotic systems when it is discretizated using different schemes.
+\textcolor{red}{In \cite{Tlelo-Cuautle2016} and \cite{DelaFraga2017}, authors have proposed to use the value of the entropy to choose the number of bits in the fractional part, when maps are implemented in integer arithmetic}
 
 Grebogi and coworkers \cite{Grebogi1988} saw that the period $T$ scales with roundoff $\epsilon$ as $T\sim\epsilon^{-d/2}$ where $d$ is the correlation dimension of the chaotic attractor.
 This issue was also addressed in \cite{Persohn2012}, in this paper authors explore the evolution on the period $T$ as consequence of roundoff induced by 2-based numerical representation.

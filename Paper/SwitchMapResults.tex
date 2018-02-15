@@ -1,5 +1,8 @@
 \subsubsection{SWITCH} \label{sssec:switch}
 
+\textcolor{red}{Between the two parameters analyzed for the TENT map, we found that mixing and stochasticity converge to the same values either for $u = 1.96$ or for $u = 2$.
+So, we chose to use $u = 2$ given its simplicity to be used both in software simulations and in hardware implementation.}
+
 Results with sequential switching are shown in Figures \ref{fig:Hval_Switch} to \ref{fig:MP_Switch}.
 The calculated entropy value for floating-point implementation is $\left\langle H_{hist}\right\rangle =0.9722$, this value is slightly higher than the one obtained for the LOG map. 
 For fixed-point arithmetic this value is reached in $B=24$, but it stabilizes from $B=28$.
@@ -66,6 +69,6 @@ If we compare with the same plane in the case of LOG (Figures \ref{fig:CbpHbp_Lo
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.49\textwidth]{CbpHbp_Switch}
-	\caption{Evolution of statistical properties in causal entropy-complexity plane for SWITCH map $H{BP} \times C_{BP}$.}
+	\caption{Evolution of statistical properties in causal entropy-complexity plane for SWITCH map $H_{BP} \times C_{BP}$.}
 	\label{fig:SWITCH_HC}
 \end{figure}

@@ -1,26 +1,30 @@
 \section{Results}\label{sec:resultados}
 
-Five pseudo chaotic maps were studied, two simple maps and three combination of them.
-For each one we have used numbers represented by floating-point (double precision 754-IEEE standard) and  fixed-point numbers with $1\leq B \leq 53$, where $B$ is the number of bits that represents the fractional part.
+Five pseudo-chaotic maps were studied, two simple maps and three combination of them.
+For each one we have used numbers represented by floating-point (double presicion 754-IEEE standard) and  fixed-point numbers with $1\leq B \leq 53$, where $B$ is the number of bits that represents the fractional part.
 Time series were generated using $100$ randomly chosen initial conditions within their attraction domain (interval $[0,1]$), for each one of these $54$ number precisions.
 The studied maps are logistic (LOG), tent (TENT), sequential switching between TENT and LOG (SWITCH) and skipping discarding the values in the odd positions (EVEN) or the values in the even positions (ODD) respectively.
+\textcolor{red}{In the following, all the results will be obtained from the pseudo-chaotic version of the LOG, TENT, SWITCH, EVEN and ODD maps.}
 
 Logistic map is interesting because it is representative of the very large family of quadratic maps.
 Its expression is:
 %
-\begin{equation}\label{eq:logimap}
-x_{n+1}=4\,x_{n}(1-x_{n}) 
+\begin{equation}\label{eq:LOG}
+x_{n+1}=4~x_{n}~(1-x_{n}) 
 \end{equation}
 %
 with $x_n \in \mathbb{R}$.
 
 Note that to effectively work in a given representation it is necessary to change the expression of the map in order to make all the operations in the chosen representation numbers. For example, in the case of LOG the expression in binary fixed-point numbers is:
 %
-\begin{equation}\label{eq:logimapB2}
-x_{n+1}=4 \epsilon \,\text{floor}\left\{\frac{x_n(1-x_n)}{\epsilon}\right\}
+\begin{equation}\label{eq:LOGB2}
+x_{n+1}=4 ~\epsilon ~\text{floor}\left\{\frac{x_n(1-x_n)}{\epsilon}\right\}
 \end{equation}
 %
 with $\epsilon = 2^{-B}$ where $B$ is the number of bits that represents the fractional part.
+
+\textcolor{red}{This rounding technique is the same as that used in \cite{Antonelli2012, Grebogi1988, Nagaraj2008} and has some advantages,such as, it is algorithmically easy to implement and is independent of the platform where it is used, as long as $B$ is lower than the mantissa of the arithmetic of the local machine.
+In our case, the results were obtained with an Intel I7 PC, which has an ALU with IEEE-754 floating point standard with double precision, which limits the method to $B \leq 53$ bits.}
 
 Floating point representation does not constitute a field, wherein the basic maths properties, such as distributive, associative, are preserved.
 However, in fixed point arithmetics the exponent does not shift the point position and some properties as distributive remains.
@@ -32,51 +36,75 @@ The Perron-Frobenius operator and its corresponding eigenvalues and eigenfunctio
 
 Tent map is represented with the equation:
 %
-\begin{equation}\label{eq:tentmap}
-x_{n+1}~=~ \left\{ \begin{array}{ll}
-2~{x_n} &, \textrm{if ~$0\leq x_n\leq 1/2$}\\
-2~(1-{x_n}) &, \textrm{if ~$1/2<x_n\leq 1$} 
-\end{array} \right. 
+\begin{equation}\label{eq:TENT}
+x_{n+1} =
+\begin{cases}
+	u~x_n &, \textrm{if } 0\leq x_n\leq 1/u\\
+	\frac{u}{1-u}~(1-x_n) &, \textrm{if } 1/u< x_n\leq 1 
+\end{cases}
 \end{equation}
 %
-with $x_n \in \mathbb{R}$.
+\textcolor{red}{with $x_n and $u$ \in \mathbb{R}$}.
 
-In base-2 fractional numbers rounding, equation (\ref{eq:tentmap}) becomes:
+In base-2 fractional numbers rounding, equation (\ref{eq:TENT}) becomes:
 %
-\begin{equation}\label{eq:tentdecbin}
-x_{n+1}~=~ \left\{ \begin{array}{ll}
-2~{x_n} &, \textrm{if $0\leq x_n\leq 1/2$}\\
-\epsilon \; \text{floor}\{\frac{2~-~2~x_n}{\epsilon}\} &, \textrm{if $1/2<x_n\leq 1$} 
-\end{array} \right. 
+\begin{equation}\label{eq:TENTB2}
+x_{n+1} = 
+\begin{cases}
+	\epsilon ~\text{floor} \{\frac{1}{\epsilon} \mu~(x_n)\} &, \textrm{if } 0\leq x_n\leq \mu^-\\
+	\epsilon ~\text{floor} \{\frac{1}{\epsilon} \rho~(1-x_n)\} &, \textrm{if } \mu^-<x_n\leq 1 
+\end{cases}	
 \end{equation}
 %
-with $\epsilon=2^{-B}$.
+with $\epsilon=2^{-B}$, $\mu = \epsilon ~\text{floor}\{\frac{1}{\epsilon} u\}$, $\mu^- = \epsilon ~\text{floor}\{\frac{1}{\epsilon} (1/\mu)\}$ and $\rho = \epsilon ~\text{floor}\{\frac{1}{\epsilon} ~(\mu/(1-\mu)) \}$.
 
-In this case, we introduce the $2$ number in the parentheses because it is computationally more efficient in a hardware implementation.
-It is valid because it is power of $2$ and the multiplication is equivalent to a shift-to-left.
+\textcolor{red}{
+In \cite{DelaFraga2017}, the authors showed the evolution of the entropy of values $H_{hist}$ with respect to the binary precision.
+They characterized the evolution of the TENT map as a function of binary precision in a fixed-point arithmethics.
+In their scheme of generation of random numbers they used two postprocessing stages, first they binarized the data by detecting the crossing by a threshold, and then these data were processed by a XOR gate.
+In our case we use the output of the chaotic maps without any randomization process, however their results are very interesting to take a criterion about which parameters are useful to implement.}
+\textcolor{red}{
+In our case, we adopted two values of $u$ for two different reasons.
+Following \cite{DelaFraga2017}, an interesting value is $ u = 1.96 $, or its closest value within the arithmetic used.
+On the other hand, the value of $u = 2$ is very attractive due to its extremely low implementation cost.}
 
 Switching, even and odd skipping procedures are shown in Fig. \ref{fig:seq}.
 %
 \begin{figure}[htpb]
 \centering	
 	\includegraphics[height=0.4\textheight]{SwitchParImpar}
-	\caption{Sequential switching between Tent and Logistic maps. In the figure are also shown even and odd skipping strategies.} \label{fig:seq}
+	\caption{Sequential switching between Tent and Logistic maps. In the figure are also shown even and odd skipping strategies.}
+	\label{fig:seq}
 \end{figure}
 
 SWITCH map is expressed as:
 %
-\begin{equation}
+\begin{equation}\label{eq:SWITCH}
 \begin{cases}
-x_{n+1}=
-\begin{cases}
-2\,x_n, &, \mbox{if } 0\leq x_n\leq 1/2 \\
-2\,(1-x_n ) &, \mbox{if } 1/2<x_n\leq 1
-\end{cases} \\
-x_{n+2}=4\,x_{n+1}\,(1-x_{n+1})
-\end{cases}\label{eq:SWITCH}
+	x_{n+1}=
+	\begin{cases}
+		u~x_n &, \textrm{if } 0\leq x_n\leq 1/u\\
+		\frac{u}{1-u}~(1-x_n) &, \textrm{if } 1/u< x_n\leq 1 
+	\end{cases} \\
+	x_{n+2}=4\,x_{n+1}\,(1-x_{n+1})
+\end{cases}
 \end{equation}
 %
 with $x_n \in \mathbb{R}$ and $n$ an even number.
+
+\textcolor{red}{However, as in the previous cases, we work with its pseudo-chaotic counterpart that can be expressed as:}
+%
+\begin{equation}\label{eq:SWITCHB2}
+\begin{cases}
+	x_{n+1}=
+	\begin{cases}
+		\epsilon ~\text{floor} \{\frac{1}{\epsilon} \mu~(x_n)\} &, \textrm{if } 0\leq x_n\leq \mu^-\\
+		\epsilon ~\text{floor} \{\frac{1}{\epsilon} \rho~(1-x_n)\} &, \textrm{if } \mu^-<x_n\leq 1
+	\end{cases} \\
+	x_{n+2}=4 ~\epsilon ~\text{floor}\left\{\frac{x_n(1-x_n)}{\epsilon}\right\}
+\end{cases}
+\end{equation}
+%
 
 Skipping is a usual randomizing technique that increases the mixing quality of a single map and correspondingly increases the value of $H_{BP}$ and decreases $C_{BP} $ of the time series.
 Skipping does not change the values of $H_{hist}$ for ergodic maps because it are evaluated using the non causal PDF (normalized histogram of values) \cite{DeMicco2008}.
@@ -84,18 +112,20 @@ Skipping does not change the values of $H_{hist}$ for ergodic maps because it ar
 In the case under consideration we study even and odd skipping of the sequential switching of TENT and LOG maps:
 \begin{enumerate}[leftmargin=*,labelsep=4.9mm]
 	\item Even skipping of the sequential switching of Tent and Logistic maps (EVEN).\\
-	If $\{x_n; n=1,\dots,\infty\}$ is the time series generated by eq. \eqref{eq:SWITCH}, discard all the values in odd positions and retain the values in even positions.
+	If $\{x_n; n=1,\dots,\infty\}$ is the time series generated by eq. \eqref{eq:SWITCHB2}, discard all the values in odd positions and retain the values in even positions.
 	\item Odd skipping of the sequential switching of Tent and Logistic maps.
-	If $\{x_n; n=1,\dots,\infty\}$ is the time series generated by eq. \eqref{eq:SWITCH}, discard all the values in even positions and retain all the values in odd positions.
+	If $\{x_n; n=1,\dots,\infty\}$ is the time series generated by eq. \eqref{eq:SWITCHB2}, discard all the values in even positions and retain all the values in odd positions.
 \end{enumerate}
 
 Even skipping may be expressed as the composition function TENT$\circ$LOG while odd skipping may be expressed as LOG$\circ$TENT.
 The evolution of period as function of precision was reported in \cite{Nagaraj2008} for these resulting maps.
+\textcolor{red}{In this paper we use the same simulation algorithm and switching scheme as in \cite{Nagaraj2008} and we add the analysis from the statistical point of view.}
 
 \input{PeriodResults}
 
-\subsection {Quantifiers of simple maps}\label{subsec:SimpleMaps}
-Here we report our results for both simple maps, LOG and TENT
+\subsection {Quantifiers of simple maps}
+\label{subsec:SimpleMaps}
+Here we report our results for both simple maps, LOG and TENT.
 
 \input{LogMapResults}
 

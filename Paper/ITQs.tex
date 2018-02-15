@@ -3,7 +3,7 @@
 Systems that evolve over time are called dynamical systems.
 Generally, only measurements of scalar time series $X(t)$ are accessible, these time series may be function of variables $V=\{ v_1, v_2,\cdots, v_k\}$ describing the underlying dynamics (i.e. $dV/dt=f(V)$).
 The goal is to infer properties and reach conclusions of an unknown system from the analysis of measured record of observational data.
-The key question would be to know how much information about the dynamics of the underlying processes can be revealed by the analyzed data.
+The key question would be to know how much information about the dynamics of the underlying processes can be revealed by the analysed data.
 A probability distribution function (PDF) $P$ is typically used to quantify the apportionment of a time series $X(t)$.
 Information Theory quantifiers can be defined as measures that characterize properties of the PDF associated with these time series, they allow to extract information about the studied system.
 We can see these quantifiers as metrics in the PDFs space, they enable to compare and classify different sets of data according to their PDFs where stochastic and deterministic are the two extremes of processes.
@@ -122,9 +122,9 @@ In order to avoid the loss of amplitude information, that would be a disadvantag
 Non-normalized weights are computed for each temporal window for the time series $X$, such that
 \begin{equation}
 \label{WPE_weigth}
-w_j~=~\frac{1}{D}\sum_{k=1}^{D} \left(x_{j+k-1}-\bar{X_j^D}\right)^2
+w_j~=~\frac{1}{D}\sum_{k=1}^{D} \left(x_{j+k-1}-\bar{X}_j^D\right)^2
 \end{equation}
-In the equation above $x_{j+k-1}-\bar{X_j^D}$ denotes the arithmetic mean of the current embedding vector of length $D$ and its variance $w_j$ is then used to weight the relative frequencies of each ordinal pattern $p_j$.
+In the equation above $\bar{X}_j^D$ denotes the arithmetic mean of the current embedding vector of length $D$ and its variance $w_j$ is then used to weight the relative frequencies of each ordinal pattern $p_j$.
 Originally, this technique was proposed to discriminate patterns immersed in low noise.
 We take advantage of the fact that the fixed points are not computed in the WPE.
 

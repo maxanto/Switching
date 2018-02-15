@@ -11,7 +11,10 @@ Figure \ref{fig:period} shows  $T$ vs. $B$ in semi logarithmic scale.
 We run the attractor of the LOG from $100$ randomly chosen initial conditions.
 The figure show: $100$ red points for each fixed-point precision ($1\geq B \geq 53$) and their average (dashed black line connecting black dots).
 The experimental averaged points can be fitted by a straight line (in blue) expressed as $\log_{10}T=m B + b$ where $m$ is the slope and $b$ is the $y$-intercept.
+
 Results for all the considered maps are summarized in Table \ref{tabla:periodos}.
+\textcolor{red}{We can detect that the average period was the same using both $u=2$ and $u=1.96$ when switching strategy is used.
+Then we report the results for SWITCH, EVEN and ODD using TENT with $u=2$ to iterate.}
 %
 \begin{figure}[H]
 \centering	
@@ -22,17 +25,18 @@ Results for all the considered maps are summarized in Table \ref{tabla:periodos}
 %
 \begin{table}[H]
 \centering	
-	\caption{Period $T$ as a function of $B$ for the maps considered}
+	\caption{Period $T$ as a function of $B$ for the maps considered. \textcolor{red}{SWITCH, EVEN and ODD were calculated with $u=2$ (see text)}.}
 	\vspace{1em}
 	\begin{tabular}{lll}
 		\hline\noalign{\smallskip}
-		map 	& m 	& b  \\
+		map 			& m 	& b  \\
 		\noalign{\smallskip}\hline\noalign{\smallskip}
-		TENT	&0 		& 0 \\
-		LOG 	&0.139 	& -0.6188 \\
-		SWITCH 	&0.1462 & -0.5115 \\
-		EVEN 	&0.1447 & -0.7783 \\
-		ODD 	&0.1444 & -0.7683 \\
+		TENT $u=2$		&0 		& 0 \\
+		TENT $u=1.96$ 	&0.1487 & -0.01177 \\
+		LOG 			&0.139 	& -0.6188 \\
+		SWITCH 			&0.1462 & -0.5115 \\
+		EVEN 			&0.1447 & -0.7783 \\
+		ODD 			&0.1444 & -0.7683 \\
 		\noalign{\smallskip}\hline
 	\end{tabular}
 	\label{tabla:periodos}	
@@ -40,3 +44,4 @@ Results for all the considered maps are summarized in Table \ref{tabla:periodos}
 
 Results are compatible for those obtained in \cite{Nagaraj2008}.
 Switching between maps increases the period $T$ but skipping procedure decreases by almost half.
+\textcolor{red}{Also, TENT with $u=1.96$ exhibit the longest periods.}
